@@ -1,0 +1,489 @@
+<html><head><script src="./scripts/athena.js" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app220.us.archive.org';v.server_ms=249;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="./scripts/bundle-playback.js" charset="utf-8"></script>
+<script type="text/javascript" src="./scripts/wombat.js" charset="utf-8"></script>
+<script>window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden"};</script>
+<script type="text/javascript" src="./scripts/ruffle.js"></script>
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://www.sanriotown.com:80/login/index.php","20011102102152","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1004696512");
+</script>
+<link rel="stylesheet" type="text/css" href="./styles/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="./styles/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+
+<title>
+Sanriotown</title>
+<meta http-equiv="Pragma" content="no-cache">
+<script language="Javascript">
+	var hellokittyLanguage = new Array('us', 'tw', 'kr', 'jp', 'us_noframe');
+	var hellokittyLanguageName = new Array('English', 'Chinese', 'Korean', 'Japanese', 'Hellokitty Office');
+	var hellokittyofficeLanguage = new Array('us');
+	var hellokittyofficeLanguageName = new Array('English');
+	
+	var mymelodyLanguage = new Array('us', 'tw');
+	var mymelodyLanguageName = new Array('English', 'Chinese');
+	
+	var kuririnmailLanguage = new Array('us', 'tw');
+	var kuririnmailLanguageName = new Array('English', 'Chinese');
+
+	var usSite = new Array('hellokitty.com', 'mymelody.com', 'kuririnmail.com');
+	var twSite = new Array('hellokitty.com', 'mymelody.com', 'kuririnmail.com');
+	var jpSite = new Array('hellokitty.com');
+	var krSite = new Array('hellokitty.com');
+	
+function changeSiteDomain(){
+	domainForm = document.loginForm.domain;
+	languageForm = document.loginForm.mail_language;
+	deleteSelectionOptions(languageForm);
+	
+	if(domainForm.options[domainForm.selectedIndex].value == 'hellokitty.com'){
+		for(i=1; i<hellokittyLanguage.length; i++){
+			languageForm.options[i] = new Option(hellokittyLanguageName[i], hellokittyLanguage[i])
+		}
+	}
+	if(domainForm.options[domainForm.selectedIndex].value == 'mymelody.com'){
+		for(i=1; i<mymelodyLanguage.length; i++){
+			languageForm.options[i] = new Option(mymelodyLanguageName[i], mymelodyLanguage[i])
+		}
+	}
+	if(domainForm.options[domainForm.selectedIndex].value == 'kuririnmail.com'){
+		for(i=1; i<kuririnmailLanguage.length; i++){
+			languageForm.options[i] = new Option(kuririnmailLanguageName[i], kuririnmailLanguage[i])
+		}
+	}
+	
+}
+
+function changeSiteLanguage(){
+	domainForm = document.loginForm.domain;
+	languageForm = document.loginForm.mail_language;
+	deleteSelectionOptions(domainForm);
+	
+	if(languageForm.options[languageForm.selectedIndex].value == 'us'){
+		for(i=1; i<usSite.length; i++){
+			domainForm.options[i] = new Option(usSite[i], usSite[i])
+		}
+	}
+	if(languageForm.options[languageForm.selectedIndex].value == 'tw'){
+		for(i=1; i<twSite.length; i++){
+			domainForm.options[i] = new Option(twSite[i], twSite[i])
+		}
+	}
+	if(languageForm.options[languageForm.selectedIndex].value == 'jp'){
+		for(i=1; i<jpSite.length; i++){
+			domainForm.options[i] = new Option(jpSite[i], jpSite[i])
+		}
+	}
+	if(languageForm.options[languageForm.selectedIndex].value == 'kr'){
+		for(i=1; i<krSite.length; i++){
+			domainForm.options[i] = new Option(krSite[i], krSite[i])
+		}
+	
+	}
+}
+
+function deleteSelectionOptions(formSelection){
+	var j = formSelection.options.length;
+	for(i=0; i<j; i++){
+		formSelection.options[1] = null;
+	}
+}
+function popUp(url){
+	window.open(url,'','width=650,height=400,resizable=yes,scrollbars=yes,menubar=no');
+}
+
+function popWin(url, wname, w, h, scroll) {
+var winw = (screen.width - w) / 2;
+var winh = (screen.height - h) / 2;
+props = 'height='+h+',width='+w+',top='+winh+',left='+winw+',scrollbars='+scroll+',resizable'
+win = window.open(url, wname, props)
+if (parseInt(navigator.appVersion) >= 4) { win.window.focus(); }
+}
+
+function SetCookie (name,value,expires,path,domain,secure) {
+  document.cookie = name + "=" + escape (value) +
+    ((expires) ? "; expires=" + expires.toGMTString() : "") +
+    ((path) ? "; path=" + path : "") +
+    ((domain) ? "; domain=" + domain : "") +
+    ((secure) ? "; secure" : "");
+}
+
+function GetCookie (name) {
+  var arg = name + "=";
+  var alen = arg.length;
+  var clen = document.cookie.length;
+  var i = 0;
+  while (i < clen) {
+    var j = i + alen;
+    if (document.cookie.substring(i, j) == arg)
+      return getCookieVal (j);
+    i = document.cookie.indexOf(" ", i) + 1;
+    if (i == 0) break; 
+  }
+  return null;
+}
+
+function Setnonflash(){
+	var expdate = new Date ();
+	expdate.setTime (expdate.getTime() + (2400 * 60 * 60 * 1000)); // 24 hrs from now 
+		SetCookie ("interface", "nonflash",expdate,"/");
+}
+
+function changeSiteLogo(){
+var siteLogo1Url ="images/index_kitty01.gif";
+var siteLogoUrl = "images/index_kitty03.gif";
+
+if(document.loginForm.characters.options[document.loginForm.characters.selectedIndex].value=="kuririnmail.com"){
+siteLogo1Url = "images/index_kuririn01.gif";
+siteLogoUrl = "images/index_kuririn03.gif";
+}
+if(document.loginForm.characters.options[document.loginForm.characters.selectedIndex].value=="mymelody.com"){
+siteLogo1Url = "images/index_melody01.gif";
+siteLogoUrl = "images/index_melody03.gif"; 
+}
+if(document.loginForm.characters.options[document.loginForm.characters.selectedIndex].value=="mail.hellokitty.com"){
+siteLogo1Url = "images/index_kitty01.gif";
+siteLogoUrl = "images/index_kitty03.gif"; 
+}
+if(document.loginForm.characters.options[document.loginForm.characters.selectedIndex].value=="hellokitty.us_noframe"){
+siteLogo1Url = "images/index_kitty01.gif";
+siteLogoUrl = "images/index_kitty03.gif"; 
+}
+document.siteLogo1.src=siteLogo1Url;
+document.siteLogo.src=siteLogoUrl;
+}
+
+function checkCharacter(){
+if(document.loginForm.characters.options[document.loginForm.characters.selectedIndex].value=="kuririnmail.com"){
+	document.loginForm.domain.value = "kuririnmail.com";
+}
+if(document.loginForm.characters.options[document.loginForm.characters.selectedIndex].value=="mymelody.com"){
+	document.loginForm.domain.value = "mymelody.com";
+}
+if(document.loginForm.characters.options[document.loginForm.characters.selectedIndex].value=="mail.hellokitty.com"){
+	document.loginForm.domain.value = "mail.hellokitty.com";
+}
+if(document.loginForm.characters.options[document.loginForm.characters.selectedIndex].value=="hellokitty.us_noframe"){
+	document.loginForm.domain.value = "mail.hellokitty.com";
+	document.loginForm.mail_language.value = "us_noframe";
+}}
+</script>
+<style type="text/css">
+<!--
+td {  font-family: "verdana", "Arial","sans-serif"; font-size: 8pt; color: #000000}
+.link {  font-family: "verdana", "Arial", "sans-serif"; font-size: 8pt; color: #000000; text-decoration: none}
+.link:hover {  font-family: "verdana", "Arial","sans-serif"; font-size: 8pt; color: #FFFFCC}
+// -->
+</style>
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" text="#00008b" link="#4169e1" vlink="#4169e1" alink="#4169e1"><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script>__wm.rw(0);</script>
+<div id="wm-ipp-print">The Wayback Machine - https://web.archive.org/web/20011102102152/http://www.sanriotown.com:80/login/index.php</div>
+<script type="text/javascript">//<![CDATA[
+__wm.bt(725,27,25,2,"web","http://www.sanriotown.com/login/index.php","20011102102152",1996,"https://web-static.archive.org/_static/",["https://web-static.archive.org/_static/css/banner-styles.css?v=S1zqJCYt","https://web-static.archive.org/_static/css/iconochive.css?v=qtvMKcIJ"], false);
+  __wm.rw(1);
+//]]></script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+ 
+<div align="center"><br>
+<table width="750" border="0" cellspacing="0" cellpadding="0" height="84" background="/web/20011102102152im_/http://www.sanriotown.com/login/images/0417_title_bg.gif">
+
+<!--●SANRIOWAVEロゴ● -->
+<tbody><tr>
+<td align="left" width="300" valign="top" height="84">
+<img src="./images/sanriotown.gif" width="300" height="84" alt="SANRIOTOWN"></td>
+<td valign="bottom" align="left" height="84" colspan="2"> 
+<table border="0" cellpadding="0" cellspacing="1" background="/web/20011102102152im_/http://www.sanriotown.com/login/BACKGROUND">
+<tbody><tr align="right"> 
+<td valign="bottom" colspan="2">
+<table width="220" border="0">
+<tbody><tr>
+
+<!--●会員ログインポタン● -->
+<td>
+<a href="./html/www.sanriowave.com.html"><img src="./images/sanriowave_jp.gif" border="0"></a></td>
+
+<!--●今すぐ入会ボタン● -->
+<td>
+<a href="./html/index.php.html"><img src="./images/sanriowave_us.gif" border="0"></a></td>
+<td>
+<a href="./html/index_tw.php.html"><img src="./images/sanriowave_cn.gif" border="0"></a></td>
+<td>
+<a href="./html/index_kr.php.html"><img src="./images/sanriowave_kr.gif" border="0"></a></td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr align="right">
+<td valign="bottom" colspan="2"><img src="./images/spacer.gif" width="412" height="12"></td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</div>
+
+<!--                  -->
+<div align="center">
+<table width="750" border="0" cellspacing="0" cellpadding="0">
+<tbody><tr><td width="150" bgcolor="#ffc0e1" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="1">
+	<form method="post" action="https://web.archive.org/web/20011102102152/http://mail.hellokitty.com/scripts/common/proxy.main" name="loginForm"></form>
+<input type="hidden" value="Enter" name="show_frame">
+<input type="hidden" value="login" name="action">
+
+	<tbody><tr><td><img src="./images/registered.gif">              </td></tr>
+
+	<tr><td align="center"><font color="#EF4080" size="1" face="Arial, Helvetica, sans-serif">User Name</font></td></tr>
+	<tr><td align="center"><input type="text" name="login" maxlength="24" size="12"></td>
+	</tr><tr><td align="center"><font color="#EF4080" size="1" face="Arial, Helvetica, sans-serif">Password</font></td></tr>
+	<tr><td align="center"><input type="password" maxlength="24" size="12" name="password"></td></tr>
+	 <tr><td align="center">
+	 <br>
+	<select name="domain" onchange="changeSiteDomain()">
+               <option value="hellokitty.com">Hellokitty.com</option>
+               <option value="mymelody.com">mymelody.com</option>
+               <option value="kuririnmail.com">kuririnmail.com</option></select> </td>
+                </tr>
+        <tr><td align="center"><select name="mail_language">
+	<option value="us">English
+	</option><option value="tw">Chinese
+	</option><option value="kr">Korean
+	</option><option value="jp">Japan
+	</option><option value="us_noframe">Hellokitty Office
+</option></select></td></tr>
+	<tr><td align="center">
+	<font color="#EF4080" size="1" face="Arial, Helvetica, sans-serif">
+	<a href="./html/forgot_password.htm', 'password' , 650, 500, 'no').html">
+	Forgot your password?</a></font></td></tr>
+	<tr><td align="center" background="/web/20011102102152im_/http://www.sanriotown.com/login/images/sanriotown_bg.gif"><input type="image" src="/web/20011102102152im_/http://www.sanriotown.com/login/images/sanriotown_login.gif" border="0&quot;"></td></tr>
+	<tr><td><a href="./html/tos.php.html"><img src="./images/sanriotown_signup.gif" border="0"></a></td></tr>
+	<tr><td>
+	<table width="100%" bgcolor="#FF6790" cellspacing="0">
+	<tbody><tr><td>
+	<table width="100%" bgcolor="#FDDEEE" cellpadding="0" cellspacing="3">
+	<tbody><tr><td>
+	<font color="#EF4080" size="1" face="Arial, Helvetica, sans-serif">
+	Sign Up Now to become a resident of Sanrio Town and enjoy all FREE community services. 
+	Pick your favourite character community from the pull down menu above.
+	</font></td></tr>
+	</tbody></table>
+	</td></tr>
+	</tbody></table>
+	</td></tr>
+	<tr><td><img src="./images/spacer.gif" width="8" height="8"></td></tr>
+	</tbody></table>
+<!--                   -->
+	<table border="0" cellpadding="0" cellspacing="0">
+	<tbody><tr><td><img src="./images/spacer.gif" width="10" height="5"></td>
+	<td>
+	<a href="./html/contact_us.htm', 'contactus' , 650, 500, 'yes').html">
+	<img src="./images/st_contactus.gif" border="0"></a></td>
+	<td><img src="./images/spacer.gif" width="5" height="5"></td>
+	<td><a href="./html/contact_us.htm', 'contactus' , 650, 500, 'yes').html">
+	<font color="#EF4080" size="2" face="Arial, Helvetica, sans-serif">Contact Us</font></a></td></tr>
+	<tr><td><img src="./images/spacer.gif" width="10" height="5"></td>
+	<td><a href="./html/links.htm', 'link' , 650, 500, 'yes').html">
+	<img src="./images/st_affiliate.gif" border="0"></a></td>
+	<td><img src="./images/spacer.gif" width="5" height="5"></td>
+	<td><a href="./html/links.htm', 'link' , 650, 500, 'yes').html">
+	<font color="#EF4080" size="2" face="Arial, Helvetica, sans-serif">Affiliate</font></a></td></tr>
+	<tr><td><img src="./images/spacer.gif" width="10" height="5"></td>
+	<td><a href="./html/set_browser.htm', 'setbrowser' , 650, 500, 'yes').html">
+	<img src="./images/st_setbrowser.gif" border="0"></a></td>
+	<td><img src="./images/spacer.gif" width="5" height="5"></td>
+	<td>
+	<a href="./html/set_browser.htm', 'setbrowser' , 650, 500, 'yes').html">
+	<font color="#EF4080" size="2" face="Arial, Helvetica, sans-serif">Set Browser</font>
+	</a></td></tr>
+	<tr><td><img src="./images/spacer.gif" width="10" height="5"></td>
+	<td><a href="./html/abuse.htm', 'antiSpam' , 650, 400, 'yes').html">
+	<img src="./images/st_anti.gif" border="0"></a></td>
+	<td><img src="./images/spacer.gif" width="5" height="5"></td>
+	<td>
+	<a href="./html/abuse.htm', 'antiSpam' , 650, 400, 'yes').html">
+	<font color="#EF4080" size="2" face="Arial, Helvetica, sans-serif">Anti Spam Policy</font></a></td></tr>
+	</tbody></table>
+</td>
+<!--                   -->
+<td bgcolor="#FFFFFF"><img src="./images/spacer.gif" width="30" height="5"></td>
+<td bgcolor="#FFFFFF" valign="top">
+<br>
+	<table border="0" cellpadding="0" cellspacing="0">
+	<tbody><tr align="middle"> 
+		<td valign="top">
+		<a href="./html/birthday.htm', 'contactus' , 650, 500, 'yes').html">
+		<img src="./images/pic_news.gif" alt="Hello kitty" border="0"></a></td>
+	</tr>	</tbody></table>
+	<br>
+	<!--                -->
+	<table border="0" cellspacing="0" width="550">
+          <tbody><tr> 
+            <td bgcolor="#F0AFBF" width="100%" height="87"> 
+              <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                <tbody><tr>
+                <td colspan="3" bgcolor="#ffffff"><img src="./images/community_line.gif"></td>
+                </tr>
+                <tr bgcolor="F1D0D8"> 
+                  <td width="6"><img src="./images/spacer.gif" width="5" height="5"></td>
+                  <td align="left" with="10%" width="30"><img src="./images/sanriopoint.gif"></td>
+                  <td align="left" with="85%" width="576">E-mail</td>
+                </tr>
+                <tr bgcolor="ffffff"> 
+                  <td width="6" height="46"><img src="./images/spacer.gif" width="5" height="5"></td>
+                  <td with="95%" align="left" colspan="2" height="46"><font color="#7E7E7E">It's great 
+                    to have an e-mail account (25MB free space) with Sanrio character 
+                    e-mail addresses! Now, @hellokitty.com, @mymelody.com &amp; @kuririnmail.com 
+                    e-mail addresses are available. On top of the special e-mail 
+                    addresses, you can send e-mail with cute Sanrio character 
+                    stamps.</font></td>
+                </tr>
+                <tr bgcolor="F1D0D8"> 
+                  <td width="6"><img src="./images/spacer.gif" width="5" height="5"></td>
+                  <td align="left" with="10%" width="30"><img src="./images/sanriopoint.gif"></td>
+                  <td align="left" with="85%" width="576">Calendar</td>
+                </tr>
+                <tr bgcolor="ffffff"> 
+                  <td width="6" height="46"><img src="./images/spacer.gif" width="5" height="5"></td>
+                  <td with="95%" align="left" colspan="2" height="46"><font color="#7E7E7E">
+                   Sanrio characters accompany you to 
+                  record all your appointments and you will receive reminders through our e-mail notification. 
+                  You have no excuse to miss any more appointments!</font></td>
+                </tr>
+                <tr bgcolor="F1D0D8"> 
+                  <td width="6"><img src="./images/spacer.gif" width="5" height="5"></td>
+                  <td align="left" with="10%" width="30"><img src="./images/sanriopoint.gif"></td>
+                  <td align="left" with="85%" width="576">Forum</td>
+                </tr>
+                <tr bgcolor="ffffff"> 
+                  <td width="6"><img src="./images/spacer.gif" width="5" height="5"></td>
+                  <td with="95%" align="left" colspan="2"><font color="#7E7E7E">There are many interesting topics to 
+                  discuss in our forum section. Let's share your passion towards Sanrio or your life experience 
+                  with other Sanrio Town residents.</font></td>
+                </tr>
+                 <tr bgcolor="F1D0D8"> 
+                  <td width="6"><img src="./images/spacer.gif" width="5" height="5"></td>
+                  <td align="left" with="10%" width="30"><img src="./images/sanriopoint.gif"></td>
+                  <td align="left" with="85%" width="576">Chat Room</td>
+                </tr>
+                <tr bgcolor="ffffff"> 
+                  <td width="6"><img src="./images/spacer.gif" width="5" height="5"></td>
+                  <td with="95%" align="left" colspan="2"><font color="#7E7E7E">
+                  Wish to have real time communication with other Sanrio 
+                  Town residents? Then come join our chat room.</font></td>
+                </tr>
+                 <tr bgcolor="F1D0D8"> 
+                  <td width="6"><img src="./images/spacer.gif" width="5" height="5"></td>
+                  <td align="left" with="10%" width="30"><img src="./images/sanriopoint.gif"></td>
+                  <td align="left" with="85%" width="576">Discussion Mailing List</td>
+                </tr>
+                <tr bgcolor="ffffff"> 
+                  <td width="6"><img src="./images/spacer.gif" width="5" height="5"></td>
+                  <td with="95%" align="left" colspan="2"><font color="#7E7E7E">
+                  Here's another channel that allows you to 
+                  share your views and ideas on Hello Kitty, other Sanrio characters or Sanrio products.</font></td>
+                </tr>
+                <tr bgcolor="F1D0D8"> 
+                  <td width="6"><img src="./images/spacer.gif" width="5" height="5"></td>
+                  <td align="left" with="10%" width="30"><img src="./images/sanriopoint.gif"></td>
+                  <td align="left" with="85%" width="576">Opt-in Newsletter</td>
+                </tr>
+                <tr bgcolor="ffffff"> 
+                  <td width="6"><img src="./images/spacer.gif" width="5" height="5"></td>
+                  <td with="95%" align="left" colspan="2"><font color="#7E7E7E">
+                  You can opt to receive newsletters on the topics of 
+                  interest to you. By receiving regular updates, you will always be informed on your favourite topics.</font>  
+ 		</td>
+                </tr>
+                 <tr bgcolor="F1D0D8"> 
+                  <td width="6"><img src="./images/spacer.gif" width="5" height="5"></td>
+                  <td align="left" with="10%" width="30"><img src="./images/sanriopoint.gif"></td>
+                  <td align="left" with="85%" width="576">Poll</td>
+                </tr>
+                <tr bgcolor="ffffff"> 
+                  <td width="6"><img src="./images/spacer.gif" width="5" height="5"></td>
+                  <td with="95%" align="left" colspan="2"><font color="#7E7E7E">Remember to submit your vote immediately when you 
+                  see a new poll topic, as the polls are updated often. Always keep an eye on the poll and give us 
+                  your opinion.</font> 
+ 		</td>
+                </tr>
+                 <tr bgcolor="F1D0D8"> 
+                  <td width="6"><img src="./images/spacer.gif" width="5" height="5"></td>
+                  <td align="left" with="10%" width="30"><img src="./images/sanriopoint.gif"></td>
+                  <td align="left" with="85%" width="576">File Cabinet</td>
+                </tr>
+                <tr bgcolor="ffffff"> 
+                  <td width="6"><img src="./images/spacer.gif" width="5" height="5"></td>
+                  <td with="95%" align="left" colspan="2"><font color="#7E7E7E">
+                  Are you looking for a place on the Internet where you can save 
+                  and store your documents and files? This is the right place. You can store your files and documents, 
+                  such as games and office documents. With "File Sharing", you can share your files with other Hello Kitty 
+                  Community residents. Let Hello Kitty keep your virtual properties.</font>
+ 		</td>
+                </tr>
+              </tbody></table>
+            </td>
+          </tr>
+        </tbody></table>
+        
+	<!--                -->
+	<br>
+	<!--                -->	
+	<table border="0" cellspacing="0" width="552">
+	<tbody><tr><td bgcolor="#F0AFBF">
+	<table border="0" cellspacing="0" cellpadding="0" width="552" bgcolor="ffffff">
+	<tbody><tr>
+	<td colspan="6" background="/web/20011102102152im_/http://www.sanriotown.com/login/images/line_bg.gif">
+	<img src="./images/kuririn_line.gif"></td>
+	<td background="/web/20011102102152im_/http://www.sanriotown.com/login/images/line_bg.gif" colspan="3"><img src="./images/spacer.gif"></td></tr>
+	<tr>
+	<td><img src="./images/spacer.gif" width="5" height="5"></td>
+	<td align="center"><a href="./html/e_index.htm.html"><img src="./images/kurirn_big.gif" border="0"></a>
+	<br>
+	<font size="2" face="Arial, Helvetica, sans-serif">
+	<a href="./html/e_index.htm.html">CORO<img src="./images/2.gif" border="0">KURIRIN</a>
+	</font></td>
+	<td><img src="./images/spacer.gif" width="10" height="10"></td>
+	<td align="center"><img src="./images/0518_gamec.jpg">
+	<br><font size="1" face="Arial, Helvetica, sans-serif">Games
+	</font></td>
+	<td><img src="./images/spacer.gif" width="10" height="10"></td>
+	<td align="center">
+	<a href="./html/psycho.htm', 'password' , 650, 500, 'no').html">
+	<img src="./images/0518_psy.gif" border="0"></a>
+	<br><font size="1" face="Arial, Helvetica, sans-serif">
+	<a href="./html/psycho.htm', 'password' , 650, 500, 'no').html">
+	Psychologistical test</a>
+	</font></td></tr>
+	</tbody></table>
+	</td></tr>
+	</tbody></table>
+	<!--                -->
+	<br>
+	<br>
+	<table border="0" cellspacing="0" cellpadding="0">
+	<tbody><tr><td><img src="./images/0518_bar_2.gif" width="550" height="18" alt="ワク"></td></tr>
+	<tr><td align="center">
+	<br>
+	<font color="#EF4080" size="2" face="Arial, Helvetica, sans-serif">
+	<nobr>©</nobr>1976, 1989, 1996, 1998, 2001 SANRIO CO., LTD.
+	<br>
+	All rights reserved. Without limiting the rights under copyright reserved above,  no part of this website 
+	may be reproduced in any form (graphic, electronic or mechanical, including photocopying, recording or 
+	taping on information storage and retrieval systems) without the prior written permission 
+	of the copyright owner. 
+	</font></td></tr>
+	</tbody></table>
+	
+</td>
+<!--                  -->
+</tr>
+</tbody></table>
+</div>
+
+
+
+
+</body></html>
