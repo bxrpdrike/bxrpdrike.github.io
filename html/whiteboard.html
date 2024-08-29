@@ -1,15 +1,21 @@
-
-<div class="btn-container">
-    <button id="clear-btn" class="btn">Clear</button>
-    <button id="black-btn" class="btn">Black</button>
-    <button id="red-btn" class="btn">Red</button>
-    <button id="blue-btn" class="btn">Blue</button>
-    <button id="green-btn" class="btn">Green</button>
-    <input type="color" class="btn" id="color-picker" />
-  </div>
-  <canvas 
-          id="my-canvas"
-          height="500"
-          width="500"
-          ></canvas>
-  
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>whiteboard app</title>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <video
+      style="position: fixed; bottom: 0; left: 0"
+      id="test"
+      width="400"
+      height="300"
+      autoplay
+    ></video>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.js"></script>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
