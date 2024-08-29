@@ -1,47 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shared Whiteboard</title>
-    <link rel="stylesheet" href="../scripts/whiteboard.css">
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.35.3/dist/umd/supabase.min.js"></script>
-</head>
-<body>
-    <div id="login-screen">
-        <p>I locked this board, what's the password?</p> 
-        <input type="text" id="nickname-input" placeholder="Enter Nickname">
-        <input type="password" id="password-input" placeholder="Enter Password">
-        <button onclick="validatePassword()">Submit</button>
-        <p id="error-message" style="color: red;"></p>
-    </div>
 
-    <div id="whiteboard-container" style="display: none;">
-        <div id="toolbar">
-            <label for="color">Color:</label>
-            <input type="color" id="color-picker" value="#000000">
-            <label for="thickness">Thickness:</label>
-            <input type="range" id="thickness-slider" min="1" max="10" value="2">
-
-            <button id="draw-tool">Draw</button>
-            <button id="eraser-tool">Eraser</button>
-            <button id="text-tool">Text</button>
-            <button id="select-tool">Select</button>
-            <button id="fill-tool">Fill</button>
-
-            <button id="undo-button">Undo</button>
-            <button id="redo-button">Redo</button>
-
-            <button id="hand-tool">Hand</button>
-            <button id="zoom-in">Zoom In</button>
-            <button id="zoom-out">Zoom Out</button>
-        </div>
-
-        <div id="canvas-container"> 
-            <canvas id="whiteboard"></canvas>
-        </div>
-    </div>
-
-    <script src="../scripts/whiteboard.js" defer></script>
-</body>
-</html>
+<div class="btn-container">
+    <button id="clear-btn" class="btn">Clear</button>
+    <button id="black-btn" class="btn">Black</button>
+    <button id="red-btn" class="btn">Red</button>
+    <button id="blue-btn" class="btn">Blue</button>
+    <button id="green-btn" class="btn">Green</button>
+    <input type="color" class="btn" id="color-picker" />
+  </div>
+  <canvas 
+          id="my-canvas"
+          height="500"
+          width="500"
+          ></canvas>
+  
