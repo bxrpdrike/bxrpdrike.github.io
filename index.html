@@ -28,33 +28,9 @@ Sanriotown</title>
 	var kuririnmailLanguage = new Array('us', 'tw');
 	var kuririnmailLanguageName = new Array('English', 'Chinese');
 
-	var usSite = new Array('hellokitty.com', 'mymelody.com', 'kuririnmail.com');
-	var twSite = new Array('hellokitty.com', 'mymelody.com', 'kuririnmail.com');
 	var jpSite = new Array('hellokitty.com');
 	var krSite = new Array('hellokitty.com');
 	
-function changeSiteDomain(){
-	domainForm = document.loginForm.domain;
-	languageForm = document.loginForm.mail_language;
-	deleteSelectionOptions(languageForm);
-	
-	if(domainForm.options[domainForm.selectedIndex].value == 'hellokitty.com'){
-		for(i=1; i<hellokittyLanguage.length; i++){
-			languageForm.options[i] = new Option(hellokittyLanguageName[i], hellokittyLanguage[i])
-		}
-	}
-	if(domainForm.options[domainForm.selectedIndex].value == 'mymelody.com'){
-		for(i=1; i<mymelodyLanguage.length; i++){
-			languageForm.options[i] = new Option(mymelodyLanguageName[i], mymelodyLanguage[i])
-		}
-	}
-	if(domainForm.options[domainForm.selectedIndex].value == 'kuririnmail.com'){
-		for(i=1; i<kuririnmailLanguage.length; i++){
-			languageForm.options[i] = new Option(kuririnmailLanguageName[i], kuririnmailLanguage[i])
-		}
-	}
-	
-}
 
 function changeSiteLanguage(){
 	domainForm = document.loginForm.domain;
@@ -66,21 +42,10 @@ function changeSiteLanguage(){
 			domainForm.options[i] = new Option(usSite[i], usSite[i])
 		}
 	}
-	if(languageForm.options[languageForm.selectedIndex].value == 'tw'){
-		for(i=1; i<twSite.length; i++){
-			domainForm.options[i] = new Option(twSite[i], twSite[i])
+	if(languageForm.options[languageForm.selectedIndex].value == 'cn'){
+		for(i=1; i<cnSite.length; i++){
+			domainForm.options[i] = new Option(cnSite[i], cnSite[i])
 		}
-	}
-	if(languageForm.options[languageForm.selectedIndex].value == 'jp'){
-		for(i=1; i<jpSite.length; i++){
-			domainForm.options[i] = new Option(jpSite[i], jpSite[i])
-		}
-	}
-	if(languageForm.options[languageForm.selectedIndex].value == 'kr'){
-		for(i=1; i<krSite.length; i++){
-			domainForm.options[i] = new Option(krSite[i], krSite[i])
-		}
-	
 	}
 }
 
@@ -203,15 +168,13 @@ __wm.bt(725,27,25,2,"web","http://www.sanriotown.com/login/index.php","200111021
 
 <!--●会員ログインポタン● -->
 <td>
-<a href="./html/www.sanriowave.com.html"><img src="./images/sanriowave_jp.gif" border="0"></a></td>
 
 <!--●今すぐ入会ボタン● -->
 <td>
 <a href="./html/index.php.html"><img src="./images/sanriowave_us.gif" border="0"></a></td>
 <td>
-<a href="./html/index_tw.php.html"><img src="./images/sanriowave_cn.gif" border="0"></a></td>
+<a href="./html/index_cn.php.html"><img src="./images/sanriowave_cn.gif" border="0"></a></td>
 <td>
-<a href="./html/index_kr.php.html"><img src="./images/sanriowave_kr.gif" border="0"></a></td>
 </tr>
 </tbody></table>
 </td>
@@ -239,20 +202,6 @@ __wm.bt(725,27,25,2,"web","http://www.sanriotown.com/login/index.php","200111021
 	<tr><td align="center"><input type="text" name="login" maxlength="24" size="12"></td>
 	</tr><tr><td align="center"><font color="#EF4080" size="1" face="Arial, Helvetica, sans-serif">Password</font></td></tr>
 	<tr><td align="center"><input type="password" maxlength="24" size="12" name="password"></td></tr>
-	 <tr><td align="center">
-	 <br>
-	<select name="domain" onchange="changeSiteDomain()">
-               <option value="hellokitty.com">Hellokitty.com</option>
-               <option value="mymelody.com">mymelody.com</option>
-               <option value="kuririnmail.com">kuririnmail.com</option></select> </td>
-                </tr>
-        <tr><td align="center"><select name="mail_language">
-	<option value="us">English
-	</option><option value="tw">Chinese
-	</option><option value="kr">Korean
-	</option><option value="jp">Japan
-	</option><option value="us_noframe">Hellokitty Office
-</option></select></td></tr>
 	<tr><td align="center">
 	<font color="#EF4080" size="1" face="Arial, Helvetica, sans-serif">
 	<a href="./html/forgot_password.htm', 'password' , 650, 500, 'no').html">
@@ -336,7 +285,7 @@ __wm.bt(725,27,25,2,"web","http://www.sanriotown.com/login/index.php","200111021
 					many, many happy birthdays we'll spend together. I hope you like the presents and stuff, I hope I can get you something better next year because you know I hate gift cards, anyways I tried to make something but as you can tell it isnt much because im stupid and dont know how to code (i forgot everything i learned in compsci sob). 
 					Anyways, enough about that, you're amazing and perfect and I know you probably don't believe me but I just can't see how I could ever catch up to you because I really don't think I deserve someone as sweet as you, thank you for everything you've done for me and I hope you keep shining as bright as you are forever. 
 					I'm in awe of everything you've achieved, everything you've overcome. I see how hard you're trying and you should pat yourself on the back because I don't think you're giving yourself enough credit here.
-					I'm really so so lucky to have you, I love you beyond expression. I don't know what I'd do without you and I'm yours forever. Happy birthday Cherune <3 <br>
+					I'm really so so lucky to have you, I love you beyond expression. I don't know what I'd do without you and I'm yours forever. Happy birthday Cherune <3 <br><br>
 				  </font></td>
                 </tr>
                 <tr bgcolor="F1D0D8"> 
@@ -353,7 +302,7 @@ __wm.bt(725,27,25,2,"web","http://www.sanriotown.com/login/index.php","200111021
 				   And sometimes when we're on call and you're doing something completely unrelated, I'm just sitting there listening to you and wondering how I managed to find someone this beautiful. 
 				   You wont believe the amount of times a day I randomly think of something super cute you did and just melt from how adorable you are (and there's way too many examples to list), honestly it's  
 				funny, every time I think about you my heart races and it starts getting a bit hard to breathe, and every time I see something funny or interesting my first thought is always "Oh I gotta show her" or "Oh I gotta tell her, she'll love this", see
-				you might call it pathetic or clingy, which it might be, but that's just how I am nya. Honestly It's never been like this with anyone, and I mean ANYONE, I've never fallen this hard for someone in my entire life, but then again, you're not just "anyone" or "someone", you're you, and that says it all.. As long as I'm with you there's no future in which I'm not happy. <br></font></td>
+				you might call it pathetic or clingy, which it might be, but that's just how I am nya. Honestly It's never been like this with anyone, and I mean ANYONE, I've never fallen this hard for someone in my entire life, but then again, you're not just "anyone" or "someone", you're you, and that says it all.. As long as I'm with you there's no future in which I'm not happy. <br><br></font></td>
                 </tr>
                  <tr bgcolor="F1D0D8"> 
                   <td width="6"><img src="./images/spacer.gif" width="5" height="5"></td>
@@ -363,7 +312,7 @@ __wm.bt(725,27,25,2,"web","http://www.sanriotown.com/login/index.php","200111021
                 <tr bgcolor="ffffff"> 
                   <td width="6"><img src="./images/spacer.gif" width="5" height="5"></td>
                   <td with="95%" align="left" colspan="2"><font color="#7E7E7E">
-                  I know I made you stress too much and I'm sorry for that <3 I promise I'm working on it and I never want to have you feel that way ever again, we didnt have a single fight and we're keeping it that way as far as I'm concerned. We're only getting closer, and I love you more and more every day (which i didnt know was possible, but ∞+1 is always welcome ig.) We'll keep rising, and even if we reach a ceiling we'll break through, I'll be by you no matter what it takes, and I'll make sure our tomorrow is always better no matter how perfect our yesterday was. <br></font></td>
+                  I know I made you stress too much and I'm sorry for that <3 I promise I'm working on it and I never want to have you feel that way ever again, we didnt have a single fight and we're keeping it that way as far as I'm concerned. We're only getting closer, and I love you more and more every day (which i didnt know was possible, but ∞+1 is always welcome ig.) We'll keep rising, and even if we reach a ceiling we'll break through, I'll be by you no matter what it takes, and I'll make sure our tomorrow is always better no matter how perfect our yesterday was. <br><br></font></td>
                 </tr>
 				<tr bgcolor="F1D0D8"> 
 					<td width="6"><img src="./images/spacer.gif" width="5" height="5"></td>
@@ -372,7 +321,7 @@ __wm.bt(725,27,25,2,"web","http://www.sanriotown.com/login/index.php","200111021
 				  </tr>
 				  <tr bgcolor="ffffff"> 
 					<td width="6"><img src="./images/spacer.gif" width="5" height="5"></td>
-					<td with="95%" align="left" colspan="2"><font color="#7E7E7E">If you noticed, there's a username and password thingy on the left of the page. The truth is there's only one correct answer, and I left some stuff for you behind that account. I have the domain for this website for a year so even though I'm sure you don't really care a whole lot, if you're ever suuuuper bored and might want to try and get it you have 365 days. (i mayyy or may not have dropped a few hints, and i may or may not leave a few more (; ) <br></font></td>
+					<td with="95%" align="left" colspan="2"><font color="#7E7E7E">If you noticed, there's a username and password thingy on the left of the page. The truth is there's only one correct answer, and I left some stuff for you behind that account. I have the domain for this website for a year so even though I'm sure you don't really care a whole lot, if you're ever suuuuper bored and might want to try and get it you have 365 days. (i mayyy or may not have dropped a few hints, and i may or may not leave a few more (; ) <br><br></font></td>
 				  </tr>
                  <tr bgcolor="F1D0D8"> 
                   <td width="6"><img src="./images/spacer.gif" width="5" height="5"></td>
@@ -382,7 +331,7 @@ __wm.bt(725,27,25,2,"web","http://www.sanriotown.com/login/index.php","200111021
                 <tr bgcolor="ffffff"> 
                   <td width="6"><img src="./images/spacer.gif" width="5" height="5"></td>
                   <td with="95%" align="left" colspan="2"><font color="#7E7E7E">
-					<3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <br> </font></td>
+					<3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <br><br> </font></td>
                 </tr>
                 <tr bgcolor="F1D0D8"> 
                   <td width="6"><img src="./images/spacer.gif" width="5" height="5"></td>
@@ -402,7 +351,7 @@ __wm.bt(725,27,25,2,"web","http://www.sanriotown.com/login/index.php","200111021
                 <tr bgcolor="ffffff"> 
                   <td width="6"><img src="./images/spacer.gif" width="5" height="5"></td>
                   <td with="95%" align="left" colspan="2"><font color="#7E7E7E">
-					Sorry for the caps I just want this to sound super official and stuff to make up for my stupidness so I can say I'm high-brained nya. Also don't think I'm gay because this is Hello Kitty themed (And if you do atleast think I'm gay for you..) <br></font>
+					Sorry for the caps I just want this to sound super official and stuff to make up for my stupidness so I can say I'm high-brained nya. Also don't think I'm gay because this is Hello Kitty themed (And if you do atleast think I'm gay for you..) <br><br></font>
  		</td>
                 </tr>
               </tbody></table>
