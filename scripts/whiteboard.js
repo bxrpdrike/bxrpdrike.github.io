@@ -1,12 +1,14 @@
-window.onload = function() {
+window.onload = function () {
     const SUPABASE_URL = 'https://jsorbpmakyqrjopxswzh.supabase.co';
     const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Impzb3JicG1ha3lxcmpvcHhzd3poIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjQ5NTU1OTIsImV4cCI6MjA0MDUzMTU5Mn0.8RCd2J5Koxeqdxbf8cgqukApw-or2IN9kFC5zBTEAZs';
     const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-
-    // User Identification (using session IDs for now, consider Supabase auth later)
+    
+    // Configuration
+    const PASSWORD = 'skibidi'; // Replace with your password or secure method
     let userId = localStorage.getItem('userId') || Math.random().toString(36).substr(2, 9); 
     localStorage.setItem('userId', userId);
-
+    
+    // State Management
     let nickname = '';
     let currentTool = 'draw';
     let isDrawing = false;
@@ -20,47 +22,85 @@ window.onload = function() {
     let isDraggingSelection = false;
     let selectionOffsetX, selectionOffsetY;
 
-    // ... (validatePassword function, with nickname handling and IP-based bypass)
+    function validatePassword() {
+        console.log("validatePassword function called.");
+        nickname = document.getElementById('nickname-input').value;
+        const passwordInput = document.getElementById('password-input').value;
+        const errorMessage = document.getElementById('error-message');
+        
+        if (!nickname) {
+            errorMessage.textContent = 'Nickname cannot be empty.';
+            return;
+        }
+        if (!passwordInput) {
+            errorMessage.textContent = 'Password cannot be empty.';
+            return;
+        }
+
+        const storedPassword = localStorage.getItem('whiteboardPassword');
+        let loginCount = localStorage.getItem('loginCount') || 0; 
+
+        if (passwordInput === PASSWORD || passwordInput === storedPassword) {
+            localStorage.setItem('whiteboardPassword', passwordInput);
+            loginCount = 0; 
+            document.getElementById('login-screen').style.display = 'none';
+            document.getElementById('whiteboard-container').style.display = 'block';
+            initializeWhiteboard();
+        } else {
+            errorMessage.textContent = 'Incorrect password, try again.';
+            loginCount++;
+        }
+
+        localStorage.setItem('loginCount', loginCount);
+        if (loginCount >= 10) {
+            localStorage.removeItem('whiteboardPassword');
+            localStorage.removeItem('loginCount');
+        }
+    }
+    
+    window.validatePassword = validatePassword;
 
     function initializeWhiteboard() {
-        // ... (canvas event listeners, color/thickness listeners)
-
-        document.getElementById('eraser-tool').addEventListener('click', () => {
-            currentTool = 'eraser';
-            canvas.style.cursor = 'url(eraser-cursor.png), auto'; 
-        });
-        // ... (add event listeners for other tools: select, fill, text)
-
-        canvas.addEventListener('wheel', handleMouseWheel);
-        document.addEventListener('keydown', handleKeyDown);
-        canvas.addEventListener('contextmenu', (e) => e.preventDefault());
-
+        setupEventListeners();
         loadWhiteboardData();
         subscribeToRealTimeUpdates();
-
         resizeCanvas();
         window.addEventListener('resize', resizeCanvas);
+    }
 
-        canvas.addEventListener('mousedown', (e) => {
-            if (e.button === 1) { // Middle mouse button (wheel button)
-                currentTool = 'hand'; // Temporarily switch to hand tool
-                canvas.style.cursor = 'grabbing';
-                isDrawing = true; // Start panning
-            }
-            else {
-                startDrawing(e); 
-            }
+    function setupEventListeners() {
+        const tools = ['eraser', 'text', 'select'];
+        tools.forEach(tool => {
+            document.getElementById(`${tool}-tool`).addEventListener('click', () => {
+                currentTool = tool;
+                canvas.style.cursor = tool === 'eraser' ? 'url(eraser-cursor.png), auto' : tool;
+            });
         });
-        
-        canvas.addEventListener('mouseup', (e) => {
-            if (e.button === 1) { // Middle mouse button (wheel button)
-                canvas.style.cursor = 'grab'; // Reset cursor
-                isDrawing = false; // Stop panning
-            }
-            else {
-                stopDrawing(e);
-            }
-        });
+
+        canvas.addEventListener('mousedown', handleMouseDown);
+        canvas.addEventListener('mouseup', handleMouseUp);
+        canvas.addEventListener('wheel', handleMouseWheel);
+        document.addEventListener('keydown', handleKeyDown);
+        canvas.addEventListener('contextmenu', e => e.preventDefault());
+    }
+
+    function handleMouseDown(e) {
+        if (e.button === 1) {
+            currentTool = 'hand';
+            canvas.style.cursor = 'grabbing';
+            isDrawing = true;
+        } else {
+            startDrawing(e);
+        }
+    }
+
+    function handleMouseUp(e) {
+        if (e.button === 1) {
+            canvas.style.cursor = 'grab';
+            isDrawing = false;
+        } else {
+            stopDrawing(e);
+        }
     }
 
     function startDrawing(e) {
@@ -69,7 +109,7 @@ window.onload = function() {
         startX = (e.clientX - canvasRect.left - translateX) / scale;
         startY = (e.clientY - canvasRect.top - translateY) / scale;
 
-        if (currentTool === 'draw' || currentTool === 'eraser') {
+        if (['draw', 'eraser'].includes(currentTool)) {
             ctx.beginPath();
             ctx.moveTo(startX, startY);
         } else if (currentTool === 'text') {
@@ -77,264 +117,93 @@ window.onload = function() {
         } else if (currentTool === 'select') {
             startSelection(e);
         }
-
-        // ... (Push to history for undo/redo)
-    }
-
-    function stopDrawing(e) {
-        isDrawing = false;
-        ctx.beginPath(); // Reset the path for drawing tools
-
-        if (currentTool === 'select') {
-            endSelection(e);
-        } else if (currentTool === 'fill') {
-            fillArea(e);
-        }
-    }
-        };
-        // Event listeners for new tools
-        document.getElementById('text-tool').addEventListener('click', () => {
-            currentTool = 'text';
-            canvas.style.cursor = 'text';
-        });
-
-        // ... (Event listeners for select, fill, undo, redo, hand, zoom in, zoom out remain the same)
-
-        canvas.addEventListener('wheel', handleMouseWheel);
-        document.addEventListener('keydown', handleKeyDown);
-        canvas.addEventListener('contextmenu', (e) => e.preventDefault()); 
-
-        loadWhiteboardData();
-        subscribeToRealTimeUpdates();
-
-        resizeCanvas();
-        window.addEventListener('resize', resizeCanvas);
-    
-
-    function startDrawing(e) {
-        isDrawing = true;
-        const canvasRect = canvas.getBoundingClientRect();
-        startX = (e.clientX - canvasRect.left - translateX) / scale;
-        startY = (e.clientY - canvasRect.top - translateY) / scale;
-
-        if (currentTool === 'draw' || currentTool === 'eraser') {
-            ctx.beginPath();
-            ctx.moveTo(startX, startY);
-        } else if (currentTool === 'text') {
-            createTextBox(startX, startY);
-        } else if (currentTool === 'select') {
-            startSelection(e);
-        }
-
-        // Push initial action to history (for undo/redo)
         history.push({ tool: currentTool, ...getActionData() }); 
         historyIndex++;
     }
 
     function stopDrawing(e) {
         isDrawing = false;
-        ctx.beginPath(); 
-
+        ctx.beginPath();
         if (currentTool === 'select') {
             endSelection(e);
         } else if (currentTool === 'fill') {
             fillArea(e);
         } else {
-            // For other tools, save the action to Supabase
             saveActionToSupabase();
         }
     }
 
-    async function draw(e) {
-        if (!isDrawing) return;
-    
-        const canvasRect = canvas.getBoundingClientRect();
-        const x = (e.clientX - canvasRect.left - translateX) / scale;
-        const y = (e.clientY - canvasRect.top - translateY) / scale;
-    
-        if (currentTool === 'draw' || currentTool === 'eraser') {
-          ctx.lineWidth = thickness;
-          ctx.lineCap = 'round';
-          ctx.strokeStyle = currentTool === 'eraser' ? '#ffffff' : color;
-    
-          ctx.lineTo(x, y);
-          ctx.stroke();
-        } else if (currentTool === 'hand') {
-          translateX += e.movementX;
-          translateY += e.movementY;
-          redrawCanvas();
-        } else if (currentTool === 'select') {
-          handleSelectionDrag(e);
-        } // ... (existing code in draw function)
-        
-        else if (currentTool === 'hand' || e.buttons === 4) { // Hand tool or middle mouse button
-            translateX += e.movementX;
-            translateY += e.movementY;
-            redrawCanvas();}
-        } 
-        
-        // ... (rest of the draw function)
-    
-        // Save to Supabase (only for drawing/erasing for now)
-        if (currentTool === 'draw' || currentTool === 'eraser') {
-          const { error } = await supabase
-            .from('whiteboard_data')
-            .insert([{ x, y, color, size: thickness, type: currentTool, nickname, userId }]);
-    
-          if (error) console.error("Error saving to Supabase:", error);
-        }
-      
-    
-      async function loadWhiteboardData() {
-        const { data, error } = await supabase.from('whiteboard_data').select('*');
-    
-        if (data) {
-          ctx.clearRect(0, 0, canvas.width, canvas.height);
-          data.forEach((item) => drawFromData(item));
-        } else if (error) {
-          console.error("Error loading data from Supabase:", error);
-        }
-      }
-    
-      function drawFromData(item) {
-        ctx.save();
-        ctx.scale(scale, scale);
-        ctx.translate(translateX, translateY);
-    
-        ctx.lineWidth = item.size;
-        ctx.lineCap = 'round';
-        ctx.strokeStyle = item.color;
-    
-        if (item.type === 'draw' || item.type === 'eraser') {
-          ctx.lineTo(item.x, item.y);
-          ctx.stroke();
-          ctx.beginPath();
-          ctx.moveTo(item.x, item.y);
-        } else if (item.type === 'text') {
-          ctx.font = `${item.size}px Arial`;
-          ctx.fillStyle = item.color;
-          ctx.fillText(item.text, item.x, item.y);
-        } else if (item.type === 'select') {
-          ctx.strokeStyle = 'blue';
-          ctx.lineWidth = 1;
-          ctx.strokeRect(item.x, item.y, item.width, item.height);
-        } else if (item.type === 'fill') {
-          ctx.fillStyle = item.color;
-          ctx.fillRect(item.x, item.y, item.width, item.height);
-        }
-        else if (item.type === 'text') {
-            ctx.font = `${item.size}px Arial`;
-            ctx.fillStyle = item.color;
-            ctx.fillText(item.text, item.x, item.y);
-        }
-    
-        // Display nickname
-        if (item.nickname && item.userId !== userId) {
-          ctx.font = '12px Arial';
-          ctx.fillStyle = 'black';
-          ctx.fillText(item.nickname, item.x + 5, item.y - 5);
-        }
-    
-        ctx.restore();
-      }
-    
-      function subscribeToRealTimeUpdates() {
-        supabase
-          .from('whiteboard_data')
-          .on('INSERT', (payload) => {
-            if (payload.new.userId !== userId) {
-              drawFromData(payload.new);
-            }
-          })
-          .subscribe();
-      }
-    
-      function handleMouseWheel(e) {
+    function handleMouseWheel(e) {
         e.preventDefault();
         const zoomFactor = 1.1;
         const zoom = e.deltaY < 0 ? zoomFactor : 1 / zoomFactor;
-    
+
         const canvasRect = canvas.getBoundingClientRect();
         const mouseX = e.clientX - canvasRect.left;
-        const mouseY = e.clientY - canvasRect.top;   
-    
-    
+        const mouseY = e.clientY - canvasRect.top;
+
         translateX -= (mouseX - translateX) * (zoom - 1);
         translateY -= (mouseY - translateY) * (zoom - 1);
         scale *= zoom;
-    
+
         redrawCanvas();
-      }
-    
-      function handleKeyDown(e) {
+    }
+
+    function handleKeyDown(e) {
         if (e.ctrlKey && e.key === 'z') {
-          e.preventDefault();
-          undo();
+            e.preventDefault();
+            undo();
         } else if (e.ctrlKey && e.key === 'y') {
-          e.preventDefault();
-          redo();
+            e.preventDefault();
+            redo();
         }
-      }
-    
-      function resizeCanvas() {
+    }
+
+    function resizeCanvas() {
         const containerWidth = canvasContainer.clientWidth;
         const containerHeight = canvasContainer.clientHeight;
-        const canvasRect = canvas.getBoundingClientRect();
 
-        // Check if scrolling near right or bottom edge
-        const expandThreshold = 100; // Adjust as needed
-        if (canvasRect.right - window.innerWidth < expandThreshold) {
-            canvas.width += 1000; // Expand width by 1000 pixels (adjust as needed)
-        }
-        if (canvasRect.bottom - window.innerHeight < expandThreshold) {
-            canvas.height += 1000; // Expand height
-        }
         const newCanvasWidth = Math.max(canvas.width, (containerWidth + translateX) / scale);
         const newCanvasHeight = Math.max(canvas.height, (containerHeight + translateY) / scale);
-    
+
         if (newCanvasWidth > canvas.width || newCanvasHeight > canvas.height) {
-          const tempCanvas = document.createElement('canvas');
-          tempCanvas.width = canvas.width;
-          tempCanvas.height = canvas.height;
-          const tempCtx = tempCanvas.getContext('2d');
-          tempCtx.drawImage(canvas, 0, 0);
-    
-          canvas.width   
-     = newCanvasWidth;
-          canvas.height = newCanvasHeight;
-    
-          ctx.drawImage(tempCanvas, 0, 0);
-    
-          ctx.scale(scale, scale);
-          ctx.translate(translateX, translateY);
+            const tempCanvas = document.createElement('canvas');
+            tempCanvas.width = canvas.width;
+            tempCanvas.height = canvas.height;
+            const tempCtx = tempCanvas.getContext('2d');
+            tempCtx.drawImage(canvas, 0, 0);
+
+            canvas.width = newCanvasWidth;
+            canvas.height = newCanvasHeight;
+            ctx.drawImage(tempCanvas, 0, 0);
+            ctx.scale(scale, scale);
+            ctx.translate(translateX, translateY);
         }
-      }
-    
-      function redrawCanvas() {
+    }
+
+    function redrawCanvas() {
         ctx.save();
         ctx.setTransform(1, 0, 0, 1, 0, 0);
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.restore();
-    
         ctx.scale(scale, scale);
         ctx.translate(translateX, translateY);
-    
         history.forEach(item => drawFromData(item));
-      }
-    
-      function undo() {
+    }
+
+    function undo() {
         if (historyIndex > 0) {
-          historyIndex--;
-          redrawCanvas();
+            historyIndex--;
+            redrawCanvas();
         }
-      }
-    
-      function redo() {
+    }
+
+    function redo() {
         if (historyIndex < history.length - 1) {
-          historyIndex++;
-          redrawCanvas();
+            historyIndex++;
+            redrawCanvas();
         }
-      }
+    }
     
       function createTextBox(x, y) {
         const textInput = document.createElement('input');
@@ -665,5 +534,4 @@ function isNearCorner(x, y, corner, handleSize) {
     
       // ... (Other tool functions implementation - you'll need to add these based on your specific requirements)
     
-      window.validatePassword = validatePassword;
-      
+      window.validatePassword = validatePassword;}
