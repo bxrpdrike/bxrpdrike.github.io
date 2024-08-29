@@ -1,6 +1,11 @@
 window.onload = function() {
-    // ... (Supabase setup, constants, HTML element references)
-
+    const SUPABASE_URL = 'https://jsorbpmakyqrjopxswzh.supabase.co';
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Impzb3JicG1ha3lxcmpvcHhzd3poIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjQ5NTU1OTIsImV4cCI6MjA0MDUzMTU5Mn0.8RCd2J5Koxeqdxbf8cgqukApw-or2IN9kFC5zBTEAZs';
+    const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    const loginScreen = document.getElementById('login-screen');
+    const whiteboardContainer = document.getElementById('whiteboard-container');
+    const passwordInput = document.getElementById('password-input'); 
+    const errorMessage = document.getElementById('error-message');
     let nickname = '';
     let currentTool = 'draw';
     let isDrawing = false;
