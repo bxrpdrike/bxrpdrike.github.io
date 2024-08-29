@@ -114,18 +114,18 @@ window.onload = function() {
         // ... (Handle end of drawing for select and fill tools)
     }
 
-    function draw(e) {
+    async function draw(e) {
         if (!isDrawing) return;
-
+    
         const canvasRect = canvas.getBoundingClientRect();
         const x = (e.clientX - canvasRect.left - translateX) / scale;
         const y = (e.clientY - canvasRect.top - translateY) / scale;
-
+    
         if (currentTool === 'draw' || currentTool === 'eraser') {
             ctx.lineWidth = thickness;
             ctx.lineCap = 'round';
             ctx.strokeStyle = (currentTool === 'eraser') ? '#ffffff' : color; // White for eraser
-
+    
             ctx.lineTo(x, y);
             ctx.stroke();
         } else if (currentTool === 'hand') {
@@ -135,13 +135,13 @@ window.onload = function() {
         } else if (currentTool === 'select') {
             // ... (Handle selection dragging/resizing)
         }
-
+    
         // Save to Supabase (only for drawing/erasing for now)
         if (currentTool === 'draw' || currentTool === 'eraser') {
-            const { data, error } = await supabase
+            const { data, error } = await supabase // This line is fine now
                 .from('whiteboard_data')
                 .insert([{ x, y, color, size: thickness, type: currentTool, nickname }]);
-
+    
             if (error) console.error("Error saving to Supabase:", error);
         }
     }
