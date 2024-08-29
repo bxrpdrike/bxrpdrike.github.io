@@ -1,17 +1,27 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 #whiteboard {
     border: 1px solid black;
     cursor: crosshair;
+    margin-top: 20px;
 }
 
 #login-screen {
-    margin-top: 20%;
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #whiteboard-container {
     margin-top: 20px;
+}
+
+input[type="password"], input[type="color"], input[type="range"], button {
+    margin: 10px;
 }

@@ -23,6 +23,11 @@ let currentTool = 'draw'; // 'draw' or 'text'
 
 // Validate Password
 function validatePassword() {
+    if (!passwordInput.value) {
+        errorMessage.textContent = 'Password cannot be empty.';
+        return;
+    }
+
     if (passwordInput.value === PASSWORD) {
         loginScreen.style.display = 'none';
         whiteboardContainer.style.display = 'block';
@@ -37,8 +42,8 @@ function initializeWhiteboard() {
     canvas.addEventListener('mousedown', startDrawing);
     canvas.addEventListener('mouseup', stopDrawing);
     canvas.addEventListener('mousemove', draw);
-    document.getElementById('color-picker').addEventListener('change', (e) => color = e.target.value);
-    document.getElementById('thickness-slider').addEventListener('change', (e) => thickness = e.target.value);
+    document.getElementById('color-picker').addEventListener('input', (e) => color = e.target.value);
+    document.getElementById('thickness-slider').addEventListener('input', (e) => thickness = e.target.value);
 
     document.getElementById('text-tool').addEventListener('click', () => currentTool = 'text');
     document.getElementById('draw-tool').addEventListener('click', () => currentTool = 'draw');
@@ -48,13 +53,14 @@ function initializeWhiteboard() {
 
 // Drawing functions
 function startDrawing(e) {
+    if (currentTool !== 'draw') return; // Only start drawing if the tool is set to 'draw'
     drawing = true;
-    if (currentTool === 'draw') draw(e);
+    draw(e); // Start drawing immediately
 }
 
 function stopDrawing() {
     drawing = false;
-    ctx.beginPath();
+    ctx.beginPath(); // Reset the drawing path
 }
 
 async function draw(e) {
@@ -69,28 +75,42 @@ async function draw(e) {
     ctx.moveTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
 
     // Save to Supabase
-    const { data, error } = await supabase
-        .from('whiteboard_data')
-        .insert([
-            { x: e.clientX - canvas.offsetLeft, y: e.clientY - canvas.offsetTop, color: color, size: thickness, type: 'draw' }
-        ]);
+    try {
+        const { data, error } = await supabase
+            .from('whiteboard_data')
+            .insert([
+                { x: e.clientX - canvas.offsetLeft, y: e.clientY - canvas.offsetTop, color: color, size: thickness, type: 'draw' }
+            ]);
+        if (error) console.error('Error saving to Supabase:', error.message);
+    } catch (err) {
+        console.error('Unexpected error:', err);
+    }
 }
 
 // Load existing whiteboard data
 async function loadWhiteboardData() {
-    const { data, error } = await supabase
-        .from('whiteboard_data')
-        .select('*');
-    
-    if (data) {
-        data.forEach(item => {
-            ctx.lineWidth = item.size;
-            ctx.lineCap = 'round';
-            ctx.strokeStyle = item.color;
-            ctx.lineTo(item.x, item.y);
-            ctx.stroke();
-            ctx.beginPath();
-            ctx.moveTo(item.x, item.y);
-        });
+    try {
+        const { data, error } = await supabase
+            .from('whiteboard_data')
+            .select('*');
+        
+        if (error) {
+            console.error('Error loading data:', error.message);
+            return;
+        }
+        
+        if (data) {
+            data.forEach(item => {
+                ctx.lineWidth = item.size;
+                ctx.lineCap = 'round';
+                ctx.strokeStyle = item.color;
+                ctx.lineTo(item.x, item.y);
+                ctx.stroke();
+                ctx.beginPath();
+                ctx.moveTo(item.x, item.y);
+            });
+        }
+    } catch (err) {
+        console.error('Unexpected error:', err);
     }
 }
