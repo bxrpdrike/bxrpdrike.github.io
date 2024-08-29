@@ -5,26 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shared Whiteboard</title>
     <link rel="stylesheet" href="../scripts/whiteboard.css">
-    <!-- Include Supabase library -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.35.3/dist/umd/supabase.min.js"></script>
 </head>
 <body>
     <div id="login-screen">
-        <h2>Enter Password to Access Whiteboard</h2>
+        <p>I locked this board, what's the password?</p> 
+        <input type="text" id="nickname-input" placeholder="Enter Nickname">
         <input type="password" id="password-input" placeholder="Enter Password">
         <button onclick="validatePassword()">Submit</button>
         <p id="error-message" style="color: red;"></p>
     </div>
-    
+
     <div id="whiteboard-container" style="display: none;">
-        <canvas id="whiteboard" width="800" height="600"></canvas>
-        <br>
-        <label for="color">Color:</label>
-        <input type="color" id="color-picker" value="#000000">
-        <label for="thickness">Thickness:</label>
-        <input type="range" id="thickness-slider" min="1" max="10" value="2">
-        <button id="text-tool">Text Tool</button>
-        <button id="draw-tool">Draw Tool</button>
+        <div id="toolbar">
+            <label for="color">Color:</label>
+            <input type="color" id="color-picker" value="#000000">
+            <label for="thickness">Thickness:</label>
+            <input type="range" id="thickness-slider" min="1" max="10" value="2">
+
+            <button id="draw-tool">Draw</button>
+            <button id="eraser-tool">Eraser</button>
+            <button id="text-tool">Text</button>
+            <button id="select-tool">Select</button>
+            <button id="fill-tool">Fill</button>
+
+            <button id="undo-button">Undo</button>
+            <button id="redo-button">Redo</button>
+
+            <button id="hand-tool">Hand</button>
+            <button id="zoom-in">Zoom In</button>
+            <button id="zoom-out">Zoom Out</button>
+        </div>
+
+        <div id="canvas-container"> 
+            <canvas id="whiteboard"></canvas>
+        </div>
     </div>
 
     <script src="../scripts/whiteboard.js"></script>
