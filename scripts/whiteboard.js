@@ -1,14 +1,9 @@
-// Ensure that the Supabase client is initialized after loading the script
-const SUPABASE_URL = 'https://jsorbpmakyqrjopxswzh.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Impzb3JicG1ha3lxcmpvcHhzd3poIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjQ5NTU1OTIsImV4cCI6MjA0MDUzMTU5Mn0.8RCd2J5Koxeqdxbf8cgqukApw-or2IN9kFC5zBTEAZs';
-
-const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-// Wait until the DOM is fully loaded
 window.onload = function() {
-    // Constants
-    const PASSWORD = 'skibidi';
+    const SUPABASE_URL = 'https://jsorbpmakyqrjopxswzh.supabase.co';
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Impzb3JicG1ha3lxcmpvcHhzd3poIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjQ5NTU1OTIsImV4cCI6MjA0MDUzMTU5Mn0.8RCd2J5Koxeqdxbf8cgqukApw-or2IN9kFC5zBTEAZs';
+    const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-    // HTML Elements
+    const PASSWORD = 'skibidi';
     const loginScreen = document.getElementById('login-screen');
     const whiteboardContainer = document.getElementById('whiteboard-container');
     const passwordInput = document.getElementById('password-input');
@@ -19,13 +14,9 @@ window.onload = function() {
     let drawing = false;
     let color = document.getElementById('color-picker').value;
     let thickness = document.getElementById('thickness-slider').value;
+    let currentTool = 'draw';
 
-    // Tools
-    let currentTool = 'draw'; // 'draw' or 'text'
-
-    // Validate Password
     function validatePassword() {
-        console.log("validatePassword function called.");
         if (!passwordInput.value) {
             errorMessage.textContent = 'Password cannot be empty.';
             return;
@@ -40,7 +31,6 @@ window.onload = function() {
         }
     }
 
-    // Initialize the whiteboard
     function initializeWhiteboard() {
         canvas.addEventListener('mousedown', startDrawing);
         canvas.addEventListener('mouseup', stopDrawing);
@@ -52,9 +42,9 @@ window.onload = function() {
         document.getElementById('draw-tool').addEventListener('click', () => currentTool = 'draw');
 
         loadWhiteboardData();
+        subscribeToRealTimeUpdates();
     }
 
-    // Drawing functions
     function startDrawing(e) {
         drawing = true;
         if (currentTool === 'draw') draw(e);
@@ -82,27 +72,40 @@ window.onload = function() {
             .insert([
                 { x: e.clientX - canvas.offsetLeft, y: e.clientY - canvas.offsetTop, color: color, size: thickness, type: 'draw' }
             ]);
+
+        if (error) console.error("Error saving to Supabase:", error);
     }
 
-    // Load existing whiteboard data
     async function loadWhiteboardData() {
         const { data, error } = await supabase
             .from('whiteboard_data')
             .select('*');
 
         if (data) {
-            data.forEach(item => {
-                ctx.lineWidth = item.size;
-                ctx.lineCap = 'round';
-                ctx.strokeStyle = item.color;
-                ctx.lineTo(item.x, item.y);
-                ctx.stroke();
-                ctx.beginPath();
-                ctx.moveTo(item.x, item.y);
-            });
+            data.forEach(item => drawFromData(item));
+        } else if (error) {
+            console.error("Error loading data from Supabase:", error);
         }
     }
 
-    // Expose the validatePassword function to global scope
+    function drawFromData(item) {
+        ctx.lineWidth = item.size;
+        ctx.lineCap = 'round';
+        ctx.strokeStyle = item.color;
+        ctx.lineTo(item.x, item.y);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(item.x, item.y);
+    }
+
+    function subscribeToRealTimeUpdates() {
+        supabase
+            .from('whiteboard_data')
+            .on('INSERT', payload => {
+                drawFromData(payload.new);
+            })
+            .subscribe();
+    }
+
     window.validatePassword = validatePassword;
 };
