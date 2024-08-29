@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>this is my website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="h-screen w-full">
+    <div class="fixed top-0 left-0 right-0 shadow-md bg-white">
+      <div class="text-3xl p-3">Web rtc stuff</div>
+    </div>
+    <canvas id="whiteboard"></canvas>
+    <div class="w-[300px] aspect-video bg-black fixed top-20 left-2 rounded-md">
+      <video id="there_video" autoplay class="w-full h-full"></video>
+    </div>
+    <div
+      class="bottom-2 fixed left-1/2 transform -translate-x-1/2 bg-white rounded-full flex gap-3"
+    >
+      <div class="p-2 bg-white shadow-md rounded-full">
+        <img
+          width="34"
+          height="34"
+          src="https://cdn-icons-png.flaticon.com/512/597/597177.png "
+          id="start_call"
+        />
+      </div>
+      <div class="p-2 bg-white shadow-md rounded-full">
+        <img
+          width="34"
+          height="34"
+          src="   https://cdn-icons-png.flaticon.com/512/3277/3277337.png"
+          id="clear_canvas"
+        />
+      </div>
+    </div>
+    <script>
+      const io = new WebSocket('ws://localhost:8080');
+      io.onopen = (ev) => {
+        console.log('web socket connection made');
+      };
+
+      window.onload = async () => {
+        const canvas = document.getElementById('whiteboard');
+        const video = document.getElementById('there_video');
+        const start_call = document.getElementById('start_call');
+        const clear_canvas = document.getElementById('clear_canvas');
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const ctx = canvas.getContext('2d');
+        ctx.lineWidth = 2;
+
+        //all the application states
+        let prev_x = 0;
+        let prev_y = 0;
+        let is_mouse_down = false;
+        const servers = {
+          iceServers: [
+            {
+              urls: [
+                'stun:stun1.l.google.com:19302',
+                'stun:stun2.l.google.com:19302',
+              ],
+            },
+          ],
+          iceCandidatePoolSize: 10,
+        };
+        const pc = new RTCPeerConnection(servers);
+
+        const remoteStream = new MediaStream();
+
+        pc.addEventListener('connectionstatechange', (ev) => {
+          if (pc.connectionState === 'connected') {
+            console.log('Connected to the next person');
+          }
+        });
+
+        canvas.onmousedown = () => {
+          is_mouse_down = true;
+        };
+
+        canvas.onmouseup = () => {
+          is_mouse_down = false;
+        };
+
+        setInterval(() => {
+          //write the base 64 value of to the data channel
+          const base_64 = canvas.toDataURL();
+          if (io.readyState == 1) {
+            io.send(
+              JSON.stringify({
+                name: 'canvas',
+                data: base_64,
+              })
+            );
+          }
+        }, 100);
+
+        clear_canvas.onclick = () => {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+        };
+
+        canvas.onmousemove = (ev) => {
+          //try out our context
+          if (is_mouse_down) {
+            ctx.beginPath();
+            ctx.moveTo(prev_x, prev_y);
+            ctx.lineTo(ev.clientX, ev.clientY);
+            ctx.closePath();
+            ctx.stroke();
+          }
+
+          prev_x = ev.clientX;
+          prev_y = ev.clientY;
+        };
+
+        //let's show our video
+        const stream = await navigator.mediaDevices.getUserMedia({
+          video: true,
+          audio: true,
+        });
+
+        stream.getTracks().forEach((track) => {
+          pc.addTrack(track, stream);
+        });
+
+        pc.ontrack = (ev) => {
+          ev.streams[0].getTracks().forEach((track) => {
+            remoteStream.addTrack(track);
+          });
+        };
+
+        video.srcObject = remoteStream;
+
+        pc.onicecandidate = (ev) => {
+          if (ev.candidate) {
+            io.send(
+              JSON.stringify({
+                name: 'ice',
+                data: ev.candidate,
+              })
+            );
+          }
+        };
+
+        //create an offer
+        start_call.onclick = async () => {
+          const offer = await pc.createOffer();
+          await pc.setLocalDescription(offer);
+
+          io.send(
+            JSON.stringify({
+              name: 'offer',
+              data: {
+                type: offer.type,
+                sdp: offer.sdp,
+              },
+            })
+          );
+        };
+
+        io.onmessage = async (ev) => {
+          const msg = JSON.parse(ev.data);
+
+          if (msg.name === 'canvas') {
+            const base_64_remote = msg.data;
+            const remote_image = new Image();
+            remote_image.src = base_64_remote;
+            remote_image.onload = () => {
+              ctx.drawImage(remote_image, 0, 0);
+            };
+          }
+
+          if (msg.name === 'offer') {
+            console.log('setting remote');
+            await pc.setRemoteDescription(new RTCSessionDescription(msg.data));
+            const answer = await pc.createAnswer();
+            await pc.setLocalDescription(answer);
+            io.send(
+              JSON.stringify({
+                name: 'answer',
+                data: answer,
+              })
+            );
+          }
+          if (msg.name === 'answer') {
+            console.log('setting remote');
+            await pc.setRemoteDescription(new RTCSessionDescription(msg.data));
+          }
+          if (msg.name === 'ice') {
+            await pc.addIceCandidate(msg.data);
+          }
+        };
+      };
+    </script>
+  </body>
+</html>
