@@ -1,22 +1,22 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    margin: 0; /* Remove default margins */
-    padding: 0; /* Remove default padding */
-    overflow: hidden; /* Prevent scrolling on the body */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 #canvas-container {
-    width: 100vw; /* Take up full viewport width */
-    height: 100vh; /* Take up full viewport height */
-    overflow: auto; 
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    position: relative; /* To position the selection and text input absolutely */
 }
+
 #whiteboard {
     border: 1px solid black;
-    cursor: crosshair;
-    /* Make the canvas expandable */
     width: 2000px; 
-    height: 2000px; 
+    height: 2000px;
 }
 
 #login-screen {
@@ -29,7 +29,7 @@ body {
 #whiteboard-container {
     display: flex;
     flex-direction: column;
-    height: 100vh; /* Take up full viewport height */
+    height: 100vh;
 }
 
 #toolbar {
@@ -38,9 +38,33 @@ body {
 }
 
 input[type="password"], 
-input[type="text"], /* Add styling for the nickname input */
-input[type="color"], 
-input[type="range"], 
+input[type="text"],
+input[type="color"],
+input[type="range"],
 button {
     margin: 5px;
+}
+
+/* Selection styles */
+#whiteboard .selection {
+    border: 1px dashed blue;
+    position: absolute;
+}
+
+#whiteboard .selection-handle {
+    width: 5px;
+    height: 5px;
+    background-color: blue;
+    border: 1px solid black;
+    position: absolute;
+    cursor: nwse-resize;
+}
+
+/* Text tool input styles */
+#whiteboard input[type="text"] {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-family: Arial; /* Match the canvas font */
+    /* Add more styles as needed (e.g., padding, box-shadow) */
 }

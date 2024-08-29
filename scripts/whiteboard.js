@@ -2,10 +2,11 @@ window.onload = function() {
     const SUPABASE_URL = 'https://jsorbpmakyqrjopxswzh.supabase.co';
     const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Impzb3JicG1ha3lxcmpvcHhzd3poIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjQ5NTU1OTIsImV4cCI6MjA0MDUzMTU5Mn0.8RCd2J5Koxeqdxbf8cgqukApw-or2IN9kFC5zBTEAZs';
     const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-    const loginScreen = document.getElementById('login-screen');
-    const whiteboardContainer = document.getElementById('whiteboard-container');
-    const passwordInput = document.getElementById('password-input'); 
-    const errorMessage = document.getElementById('error-message');
+
+    // User Identification (using session IDs for now, consider Supabase auth later)
+    let userId = localStorage.getItem('userId') || Math.random().toString(36).substr(2, 9); 
+    localStorage.setItem('userId', userId);
+
     let nickname = '';
     let currentTool = 'draw';
     let isDrawing = false;
@@ -15,82 +16,51 @@ window.onload = function() {
     let scale = 1;
     let translateX = 0;
     let translateY = 0;
-    let selectedArea = null; 
+    let selectedArea = null;
     let isDraggingSelection = false;
     let selectionOffsetX, selectionOffsetY;
 
-    function validatePassword() {
-        nickname = document.getElementById('nickname-input').value;
-        if (!nickname) {
-            errorMessage.textContent = 'Nickname cannot be empty.';
-            return;
-        }
-    
-        const password = passwordInput.value;
-        if (!password) {
-            errorMessage.textContent = 'Password cannot be empty.';
-            return;
-        }
-    
-        // Check if password is in local storage (for IP-based bypass)
-        const storedPassword = localStorage.getItem('whiteboardPassword');
-        let loginCount = localStorage.getItem('loginCount') || 0; // Get login count or initialize to 0
-    
-        if (password === PASSWORD || password === storedPassword) {
-            // Store password in local storage for future bypass
-            localStorage.setItem('whiteboardPassword', password);
-    
-            // Reset login count if the correct password is entered
-            loginCount = 0; 
-    
-            loginScreen.style.display = 'none';
-            whiteboardContainer.style.display = 'block';
-            initializeWhiteboard();
-        } else {
-            errorMessage.textContent = 'Incorrect password, try again.';
-    
-            // Increment login count if the password is incorrect
-            loginCount++;
-        }
-    
-        // Store updated login count
-        localStorage.setItem('loginCount', loginCount);
-    
-        // Check if login count reached 10
-        if (loginCount >= 10) {
-            // Clear stored password and login count
-            localStorage.removeItem('whiteboardPassword');
-            localStorage.removeItem('loginCount');
-        }
-    }
+    // ... (validatePassword function, with nickname handling and IP-based bypass)
 
     function initializeWhiteboard() {
         // ... (canvas event listeners, color/thickness listeners)
 
-        document.getElementById('eraser-tool').addEventListener('click', () => { 
-            currentTool = 'eraser'; 
-            canvas.style.cursor = 'url(eraser-cursor.png), auto'; // Assuming you have an eraser cursor image
+        document.getElementById('eraser-tool').addEventListener('click', () => {
+            currentTool = 'eraser';
+            canvas.style.cursor = 'url(eraser-cursor.png), auto'; 
         });
-        document.getElementById('select-tool').addEventListener('click', () => currentTool = 'select');
-        document.getElementById('fill-tool').addEventListener('click', () => currentTool = 'fill');
-        document.getElementById('undo-button').addEventListener('click', undo);
-        document.getElementById('redo-button').addEventListener('click', redo);
-        document.getElementById('hand-tool').addEventListener('click', () => { 
-            currentTool = 'hand'; 
-            canvas.style.cursor = 'grab'; 
-        });
-        document.getElementById('zoom-in').addEventListener('click', zoomIn);
-        document.getElementById('zoom-out').addEventListener('click', zoomOut);
+        // ... (add event listeners for other tools: select, fill, text)
 
         canvas.addEventListener('wheel', handleMouseWheel);
         document.addEventListener('keydown', handleKeyDown);
-        canvas.addEventListener('contextmenu', (e) => e.preventDefault()); // Prevent right-click menu
+        canvas.addEventListener('contextmenu', (e) => e.preventDefault());
 
         loadWhiteboardData();
         subscribeToRealTimeUpdates();
 
         resizeCanvas();
         window.addEventListener('resize', resizeCanvas);
+
+        canvas.addEventListener('mousedown', (e) => {
+            if (e.button === 1) { // Middle mouse button (wheel button)
+                currentTool = 'hand'; // Temporarily switch to hand tool
+                canvas.style.cursor = 'grabbing';
+                isDrawing = true; // Start panning
+            }
+            else {
+                startDrawing(e); 
+            }
+        });
+        
+        canvas.addEventListener('mouseup', (e) => {
+            if (e.button === 1) { // Middle mouse button (wheel button)
+                canvas.style.cursor = 'grab'; // Reset cursor
+                isDrawing = false; // Stop panning
+            }
+            else {
+                stopDrawing(e);
+            }
+        });
     }
 
     function startDrawing(e) {
@@ -103,20 +73,76 @@ window.onload = function() {
             ctx.beginPath();
             ctx.moveTo(startX, startY);
         } else if (currentTool === 'text') {
-            // ... (Implement text tool logic here)
+            createTextBox(startX, startY);
         } else if (currentTool === 'select') {
-            // ... (Implement select tool start logic here)
-        } 
+            startSelection(e);
+        }
 
-        history.push({ tool: currentTool, ...actionData }); // Capture action for undo/redo
-        historyIndex++;
+        // ... (Push to history for undo/redo)
     }
 
     function stopDrawing(e) {
         isDrawing = false;
         ctx.beginPath(); // Reset the path for drawing tools
 
-        // ... (Handle end of drawing for select and fill tools)
+        if (currentTool === 'select') {
+            endSelection(e);
+        } else if (currentTool === 'fill') {
+            fillArea(e);
+        }
+    }
+        };
+        // Event listeners for new tools
+        document.getElementById('text-tool').addEventListener('click', () => {
+            currentTool = 'text';
+            canvas.style.cursor = 'text';
+        });
+
+        // ... (Event listeners for select, fill, undo, redo, hand, zoom in, zoom out remain the same)
+
+        canvas.addEventListener('wheel', handleMouseWheel);
+        document.addEventListener('keydown', handleKeyDown);
+        canvas.addEventListener('contextmenu', (e) => e.preventDefault()); 
+
+        loadWhiteboardData();
+        subscribeToRealTimeUpdates();
+
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+    
+
+    function startDrawing(e) {
+        isDrawing = true;
+        const canvasRect = canvas.getBoundingClientRect();
+        startX = (e.clientX - canvasRect.left - translateX) / scale;
+        startY = (e.clientY - canvasRect.top - translateY) / scale;
+
+        if (currentTool === 'draw' || currentTool === 'eraser') {
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+        } else if (currentTool === 'text') {
+            createTextBox(startX, startY);
+        } else if (currentTool === 'select') {
+            startSelection(e);
+        }
+
+        // Push initial action to history (for undo/redo)
+        history.push({ tool: currentTool, ...getActionData() }); 
+        historyIndex++;
+    }
+
+    function stopDrawing(e) {
+        isDrawing = false;
+        ctx.beginPath(); 
+
+        if (currentTool === 'select') {
+            endSelection(e);
+        } else if (currentTool === 'fill') {
+            fillArea(e);
+        } else {
+            // For other tools, save the action to Supabase
+            saveActionToSupabase();
+        }
     }
 
     async function draw(e) {
@@ -127,66 +153,517 @@ window.onload = function() {
         const y = (e.clientY - canvasRect.top - translateY) / scale;
     
         if (currentTool === 'draw' || currentTool === 'eraser') {
-            ctx.lineWidth = thickness;
-            ctx.lineCap = 'round';
-            ctx.strokeStyle = (currentTool === 'eraser') ? '#ffffff' : color; // White for eraser
+          ctx.lineWidth = thickness;
+          ctx.lineCap = 'round';
+          ctx.strokeStyle = currentTool === 'eraser' ? '#ffffff' : color;
     
-            ctx.lineTo(x, y);
-            ctx.stroke();
+          ctx.lineTo(x, y);
+          ctx.stroke();
         } else if (currentTool === 'hand') {
+          translateX += e.movementX;
+          translateY += e.movementY;
+          redrawCanvas();
+        } else if (currentTool === 'select') {
+          handleSelectionDrag(e);
+        } // ... (existing code in draw function)
+        
+        else if (currentTool === 'hand' || e.buttons === 4) { // Hand tool or middle mouse button
             translateX += e.movementX;
             translateY += e.movementY;
-            redrawCanvas(); // Redraw everything with new translation
-        } else if (currentTool === 'select') {
-            // ... (Handle selection dragging/resizing)
-        }
+            redrawCanvas();}
+        } 
+        
+        // ... (rest of the draw function)
     
         // Save to Supabase (only for drawing/erasing for now)
         if (currentTool === 'draw' || currentTool === 'eraser') {
-            const { data, error } = await supabase // This line is fine now
-                .from('whiteboard_data')
-                .insert([{ x, y, color, size: thickness, type: currentTool, nickname }]);
+          const { error } = await supabase
+            .from('whiteboard_data')
+            .insert([{ x, y, color, size: thickness, type: currentTool, nickname, userId }]);
     
-            if (error) console.error("Error saving to Supabase:", error);
+          if (error) console.error("Error saving to Supabase:", error);
         }
-    }
-
-    async function loadWhiteboardData() {
-        // ... (load and draw existing data, similar to before)
-    }
-
-    function drawFromData(item) {
+      
+    
+      async function loadWhiteboardData() {
+        const { data, error } = await supabase.from('whiteboard_data').select('*');
+    
+        if (data) {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          data.forEach((item) => drawFromData(item));
+        } else if (error) {
+          console.error("Error loading data from Supabase:", error);
+        }
+      }
+    
+      function drawFromData(item) {
+        ctx.save();
+        ctx.scale(scale, scale);
+        ctx.translate(translateX, translateY);
+    
         ctx.lineWidth = item.size;
         ctx.lineCap = 'round';
         ctx.strokeStyle = item.color;
-
+    
         if (item.type === 'draw' || item.type === 'eraser') {
-            ctx.lineTo(item.x, item.y);
-            ctx.stroke();
-            ctx.beginPath();
-            ctx.moveTo(item.x, item.y);
-        } 
-        // ... (Handle rendering for other types: text, select, fill, etc.)
-
+          ctx.lineTo(item.x, item.y);
+          ctx.stroke();
+          ctx.beginPath();
+          ctx.moveTo(item.x, item.y);
+        } else if (item.type === 'text') {
+          ctx.font = `${item.size}px Arial`;
+          ctx.fillStyle = item.color;
+          ctx.fillText(item.text, item.x, item.y);
+        } else if (item.type === 'select') {
+          ctx.strokeStyle = 'blue';
+          ctx.lineWidth = 1;
+          ctx.strokeRect(item.x, item.y, item.width, item.height);
+        } else if (item.type === 'fill') {
+          ctx.fillStyle = item.color;
+          ctx.fillRect(item.x, item.y, item.width, item.height);
+        }
+        else if (item.type === 'text') {
+            ctx.font = `${item.size}px Arial`;
+            ctx.fillStyle = item.color;
+            ctx.fillText(item.text, item.x, item.y);
+        }
+    
         // Display nickname
-        if (item.nickname) {
-            ctx.font = '12px Arial';
-            ctx.fillStyle = 'black';
-            ctx.fillText(item.nickname, item.x + 5, item.y - 5);
+        if (item.nickname && item.userId !== userId) {
+          ctx.font = '12px Arial';
+          ctx.fillStyle = 'black';
+          ctx.fillText(item.nickname, item.x + 5, item.y - 5);
+        }
+    
+        ctx.restore();
+      }
+    
+      function subscribeToRealTimeUpdates() {
+        supabase
+          .from('whiteboard_data')
+          .on('INSERT', (payload) => {
+            if (payload.new.userId !== userId) {
+              drawFromData(payload.new);
+            }
+          })
+          .subscribe();
+      }
+    
+      function handleMouseWheel(e) {
+        e.preventDefault();
+        const zoomFactor = 1.1;
+        const zoom = e.deltaY < 0 ? zoomFactor : 1 / zoomFactor;
+    
+        const canvasRect = canvas.getBoundingClientRect();
+        const mouseX = e.clientX - canvasRect.left;
+        const mouseY = e.clientY - canvasRect.top;   
+    
+    
+        translateX -= (mouseX - translateX) * (zoom - 1);
+        translateY -= (mouseY - translateY) * (zoom - 1);
+        scale *= zoom;
+    
+        redrawCanvas();
+      }
+    
+      function handleKeyDown(e) {
+        if (e.ctrlKey && e.key === 'z') {
+          e.preventDefault();
+          undo();
+        } else if (e.ctrlKey && e.key === 'y') {
+          e.preventDefault();
+          redo();
+        }
+      }
+    
+      function resizeCanvas() {
+        const containerWidth = canvasContainer.clientWidth;
+        const containerHeight = canvasContainer.clientHeight;
+        const canvasRect = canvas.getBoundingClientRect();
+
+        // Check if scrolling near right or bottom edge
+        const expandThreshold = 100; // Adjust as needed
+        if (canvasRect.right - window.innerWidth < expandThreshold) {
+            canvas.width += 1000; // Expand width by 1000 pixels (adjust as needed)
+        }
+        if (canvasRect.bottom - window.innerHeight < expandThreshold) {
+            canvas.height += 1000; // Expand height
+        }
+        const newCanvasWidth = Math.max(canvas.width, (containerWidth + translateX) / scale);
+        const newCanvasHeight = Math.max(canvas.height, (containerHeight + translateY) / scale);
+    
+        if (newCanvasWidth > canvas.width || newCanvasHeight > canvas.height) {
+          const tempCanvas = document.createElement('canvas');
+          tempCanvas.width = canvas.width;
+          tempCanvas.height = canvas.height;
+          const tempCtx = tempCanvas.getContext('2d');
+          tempCtx.drawImage(canvas, 0, 0);
+    
+          canvas.width   
+     = newCanvasWidth;
+          canvas.height = newCanvasHeight;
+    
+          ctx.drawImage(tempCanvas, 0, 0);
+    
+          ctx.scale(scale, scale);
+          ctx.translate(translateX, translateY);
+        }
+      }
+    
+      function redrawCanvas() {
+        ctx.save();
+        ctx.setTransform(1, 0, 0, 1, 0, 0);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.restore();
+    
+        ctx.scale(scale, scale);
+        ctx.translate(translateX, translateY);
+    
+        history.forEach(item => drawFromData(item));
+      }
+    
+      function undo() {
+        if (historyIndex > 0) {
+          historyIndex--;
+          redrawCanvas();
+        }
+      }
+    
+      function redo() {
+        if (historyIndex < history.length - 1) {
+          historyIndex++;
+          redrawCanvas();
+        }
+      }
+    
+      function createTextBox(x, y) {
+        const textInput = document.createElement('input');
+        textInput.type = 'text';
+        textInput.style.position = 'absolute';
+        textInput.style.left   
+     = (x * scale + translateX + canvas.offsetLeft) + 'px';
+        textInput.style.top = (y * scale + translateY + canvas.offsetTop) + 'px';
+        textInput.style.fontSize = (thickness * scale) + 'px';
+        textInput.style.color = color;
+        textInput.style.border = 'none';
+        textInput.style.outline = 'none';
+        textInput.style.backgroundColor = 'transparent';
+        document.body.appendChild(textInput);
+    
+        textInput.focus();
+    
+        textInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                const text = textInput.value;
+                ctx.font = textInput.style.fontSize + ' Arial';
+                ctx.fillStyle = textInput.style.color;
+                ctx.fillText(text, x, y + parseInt(textInput.style.fontSize)); 
+    
+                saveActionToSupabase({
+                    x, y,
+                    text,
+                    color: textInput.style.color,
+                    size: parseInt(textInput.style.fontSize) / scale, 
+                    type: 'text'
+                });
+    
+                textInput.remove();
+            }
+        });
+    }
+    
+            textInput.remove();
+// ... (Other functions and variables)
+
+function startSelection(e) {
+    const canvasRect = canvas.getBoundingClientRect();
+    startX = (e.clientX - canvasRect.left - translateX) / scale;
+    startY = (e.clientY - canvasRect.top - translateY) / scale;
+
+    // Check if clicking inside an existing selection for dragging/resizing
+    if (selectedArea && ctx.isPointInPath(startX, startY)) {
+        isDraggingSelection = true;
+        selectionOffsetX = startX - selectedArea.x;
+        selectionOffsetY = startY - selectedArea.y;
+
+        // Check if clicking near a corner for resizing
+        const handleSize = 5 / scale; // Adjust handle size based on zoom
+        if (isNearCorner(startX, startY, 'topLeft', handleSize)) {
+            selectedArea.isResizing = true;
+            selectedArea.resizeCorner = 'topLeft';
+            canvas.style.cursor = 'nwse-resize';
+        } else if (isNearCorner(startX + selectedArea.width, startY, 'topRight', handleSize)) {
+            selectedArea.isResizing = true;
+            selectedArea.resizeCorner = 'topRight';
+            canvas.style.cursor = 'nesw-resize';
+        } else if (isNearCorner(startX, startY + selectedArea.height, 'bottomLeft', handleSize)) {
+            selectedArea.isResizing = true;
+            selectedArea.resizeCorner = 'bottomLeft';
+            canvas.style.cursor = 'nesw-resize';
+        } else if (isNearCorner(startX + selectedArea.width, startY + selectedArea.height, 'bottomRight', handleSize)) {
+            selectedArea.isResizing = true;
+            selectedArea.resizeCorner = 'bottomRight';
+            canvas.style.cursor = 'nwse-resize';
+        }
+    } else {
+        // Start a new selection
+        selectedArea = {
+            x: startX,
+            y: startY,
+            width: 0,
+            height: 0,
+            isResizing: false,
+            resizeCorner: null
+        };
+    }
+}
+
+function endSelection(e) {
+    if (!selectedArea) return;
+
+    const canvasRect = canvas.getBoundingClientRect();
+    const endX = (e.clientX - canvasRect.left - translateX) / scale;
+    const endY = (e.clientY - canvasRect.top - translateY) / scale;
+
+    if (!selectedArea.isResizing) {
+        selectedArea.width = endX - startX;
+        selectedArea.height = endY - startY;
+    }
+
+    // If the selection is too small, clear it
+    if (Math.abs(selectedArea.width) < 5 || Math.abs(selectedArea.height) < 5) {
+        selectedArea = null;
+    } else {
+        // Optionally, save the selection to Supabase
+        // saveActionToSupabase({...selectedArea, type: 'select'});
+    }
+
+    // Reset resizing flag
+    selectedArea.isResizing = false;
+    selectedArea.resizeCorner = null;
+
+    redrawCanvas();
+}
+
+function handleSelectionDrag(e) {
+    if (!selectedArea) return;
+
+    const canvasRect = canvas.getBoundingClientRect();
+    const currentX = (e.clientX - canvasRect.left - translateX) / scale;
+    const currentY = (e.clientY - canvasRect.top - translateY) / scale;
+
+    if (selectedArea.isResizing) {
+        // Handle resizing
+        switch (selectedArea.resizeCorner) {
+            case 'topLeft':
+                selectedArea.x = currentX;
+                selectedArea.y = currentY;
+                selectedArea.width = startX - currentX;
+                selectedArea.height = startY - currentY;
+                break;
+            case 'topRight':
+                selectedArea.y = currentY;
+                selectedArea.width = currentX - startX;
+                selectedArea.height = startY - currentY;
+                break;
+            case 'bottomLeft':
+                selectedArea.x = currentX;
+                selectedArea.width = startX - currentX;
+                selectedArea.height = currentY - startY;
+                break;
+            case 'bottomRight':
+                selectedArea.width = currentX - startX;
+                selectedArea.height = currentY - startY;
+                break;
+        }
+    } else if (isDraggingSelection) {
+        // Handle dragging
+        selectedArea.x = currentX - selectionOffsetX;
+        selectedArea.y = currentY - selectionOffsetY;
+    } else {
+        // Check if mouse is over a resize handle
+        const handleSize = 5 / scale;
+        if (isNearCorner(currentX, currentY, 'topLeft', handleSize)) {
+            canvas.style.cursor = 'nwse-resize';
+        } else if (isNearCorner(currentX, currentY, 'topRight', handleSize)) {
+            canvas.style.cursor = 'nesw-resize';
+        } else if (isNearCorner(currentX, currentY, 'bottomLeft', handleSize)) {
+            canvas.style.cursor = 'nesw-resize';
+        } else if (isNearCorner(currentX, currentY, 'bottomRight', handleSize)) {
+            canvas.style.cursor = 'nwse-resize';
+        } else if (ctx.isPointInPath(currentX, currentY)) {
+            canvas.style.cursor = 'move';
+        } else {
+            canvas.style.cursor = 'default';
         }
     }
 
-    function subscribeToRealTimeUpdates() {
-        supabase
-            .from('whiteboard_data')
-            .on('INSERT', payload => {
-                drawFromData(payload.new);
-            })
-            .subscribe();
+    redrawCanvas(); 
+}
+
+function deleteSelectedArea() {
+    if (!selectedArea) return;
+
+    // Clear the selected area on the canvas
+    ctx.save();
+    ctx.setTransform(1, 0, 0, 1, 0, 0); 
+    ctx.clearRect(
+        selectedArea.x * scale + translateX,
+        selectedArea.y * scale + translateY,
+        selectedArea.width * scale,
+        selectedArea.height * scale
+    );
+    ctx.restore();
+
+    // Remove the corresponding actions from history (you'll need to implement this based on your history structure)
+    // history = history.filter(item => !isActionWithinSelection(item, selectedArea));
+    // historyIndex = history.length - 1;
+
+    // Clear the selection
+    selectedArea = null;
+
+    redrawCanvas();
+
+    // You might also want to delete the selection from Supabase if you're storing it there
+}
+
+function isNearCorner(x, y, corner, handleSize) {
+    switch (corner) {
+        case 'topLeft':
+            return Math.abs(x - selectedArea.x) < handleSize && Math.abs(y - selectedArea.y) < handleSize;
+        case 'topRight':
+            return Math.abs(x - (selectedArea.x + selectedArea.width)) < handleSize && Math.abs(y - selectedArea.y) < handleSize;
+        case 'bottomLeft':
+            return Math.abs(x - selectedArea.x) < handleSize && Math.abs(y - (selectedArea.y + selectedArea.height)) < handleSize;
+        case 'bottomRight':
+            return Math.abs(x - (selectedArea.x + selectedArea.width)) < handleSize && Math.abs(y - (selectedArea.y + selectedArea.height)) < handleSize;
     }
+}
 
-    // ... (Implement other functions: handleMouseWheel, handleKeyDown, resizeCanvas, 
-    //      undo, redo, eraser tool, select tool, fill tool, text tool, selection tool, hand tool)
-
-    window.validatePassword = validatePassword;
-};
+// ... (rest of the code)
+    
+      function handleSelectionDrag(e) {
+        if (!selectedArea || !isDraggingSelection) return;
+    
+        const canvasRect = canvas.getBoundingClientRect();
+        const currentX = (e.clientX - canvasRect.left - translateX) / scale;
+        const currentY = (e.clientY - canvasRect.top - translateY) / scale;
+    
+        selectedArea.x = Math.min(startX, currentX);
+        selectedArea.y = Math.min(startY, currentY);
+        selectedArea.width = Math.abs(currentX - startX);
+        selectedArea.height = Math.abs(currentY - startY);
+    
+        redrawCanvas();
+      }
+    
+      function fillArea(e) {
+        const canvasRect = canvas.getBoundingClientRect();
+        const x = (e.clientX - canvasRect.left - translateX) / scale;
+        const y = (e.clientY - canvasRect.top - translateY) / scale;
+    
+        const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        const pixelData = imageData.data;
+        const targetColor = getPixelColor(x, y);
+    
+        if (color === targetColor) return; // Avoid filling with the same color
+    
+        function getPixelColor(x, y) {
+            const index = (y * imageData.width + x) * 4;
+            return `rgba(${pixelData[index]}, ${pixelData[index + 1]}, ${pixelData[index + 2]}, ${pixelData[index + 3] / 255})`;
+        }
+    
+        function floodFill(x, y) {
+            if (x < 0 || x >= imageData.width || y < 0 || y >= imageData.height) return;
+            if (getPixelColor(x, y) !== targetColor) return;
+    
+            setPixelColor(x, y);
+    
+            floodFill(x + 1, y);
+            floodFill(x - 1, y);
+            floodFill(x, y + 1);
+            floodFill(x, y - 1);
+        }
+    
+        function setPixelColor(x, y) {
+            const index = (y * imageData.width + x) * 4;
+            pixelData[index] = parseInt(color.slice(1, 3), 16); // Red
+            pixelData[index + 1] = parseInt(color.slice(3, 5), 16); // Green
+            pixelData[index + 2] = parseInt(color.slice(5, 7), 16); // Blue
+            pixelData[index + 3] = 255; // Alpha (fully opaque)
+        }
+    
+        floodFill(x, y);
+        ctx.putImageData(imageData, 0, 0);
+    
+        // Save to Supabase
+        saveActionToSupabase({ x, y, color, type: 'fill' });
+    }
+    
+      async function saveActionToSupabase(actionData) {
+        if (!actionData) {
+          actionData = getActionData();
+        }
+    
+        const { error } = await supabase
+          .from('whiteboard_data')
+          .insert([{ ...actionData, userId }]);
+    
+        if (error) console.error("Error saving to Supabase:", error);
+      }
+    
+      function getActionData() {
+        switch (currentTool) {
+            case 'draw':
+            case 'eraser':
+                return {
+                    x: startX,
+                    y: startY,
+                    color,
+                    size: thickness,
+                    type: currentTool
+                };
+            case 'text':
+                // Get the actual text content and color from the text box element
+                const textInput = document.querySelector('input[type="text"]'); // Assuming only one text box exists at a time
+                const text = textInput ? textInput.value : ''; 
+                const textColor = textInput ? textInput.style.color : color; // Fallback to default color if no text box
+    
+                return {
+                    x: startX,
+                    y: startY,
+                    text,
+                    font: 'Arial', 
+                    color: textColor,
+                    size: thickness,
+                    type: 'text'
+                };
+            case 'select':
+                return {
+                    x: selectedArea.x,
+                    y: selectedArea.y,
+                    width: selectedArea.width,
+                    height: selectedArea.height,
+                    type: 'select'
+                };
+            // ... add cases for other tools as you implement them
+            default:
+                return {};
+        }
+    }
+    
+      function zoomIn() {
+          scale *= 1.1;
+          redrawCanvas();
+      }
+    
+      function zoomOut() {
+          scale /= 1.1;
+          redrawCanvas();
+      }
+    
+      // ... (Other tool functions implementation - you'll need to add these based on your specific requirements)
+    
+      window.validatePassword = validatePassword;
+      
