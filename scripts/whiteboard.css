@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#whiteboard {
+    border: 1px solid black;
+    cursor: crosshair;
+}
+
+#login-screen {
+    margin-top: 20%;
+}
+
+#whiteboard-container {
+    margin-top: 20px;
+}
