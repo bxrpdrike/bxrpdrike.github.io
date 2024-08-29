@@ -1,0 +1,416 @@
+<html><head><script src="./scripts/athena.js" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app220.us.archive.org';v.server_ms=249;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="./scripts/bundle-playback.js" charset="utf-8"></script>
+<script type="text/javascript" src="./scripts/wombat.js" charset="utf-8"></script>
+<script>window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden"};</script>
+<script type="text/javascript" src="./scripts/ruffle.js"></script>
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://www.sanriotown.com:80/login/index.php","20011102102152","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1004696512");
+</script>
+<link rel="stylesheet" type="text/css" href="./styles/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="./styles/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+
+<title>
+cherry</title>
+<meta http-equiv="Pragma" content="no-cache">
+<script language="Javascript">
+	var hellokittyLanguage = new Array('us', 'tw', 'kr', 'jp', 'us_noframe');
+	var hellokittyLanguageName = new Array('English', 'Chinese', 'Korean', 'Japanese', 'Hellokitty Office');
+	var hellokittyofficeLanguage = new Array('us');
+	var hellokittyofficeLanguageName = new Array('English');
+	
+	var mymelodyLanguage = new Array('us', 'tw');
+	var mymelodyLanguageName = new Array('English', 'Chinese');
+	
+	var kuririnmailLanguage = new Array('us', 'tw');
+	var kuririnmailLanguageName = new Array('English', 'Chinese');
+
+	var jpSite = new Array('hellokitty.com');
+	var krSite = new Array('hellokitty.com');
+	
+
+function changeSiteLanguage(){
+	domainForm = document.loginForm.domain;
+	languageForm = document.loginForm.mail_language;
+	deleteSelectionOptions(domainForm);
+	
+	if(languageForm.options[languageForm.selectedIndex].value == 'us'){
+		for(i=1; i<usSite.length; i++){
+			domainForm.options[i] = new Option(usSite[i], usSite[i])
+		}
+	}
+	if(languageForm.options[languageForm.selectedIndex].value == 'cn'){
+		for(i=1; i<cnSite.length; i++){
+			domainForm.options[i] = new Option(cnSite[i], cnSite[i])
+		}
+	}
+}
+
+function deleteSelectionOptions(formSelection){
+	var j = formSelection.options.length;
+	for(i=0; i<j; i++){
+		formSelection.options[1] = null;
+	}
+}
+function popUp(url){
+	window.open(url,'','width=650,height=400,resizable=yes,scrollbars=yes,menubar=no');
+}
+
+function popWin(url, wname, w, h, scroll) {
+var winw = (screen.width - w) / 2;
+var winh = (screen.height - h) / 2;
+props = 'height='+h+',width='+w+',top='+winh+',left='+winw+',scrollbars='+scroll+',resizable'
+win = window.open(url, wname, props)
+if (parseInt(navigator.appVersion) >= 4) { win.window.focus(); }
+}
+
+function SetCookie (name,value,expires,path,domain,secure) {
+  document.cookie = name + "=" + escape (value) +
+    ((expires) ? "; expires=" + expires.toGMTString() : "") +
+    ((path) ? "; path=" + path : "") +
+    ((domain) ? "; domain=" + domain : "") +
+    ((secure) ? "; secure" : "");
+}
+
+function GetCookie (name) {
+  var arg = name + "=";
+  var alen = arg.length;
+  var clen = document.cookie.length;
+  var i = 0;
+  while (i < clen) {
+    var j = i + alen;
+    if (document.cookie.substring(i, j) == arg)
+      return getCookieVal (j);
+    i = document.cookie.indexOf(" ", i) + 1;
+    if (i == 0) break; 
+  }
+  return null;
+}
+
+function Setnonflash(){
+	var expdate = new Date ();
+	expdate.setTime (expdate.getTime() + (2400 * 60 * 60 * 1000)); // 24 hrs from now 
+		SetCookie ("interface", "nonflash",expdate,"/");
+}
+
+function changeSiteLogo(){
+var siteLogo1Url ="images/index_kitty01.gif";
+var siteLogoUrl = "images/index_kitty03.gif";
+
+if(document.loginForm.characters.options[document.loginForm.characters.selectedIndex].value=="kuririnmail.com"){
+siteLogo1Url = "images/index_kuririn01.gif";
+siteLogoUrl = "images/index_kuririn03.gif";
+}
+if(document.loginForm.characters.options[document.loginForm.characters.selectedIndex].value=="mymelody.com"){
+siteLogo1Url = "images/index_melody01.gif";
+siteLogoUrl = "images/index_melody03.gif"; 
+}
+if(document.loginForm.characters.options[document.loginForm.characters.selectedIndex].value=="mail.hellokitty.com"){
+siteLogo1Url = "images/index_kitty01.gif";
+siteLogoUrl = "images/index_kitty03.gif"; 
+}
+if(document.loginForm.characters.options[document.loginForm.characters.selectedIndex].value=="hellokitty.us_noframe"){
+siteLogo1Url = "images/index_kitty01.gif";
+siteLogoUrl = "images/index_kitty03.gif"; 
+}
+document.siteLogo1.src=siteLogo1Url;
+document.siteLogo.src=siteLogoUrl;
+}
+
+function checkCharacter(){
+if(document.loginForm.characters.options[document.loginForm.characters.selectedIndex].value=="kuririnmail.com"){
+	document.loginForm.domain.value = "kuririnmail.com";
+}
+if(document.loginForm.characters.options[document.loginForm.characters.selectedIndex].value=="mymelody.com"){
+	document.loginForm.domain.value = "mymelody.com";
+}
+if(document.loginForm.characters.options[document.loginForm.characters.selectedIndex].value=="mail.hellokitty.com"){
+	document.loginForm.domain.value = "mail.hellokitty.com";
+}
+if(document.loginForm.characters.options[document.loginForm.characters.selectedIndex].value=="hellokitty.us_noframe"){
+	document.loginForm.domain.value = "mail.hellokitty.com";
+	document.loginForm.mail_language.value = "us_noframe";
+}}
+</script>
+<style type="text/css">
+<!--
+td {  font-family: "verdana", "Arial","sans-serif"; font-size: 8pt; color: #000000}
+.link {  font-family: "verdana", "Arial", "sans-serif"; font-size: 8pt; color: #000000; text-decoration: none}
+.link:hover {  font-family: "verdana", "Arial","sans-serif"; font-size: 8pt; color: #FFFFCC}
+</style>
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" text="#00008b" link="#4169e1" vlink="#4169e1" alink="#4169e1"><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script>__wm.rw(0);</script>
+<div id="wm-ipp-print">The Wayback Machine - https://web.archive.org/web/20011102102152/http://www.sanriotown.com:80/login/index.php</div>
+<script type="text/javascript">//<![CDATA[
+__wm.bt(725,27,25,2,"web","http://www.sanriotown.com/login/index.php","20011102102152",1996,"https://web-static.archive.org/_static/",["https://web-static.archive.org/_static/css/banner-styles.css?v=S1zqJCYt","https://web-static.archive.org/_static/css/iconochive.css?v=qtvMKcIJ"], false);
+  __wm.rw(1);
+//]]></script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+ 
+<div align="center"><br>
+<table width="750" border="0" cellspacing="0" cellpadding="0" height="84" background="./images/0417_title_bg.gif">
+
+<!--●SANRIOWAVEロゴ● -->
+<tbody><tr>
+<td align="left" width="300" valign="top" height="84">
+<img src="./images/sanriotown.gif" width="300" height="84" alt="SANRIOTOWN"></td>
+<td valign="bottom" align="left" height="84" colspan="2"> 
+<table border="0" cellpadding="0" cellspacing="1" background="/web/20011102102152im_/http://www.sanriotown.com/login/BACKGROUND">
+<tbody><tr align="right"> 
+<td valign="bottom" colspan="2">
+<table width="220" border="0">
+<tbody><tr>
+
+<!--●会員ログインポタン● -->
+<td>
+
+<!--●今すぐ入会ボタン● -->
+<td>
+<a href="./html/index.php.html"><img src="./images/sanriowave_us.gif" border="0"></a></td>
+<td>
+<a href="./html/index_cn.php.html"><img src="./images/sanriowave_cn.gif" border="0"></a></td>
+<td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr align="right">
+<td valign="bottom" colspan="2"><img src="./images/spacer.gif" width="412" height="12"></td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</div>
+
+<!--                  -->
+<div align="center">
+<table width="750" border="0" cellspacing="0" cellpadding="0">
+<tbody><tr><td width="150" bgcolor="#ffc0e1" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="1">
+	<form method="post" action="https://web.archive.org/web/20011102102152/http://mail.hellokitty.com/scripts/common/proxy.main" name="loginForm"></form>
+<input type="hidden" value="Enter" name="show_frame">
+<input type="hidden" value="login" name="action">
+
+	<tbody><tr><td><img src="./images/registered.gif">              </td></tr>
+
+	<tr><td align="center"><font color="#EF4080" size="1" face="Arial, Helvetica, sans-serif">User Name</font></td></tr>
+	<tr><td align="center"><input type="text" name="login" maxlength="24" size="12"></td>
+	</tr><tr><td align="center"><font color="#EF4080" size="1" face="Arial, Helvetica, sans-serif">Password</font></td></tr>
+	<tr><td align="center"><input type="password" maxlength="24" size="12" name="password"></td></tr>
+	<tr><td align="center">
+	<font color="#EF4080" size="1" face="Arial, Helvetica, sans-serif">
+	<tr><td align="center" background="./images/sanriotown_bg.gif"><input type="image" src="./images/sanriotown_login.gif" border="0&quot;"></td></tr>
+	<tr><td><a href="./html/tos.php.html"><img src="./images/sanriotown_signup.gif" border="0"></a></td></tr>
+	<tr><td>
+	<table width="100%" bgcolor="#FF6790" cellspacing="0">
+	<tbody><tr><td>
+	<table width="100%" bgcolor="#FDDEEE" cellpadding="0" cellspacing="3">
+	<tbody><tr><td>
+	<font color="#EF4080" size="1" face="Arial, Helvetica, sans-serif">
+	Input your username and password to access additional content <img src="./images/joobi.png" width="10" height="10"> <img src="./images/joobi.png" width="10" height="10">
+	</font></td></tr>
+	</tbody></table>
+	</td></tr>
+	</tbody></table>
+	</td></tr>
+	<tr><td><img src="./images/spacer.gif" width="8" height="8"></td></tr>
+	</tbody></table>
+<!--                   -->
+	<table border="0" cellpadding="0" cellspacing="0">
+	<tbody><tr><td><img src="./images/spacer.gif" width="10" height="5"></td>
+	<td>
+	<a href="./html/contact_us.htm', 'contactus' , 650, 500, 'yes').html">
+	<img src="./images/st_contactus.gif" border="0"></a></td>
+	<td><img src="./images/spacer.gif" width="5" height="5"></td>
+	<td><a href="./html/contact_us.htm', 'contactus' , 650, 500, 'yes').html">
+	<font color="#EF4080" size="2" face="Arial, Helvetica, sans-serif">Contact Us</font></a></td></tr>
+	<tr><td><img src="./images/spacer.gif" width="10" height="5"></td>
+	<td><a href="./html/links.htm', 'link' , 650, 500, 'yes').html">
+	<img src="./images/st_affiliate.gif" border="0"></a></td>
+	<td><img src="./images/spacer.gif" width="5" height="5"></td>
+	<td><a href="./html/links.htm', 'link' , 650, 500, 'yes').html">
+	<font color="#EF4080" size="2" face="Arial, Helvetica, sans-serif">Affiliate</font></a></td></tr>
+	<tr><td><img src="./images/spacer.gif" width="10" height="5"></td>
+	<td><a href="./html/set_browser.htm', 'setbrowser' , 650, 500, 'yes').html">
+	<img src="./images/st_setbrowser.gif" border="0"></a></td>
+	<td><img src="./images/spacer.gif" width="5" height="5"></td>
+	<td>
+	<a href="./html/set_browser.htm', 'setbrowser' , 650, 500, 'yes').html">
+	<font color="#EF4080" size="2" face="Arial, Helvetica, sans-serif">Set Browser</font>
+	</a></td></tr>
+	<tr><td><img src="./images/spacer.gif" width="10" height="5"></td>
+	<td><a href="./html/abuse.htm', 'antiSpam' , 650, 400, 'yes').html">
+	<img src="./images/st_anti.gif" border="0"></a></td>
+	<td><img src="./images/spacer.gif" width="5" height="5"></td>
+	<td>
+	<a href="./html/abuse.htm', 'antiSpam' , 650, 400, 'yes').html">
+	<font color="#EF4080" size="2" face="Arial, Helvetica, sans-serif">Anti Spam Policy</font></a></td></tr>
+	</tbody></table>
+</td>
+<!--                   -->
+<td bgcolor="#FFFFFF"><img src="./images/spacer.gif" width="30" height="5"></td>
+<td bgcolor="#FFFFFF" valign="top">
+<br>
+	<table border="0" cellpadding="0" cellspacing="0">
+	<tbody><tr align="middle"> 
+		<td valign="top">
+		<a href="./html/birthday.htm', 'contactus' , 650, 500, 'yes').html">
+		<img src="./images/pic_news.gif" alt="Hello kitty" border="0"></a></td>
+	</tr>	</tbody></table>
+	<br>
+	<!--                -->
+	<table border="0" cellspacing="0" width="550">
+          <tbody><tr> 
+            <td bgcolor="#F0AFBF" width="100%" height="87"> 
+              <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                <tbody><tr>
+                <td colspan="3" bgcolor="#ffffff"><img src="./images/community_line.gif"></td>
+                </tr>
+                <tr bgcolor="F1D0D8"> 
+                  <td width="6"><img src="./images/spacer.gif" width="5" height="5"></td>
+                  <td align="left" with="10%" width="30"><img src="./images/sanriopoint.gif"></td>
+                  <td align="left" with="85%" width="576">生日快樂</td>
+                </tr>
+                <tr bgcolor="ffffff"> 
+                  <td width="6" height="46"><img src="./images/spacer.gif" width="5" height="5"></td>
+                  <td with="95%" align="left" colspan="2" height="46"><font color="#7E7E7E">給我的公主，這個世界上最美麗的女孩...
+
+					我愛你勝過宇宙中的一切。我知道這將是我們一起度過的眾多美好生日中的第一個。我希望你喜歡這些禮物，我希望明年我能給你更好的東西，因為你知道我多麼討厭禮品卡，唉，不管怎樣，我試著做些東西，因為只給你禮品卡會顯得很尷尬......所以，你覺得我的網頁設計技巧怎麼樣？很棒吧？對不起啦，我其實很笨，不懂得怎麼編程（我把在電腦科學課上學到的東西全忘了，哭）。
+					
+					不說這些了，我只想說你很了不起，很完美。我知道你可能不相信，但我真的百分百真心話。我實在無法想像我怎麼能夠配得上你，而最神奇的是，我知道你將會比現在更加閃耀。謝謝你為我做的一切。我對你所取得的一切成就以及克服的所有困難感到敬畏。我看到你如此努力，你應該給自己一個大大的讚揚，因為我覺得你並沒有給自己足夠的肯定。
+					
+					我真的非常非常幸運能擁有你。我愛你，超越了所有的言語。我不知道沒有你我該怎麼辦，我永遠屬於你。生日快樂, Cherune <3 <br><br>
+				  </font></td>
+                </tr>
+                <tr bgcolor="F1D0D8"> 
+                  <td width="6"><img src="./images/spacer.gif" width="5" height="5"></td>
+                  <td align="left" with="10%" width="30"><img src="./images/sanriopoint.gif"></td>
+                  <td align="left" with="85%" width="576">每一天</td>
+                </tr>
+                <tr bgcolor="ffffff"> 
+                  <td width="6" height="46"><img src="./images/spacer.gif" width="5" height="5"></td>
+                  <td with="95%" align="left" colspan="2" height="46"><font color="#7E7E7E">
+					你總是在我腦海中。我經常回想起我們剛開始聊天的時候，我一開始就愛上了你，我很高興你選擇了我。我想起你在俄羅斯方塊和西洋棋上打敗我的時候，這可能是我第一次（也許是最後一次）承認我在這些遊戲上真的很差，唉...我想起你的笑聲和聲音，還有你在裝矜持的時候有多可愛。有時候我們打電話的時候，你在做別的事情，我就坐在那裡聽著你，心裡想著，我是怎麼找到像你這樣美麗的人呢？
+
+					你不會相信我每天隨機想到一些你做過的可愛的事，然後就因為你有多可愛而融化（例子實在太多了），說真的，每次我想到你，我的心就跳得很快，呼吸變得有點困難，每次我看到有趣的東西，我的第一反應就是“哦，我要給她看”或者“哦，我要告訴她，她會喜歡這個”。你可能會說這很可悲或黏人，也許是吧，但我就是這樣。說真的，和任何人都從來沒有這樣過，真的沒有。我從來沒有這麼愛上過任何人，但話又說回來，你不只是“任何人”，你是你，這已經說明了一切。只要有你在我身邊，我的未來就一定是幸福的。 <br><br></font></td>
+                </tr>
+                 <tr bgcolor="F1D0D8"> 
+                  <td width="6"><img src="./images/spacer.gif" width="5" height="5"></td>
+                  <td align="left" with="10%" width="30"><img src="./images/sanriopoint.gif"></td>
+                  <td align="left" with="85%" width="576">在過去</td>
+                </tr>
+                <tr bgcolor="ffffff"> 
+                  <td width="6"><img src="./images/spacer.gif" width="5" height="5"></td>
+                  <td with="95%" align="left" colspan="2"><font color="#7E7E7E">
+					我知道我讓你太操心了，對不起 <3 我保證我在改進，我絕不想讓你再有那樣的感受。我們沒有過一次爭吵，而我打算就這樣繼續下去。我們只會越來越親密，我每天都更愛你（我以前不知道這還能再多，但無限加1總是歡迎的，哈）。我們會繼續上升，即使遇到天花板，我們也會突破。我會一直陪在你身邊，確保我們的明天永遠比今天更好。 <br><br></font></td>
+                </tr>
+				<tr bgcolor="F1D0D8"> 
+					<td width="6"><img src="./images/spacer.gif" width="5" height="5"></td>
+					<td align="left" with="10%" width="30"><img src="./images/sanriopoint.gif"></td>
+					<td align="left" with="85%" width="576">噢，仲有</td>
+				  </tr>
+				  <tr bgcolor="ffffff"> 
+					<td width="6"><img src="./images/spacer.gif" width="5" height="5"></td>
+					<td with="95%" align="left" colspan="2"><font color="#7E7E7E">如果你注意到嘅話，喺頁面嘅左邊有個用戶名同密碼嘅嘢。事實上呢，得一個正確答案，我為呢個賬號留咗啲嘢俾你。我有呢個網站一年時間，所以即使我知你可能唔係好在意，如果你真係好無聊同想試下搵到答案，你有365日去試。（我可能有或者可能無畀過啲提示） <br><br></font></td>
+				  </tr>
+                 <tr bgcolor="F1D0D8"> 
+                  <td width="6"><img src="./images/spacer.gif" width="5" height="5"></td>
+                  <td align="left" with="10%" width="30"><img src="./images/sanriopoint.gif"></td>
+                  <td align="left" with="85%" width="576">Extra Excessive Hearts</td>
+                </tr>
+                <tr bgcolor="ffffff"> 
+                  <td width="6"><img src="./images/spacer.gif" width="5" height="5"></td>
+                  <td with="95%" align="left" colspan="2"><font color="#7E7E7E">
+					<3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <br><br> </font></td>
+                </tr>
+                <tr bgcolor="F1D0D8"> 
+                  <td width="6"><img src="./images/spacer.gif" width="5" height="5"></td>
+                  <td align="left" with="10%" width="30"><img src="./images/sanriopoint.gif"></td>
+                  <td align="left" with="85%" width="576">點解呢？</td>
+                </tr>
+                <tr bgcolor="ffffff"> 
+                  <td width="6"><img src="./images/spacer.gif" width="5" height="5"></td>
+                  <td with="95%" align="left" colspan="2"><font color="#7E7E7E">
+                  <br>因為我愛你，傻瓜。<br><br></font>  
+                </tr>
+                 <tr bgcolor="F1D0D8"> 
+                  <td width="6"><img src="./images/spacer.gif" width="5" height="5"></td>
+                  <td align="left" with="10%" width="30"><img src="./images/sanriopoint.gif"></td>
+                  <td align="left" with="85%" width="576">後記
+				  </td>
+                </tr>
+                <tr bgcolor="ffffff"> 
+                  <td width="6"><img src="./images/spacer.gif" width="5" height="5"></td>
+                  <td with="95%" align="left" colspan="2"><font color="#7E7E7E">
+					對唔住我用咁多大寫字母，我只係想令呢段話聽起嚟好正式，補償返我嘅愚蠢，所以我可以話自己係高智商nya。仲有如果呢段話有啲肉麻，對唔住啦，你知我係T-T。仲有唔好覺得我係同性戀，只係因為呢度係Hello Kitty主題（如果你真係以為我係因為你嘅話...） <br><br></font>
+ 		</td>
+                </tr>
+              </tbody></table>
+            </td>
+          </tr>
+        </tbody></table>
+        
+	<!--                -->
+	<br>
+	<!--                -->	
+	<table border="0" cellspacing="0" width="552">
+	<tbody><tr><td bgcolor="#F0AFBF">
+	<table border="0" cellspacing="0" cellpadding="0" width="552" bgcolor="ffffff">
+	<tbody><tr>
+	<td colspan="6" background="/web/20011102102152im_/http://www.sanriotown.com/login/images/line_bg.gif">
+	<img src="./images/kuririn_line.gif"></td>
+	<td background="/web/20011102102152im_/http://www.sanriotown.com/login/images/line_bg.gif" colspan="3"><img src="./images/spacer.gif"></td></tr>
+	<tr>
+	<td><img src="./images/spacer.gif" width="5" height="5"></td>
+	<td align="center"><a href="./html/e_index.htm.html"><img src="./images/kurirn_big.gif" border="0"></a>
+	<br>
+	<font size="2" face="Arial, Helvetica, sans-serif">
+	<a href="./html/e_index.htm.html">CORO<img src="./images/2.gif" border="0">KURIRIN</a>
+	</font></td>
+	<td><img src="./images/spacer.gif" width="10" height="10"></td>
+	<td align="center"><img src="./images/0518_gamec.jpg">
+	<br><font size="1" face="Arial, Helvetica, sans-serif">Games
+	</font></td>
+	<td><img src="./images/spacer.gif" width="10" height="10"></td>
+	<td align="center">
+	<a href="./html/psycho.htm', 'password' , 650, 500, 'no').html">
+	<img src="./images/0518_psy.gif" border="0"></a>
+	<br><font size="1" face="Arial, Helvetica, sans-serif">
+	<a href="./html/psycho.htm', 'password' , 650, 500, 'no').html">
+	Psychologistical test</a>
+	</font></td></tr>
+	</tbody></table>
+	</td></tr>
+	</tbody></table>
+	<!--                -->
+	<br>
+	<br>
+	<table border="0" cellspacing="0" cellpadding="0">
+	<tbody><tr><td><img src="./images/0518_bar_2.gif" width="550" height="18" alt="ワク"></td></tr>
+	<tr><td align="center">
+	<br>
+	<font color="#EF4080" size="2" face="Arial, Helvetica, sans-serif">
+	<nobr>©</nobr>1976, 1989, 1996, 1998, 2001 SANRIO CO., LTD.
+	<br>
+	All rights reserved. Without limiting the rights under copyright reserved above,  no part of this website 
+	may be reproduced in any form (graphic, electronic or mechanical, including photocopying, recording or 
+	taping on information storage and retrieval systems) without the prior written permission 
+	of the copyright owner. 
+	</font></td></tr>
+	</tbody></table>
+	
+</td>
+<!--                  -->
+</tr>
+</tbody></table>
+</div>
+
+
+
+
+</body></html>
