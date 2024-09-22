@@ -64,7 +64,7 @@
 				// Compare encoded inputs with stored encoded credentials
 				if (encodedInputUsername === storedUsername && encodedInputPassword === storedPassword) {
 					// Redirect to letters.html on successful login
-					window.location.href = 'https://www.cherune.site/cherry/letters';
+					window.location.href = 'html/letters.html';
 					return false; // Prevent form from submitting
 				} else {
 					// Display error message
@@ -232,12 +232,12 @@ __wm.bt(725,27,25,2,"web","http://www.sanriotown.com/login/index.php","200111021
 <!-- END WAYBACK TOOLBAR INSERT -->
  
 <div align="center">
-<table width="750" border="0" cellspacing="0" cellpadding="0" height="84" background="./images/0417_title_bg.gif">
+<table width="750" border="0" cellspacing="0" cellpadding="0" height="84" background="../images/0417_title_bg.gif">
 
 <!--●SANRIOWAVEロゴ● -->
 <tbody><tr>
 <td align="left" width="300" valign="top" height="84">
-<img src="./images/sanriotown.gif" width="300" height="84" alt="SANRIOTOWN"></td>
+<img src="../images/sanriotown.gif" width="300" height="84" alt="SANRIOTOWN"></td>
 <td valign="bottom" align="left" height="84" colspan="2"> 
 <table border="0" cellpadding="0" cellspacing="1" background="/web/20011102102152im_/http://www.sanriotown.com/login/BACKGROUND">
 <tbody><tr align="right"> 
@@ -250,12 +250,16 @@ __wm.bt(725,27,25,2,"web","http://www.sanriotown.com/login/index.php","200111021
 
 <!--●今すぐ入会ボタン● -->
 <td>
+<a href="https://www.cherune.site/cherrysbd"><img src="../images/sanriowave_us.gif" border="0"></a></td>
+<td>
+<a href="https://www.cherune.site/index_cn.php"><img src="../images/sanriowave_cn.gif" border="0"></a></td>
+<td>
 </tr>
 </tbody></table>
 </td>
 </tr>
 <tr align="right">
-<td valign="bottom" colspan="2"><img src="./images/spacer.gif" width="412" height="12"></td>
+<td valign="bottom" colspan="2"><img src="../images/spacer.gif" width="412" height="12"></td>
 </tr>
 </tbody></table>
 </td>
@@ -271,9 +275,9 @@ __wm.bt(725,27,25,2,"web","http://www.sanriotown.com/login/index.php","200111021
 <input type="hidden" value="Enter" name="show_frame">
 <input type="hidden" value="login" name="action">
 
-	<tbody><tr><td><img src="./images/registered.gif">              </td></tr>
+	<tbody><tr><td><img src="../images/registered.gif">              </td></tr>
 
-	<!-- Begin Modified Login Form -->
+		<!-- Begin Modified Login Form -->
 <form id="loginForm" onsubmit="return validateLogin(event)">
     <table>
         <!-- User Name Field -->
@@ -302,15 +306,15 @@ __wm.bt(725,27,25,2,"web","http://www.sanriotown.com/login/index.php","200111021
         
         <!-- Submit Button -->
         <tr>
-            <td align="center" background="./images/sanriotown_bg.gif">
-                <input type="image" src="./images/sanriotown_login.gif" alt="Log In" border="0">
+            <td align="center" background="../images/sanriotown_bg.gif">
+                <input type="image" src="../images/sanriotown_login.gif" alt="Log In" border="0">
             </td>
         </tr>
         
         <!-- Sign Up Image -->
         <tr>
             <td align="center">
-                <img src="./images/sanriotown_signup.gif" border="0" alt="Sign Up">
+                <img src="../images/sanriotown_signup.gif" border="0" alt="Sign Up">
             </td>
         </tr>
         
@@ -324,9 +328,9 @@ __wm.bt(725,27,25,2,"web","http://www.sanriotown.com/login/index.php","200111021
                                 <tr>
                                     <td>
                                         <font color="#EF4080" size="1" face="Arial, Helvetica, sans-serif">
-                                            Input your username and password in order to access additional content 
-                                            <img src="./images/joobi.png" width="10" height="10"> 
-                                            <img src="./images/joobi.png" width="10" height="10">
+                                            輸入您的用戶名和密碼以訪問更多內容。
+                                            <img src="../images/joobi.png" width="10" height="10"> 
+                                            <img src="../images/joobi.png" width="10" height="10">
                                         </font>
                                     </td>
                                 </tr>
@@ -340,8 +344,8 @@ __wm.bt(725,27,25,2,"web","http://www.sanriotown.com/login/index.php","200111021
         <!-- Error Message Container -->
         <tr>
             <td align="center">
-                <div id="errorMessage" style="color: rgb(255, 45, 80); font-size: 8pt; font-family: Arial, Helvetica, sans-serif; text-align: center; display: none;">
-                    Invalid username or password. Please try again.
+                <div id="errorMessage" style="color: red; font-size: 8pt; font-family: Arial, Helvetica, sans-serif; text-align: center; display: none;">
+                    無效的用戶名或密碼。請再試一次。
                 </div>
             </td>
         </tr>
@@ -349,7 +353,7 @@ __wm.bt(725,27,25,2,"web","http://www.sanriotown.com/login/index.php","200111021
         <!-- Spacer -->
         <tr>
             <td>
-                <img src="./images/spacer.gif" width="8" height="8" alt="Spacer">
+                <img src="../images/spacer.gif" width="8" height="8" alt="Spacer">
             </td>
         </tr>
     </table>
@@ -358,157 +362,125 @@ __wm.bt(725,27,25,2,"web","http://www.sanriotown.com/login/index.php","200111021
 
 <!--                   -->
 <table border="0" cellpadding="0" cellspacing="0">
-	<tbody><tr><tr><td><img src="./images/images/spacer.gif" width="10" height="5"></td>
-		<td><a href="https://www.cherune.site/">
-		<img src="./images/st_setbrowser.gif" border="0"></a></td>
-		<td><img src="./images/images/spacer.gif" width="5" height="5"></td>
+	<tbody><tr><tr><td><img src="../images/images/spacer.gif" width="10" height="5"></td>
+		<td><a href="../index.html">
+		<img src="../images/st_setbrowser.gif" border="0"></a></td>
+		<td><img src="../images/images/spacer.gif" width="5" height="5"></td>
 		<td>
 		<a href="https://www.cherune.site/">
-		<font color="#EF4080" size="2" face="Arial, Helvetica, sans-serif">Homepage</font>
+		<font color="#EF4080" size="2" face="Arial, Helvetica, sans-serif">主頁</font>
 		</a></td></tr>
-		<tr><td><img src="./images/images/spacer.gif" width="10" height="5"></td>
-		<td><a href="https://www.cherune.site/cherry/cherrysbd">
-		<img src="./images/st_anti.gif" border="0"></a></td>
-		<td><img src="./images/images/spacer.gif" width="5" height="5"></td>
+		<tr><td><img src="../images/images/spacer.gif" width="10" height="5"></td>
+		<td><a href="https://www.cherune.site/cherrysbd">
+		<img src="../images/st_anti.gif" border="0"></a></td>
+		<td><img src="../images/images/spacer.gif" width="5" height="5"></td>
 		<td>
-		<a href="https://www.cherune.site/cherry/cherrysbd">
-		<font color="#EF4080" size="2" face="Arial, Helvetica, sans-serif">Cherry's Birthday</font></a></td></tr>
+		<a href="https://www.cherune.site/cherrysbd">
+		<font color="#EF4080" size="2" face="Arial, Helvetica, sans-serif">櫻桃的生日</font></a></td></tr>
 	</tbody></table>
 </td>
 <!--                   -->
-<td bgcolor="#FFFFFF"><img src="./images/spacer.gif" width="30" height="5"></td>
+<td bgcolor="#FFFFFF"><img src="../images/spacer.gif" width="30" height="5"></td>
 <td bgcolor="#FFFFFF" valign="top">
+<br>
+	<table border="0" cellpadding="0" cellspacing="0">
+	<tbody><tr align="middle"> 
+		<td valign="top">
+		<a href="https://www.cherune.site/giftcards">
+    <img src="../images/pic_news.gif" alt="Hello kitty" border="0"> 
+</a></td>	</tr>	</tbody></table>
+	<br>
+	<!--                -->
+	<table border="0" cellspacing="0" width="550">
+          <tbody><tr> 
+            <td bgcolor="#F0AFBF" width="100%" height="87"> 
+              <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                <tbody><tr>
+                <td colspan="3" bgcolor="#ffffff"><img src="../images/community_line.gif"></td>
+                </tr>
+                <tr bgcolor="F1D0D8"> 
+                  <td width="6"><img src="../images/spacer.gif" width="5" height="5"></td>
+                  <td align="left" with="10%" width="30"><img src="../images/sanriopoint.gif"></td>
+                  <td align="left" with="85%" width="576">生日快樂</td>
+                </tr>
+                <tr bgcolor="ffffff"> 
+                  <td width="6" height="46"><img src="../images/spacer.gif" width="5" height="5"></td>
+                  <td with="95%" align="left" colspan="2" height="46"><font color="#7E7E7E">給我的公主，這個世界上最美麗的女孩...
 	
-	<table width="550" border="0" align="center" cellpadding="0" cellspacing="0">
-
-
-		</tr>
-		<tr>
-				<table border="0" cellspacing="1" cellpadding="1" width="100%">
-				 <tbody><tr><td bgcolor="F1D0D8">
-				<table border="0" cellspacing="0" cellpadding="0" width="100%">
-				<!--wallpaper-->
-				<tbody><tr bgcolor="F1D0D8"> 
-				<td width="5"><img src="./images/sp.gif" width="5" height="1"></td>
-				<td align="left" with="10%" width="15"><img src="./images/wave_bt.gif" width="13" height="14"></td>
-				<td align="left" with="85%"><font size="2">Featured Songs</font></td>
-				</tr>
-				<tr bgcolor="ffffff"> 
-				<td><img src="./images/sp.gif" width="5" height="1"></td>
-				<td with="95%" align="left" colspan="2">
-				<center>
-				</td></tr>
-				<tr bgcolor="ffffff"> 
-				<td><img src="./images/sp.gif" width="5" height="1"></td>
-				<td with="95%" align="left" colspan="2">
-				<table border="0" width="100%" cellspacing="0" cellpadding="0">
-				<tbody><tr>
-				</center>
-				<tr>
-				<td align="center"><a href="https://open.spotify.com/track/2X485T9Z5Ly0xyaghN73ed?si=ad3763c004c444bb" target="_blank"><img src="./images/letithappen.jpg" width="100" height="100"></a>
-					<br><font color="ffffff">aaaa</font><b>Let It Happen</b> <font color="ffffff">aaaa</font>
-					<br>tame impala is<br>so underground
-					<br> <font color="ffffff"> a
-						<br> a</font>
-				<td align="center"><a href="https://open.spotify.com/track/5ocSQW5sIUIOFojwXEz9Ki?si=3b5013f5021b4fd6" target="_blank"><img src="./images/NewJeans_-_Supernatural.png" width="100" height="100"> </a><br> 
+					我愛你勝過宇宙中的一切。我知道這將是我們一起度過的眾多美好生日中的第一個。我希望你喜歡這些禮物，我希望明年我能給你更好的東西，因為你知道我多麼討厭禮品卡，唉，不管怎樣，我試著做些東西，因為只給你禮品卡會顯得很尷尬......所以，你覺得我的網頁設計技巧怎麼樣？很棒吧？對不起啦，我其實很笨，不懂得怎麼編程（我把在電腦科學課上學到的東西全忘了，哭）。
 					
-					<b>Supernatural</b> 
-					<br>i love tjis song
-					<br> <font color="ffffff"> a
-						<br> a<br> a</font>
-				<td align="center"><a href="https://open.spotify.com/track/3hxIUxnT27p5WcmjGUXNwx?si=15782bcec53a45dd" target="_blank"><img src="./images/love..jpg" width="100" height="100"> </a><br> 
+					不說這些了，我只想說你很了不起，很完美。我知道你可能不相信，但我真的百分百真心話。我實在無法想像我怎麼能夠配得上你，而最神奇的是，我知道你將會比現在更加閃耀。謝謝你為我做的一切。我對你所取得的一切成就以及克服的所有困難感到敬畏。我看到你如此努力，你應該給自己一個大大的讚揚，因為我覺得你並沒有給自己足夠的肯定。
 					
-					<b>Shut up My Moms Calling</b> 
-					<br>137 times and i havent<br>listened to it since
-					<br> <font color="ffffff"> a
-					<br> a</font>
-					
-				</tr>
-				
-				</td>
-				
-				</td>
-				<br></td>
-				</tr>
-				</tbody></table>
-				</td></tr>
-			</tbody>
-			<table border="0" cellspacing="1" cellpadding="0" width="100%">
-				<tbody><tr><td bgcolor="F1D0D8">
-			   <table border="0" cellspacing="0" cellpadding="0" width="100%">
-			   <!--wallpaper-->
-			   <tbody><tr bgcolor="F1D0D8"> 
-			   <td width="5"><img src="./images/sp.gif" width="5" height="1"></td>
-			   <td align="left" with="10%" width="15"><img src="./images/wave_bt.gif" width="13" height="14"></td>
-			   <td align="left" with="85%"><font size="2">Poem</font></td>
-			   </tr>
-			   <tr bgcolor="ffffff"> 
-			   <td><img src="./images/sp.gif" width="5" height="1"></td>
-			   <td with="95%" align="left" colspan="2">
-			   <center>
-			   </td></tr>
-			   <tr bgcolor="ffffff"> 
-			   <td><img src="./images/sp.gif" width="5" height="1"></td>
-			   <td with="95%" align="left" colspan="2">
-			   <table border="0" width="100%" cellspacing="0" cellpadding="0">
-			   <tbody><tr>
-			   </center>
-			   <tr>
-				   <br><b><center>write a poem</b> <br> <font size="1"><b>cherry ai</b></font><br>
-				   <br>
-				   nah<br>
-not in the mood<br>
-sorry<br></center><br>
-				   
-			   </tr>
-			   
-			   </td>
-			   
-			   </td>
-			   <br></td>
-			   </tr>
-			   </tbody></table>
-			   </td></tr>
-		   </tbody></table>
-		   <table border="0" cellspacing="0" cellpadding="0" width="100%">
-			<tbody><tr><td bgcolor="F1D0D8">
-		   <table border="0" cellspacing="0" cellpadding="0" width="100%">
-		   <!--wallpaper-->
-		   <tbody><tr bgcolor="F1D0D8"> 
-		   <td width="5"><img src="./images/sp.gif" width="5" height="1"></td>
-		   <td align="left" with="10%" width="15"><img src="./images/wave_bt.gif" width="13" height="14"></td>
-		   <td align="left" with="85%"><font size="2">Cherry QOTW</font></td>
-		   </tr>
-		   <tr bgcolor="ffffff"> 
-		   <td><img src="./images/sp.gif" width="5" height="1"></td>
-		   <td with="95%" align="left" colspan="2">
-		   <center>
-		   </td></tr>
-		   <tr bgcolor="ffffff"> 
-		   <td><img src="./images/sp.gif" width="5" height="1"></td>
-		   <td with="95%" align="left" colspan="2">
-		   <table border="0" width="100%" cellspacing="0" cellpadding="0">
-		   <tbody><tr>
-		   </center>
-		   <tr>
-			<td align="center"><img src="./images/cherryqotw.png"> <br> 			   
-		   </tr>
-		   
-		   </td>
-		   
-		   </td>
-		   <br></td>
-		   </tr>
-		   </tbody></table>
-		   </td></tr>
-	   </tbody></table>
-	   </td></tr>
-	   </tbody></table>
-	   </td>
-	   </tr>
-	   </tbody></table>
-			<td bgcolor="#FFFFFF"><img src="./images/spacer.gif" width="30" height="5"></td>
-
+					我真的非常非常幸運能擁有你。我愛你，超越了所有的言語。我不知道沒有你我該怎麼辦，我永遠屬於你。生日快樂, Cherune <3 <br><br>
+				  </font></td>
+                </tr>
+                <tr bgcolor="F1D0D8"> 
+                  <td width="6"><img src="../images/spacer.gif" width="5" height="5"></td>
+                  <td align="left" with="10%" width="30"><img src="../images/sanriopoint.gif"></td>
+                  <td align="left" with="85%" width="576">每一天</td>
+                </tr>
+                <tr bgcolor="ffffff"> 
+                  <td width="6" height="46"><img src="../images/spacer.gif" width="5" height="5"></td>
+                  <td with="95%" align="left" colspan="2" height="46"><font color="#7E7E7E">
+					你總是在我腦海中。我經常回想起我們剛開始聊天的時候，我一開始就愛上了你，我很高興你選擇了我。我想起你在俄羅斯方塊和西洋棋上打敗我的時候，這可能是我第一次（也許是最後一次）承認我在這些遊戲上真的很差，唉...我想起你的笑聲和聲音，還有你在裝矜持的時候有多可愛。有時候我們打電話的時候，你在做別的事情，我就坐在那裡聽著你，心裡想著，我是怎麼找到像你這樣美麗的人呢？
+	
+					你不會相信我每天隨機想到一些你做過的可愛的事，然後就因為你有多可愛而融化（例子實在太多了），說真的，每次我想到你，我的心就跳得很快，呼吸變得有點困難，每次我看到有趣的東西，我的第一反應就是“哦，我要給她看”或者“哦，我要告訴她，她會喜歡這個”。你可能會說這很可悲或黏人，也許是吧，但我就是這樣。說真的，和任何人都從來沒有這樣過，真的沒有。我從來沒有這麼愛上過任何人，但話又說回來，你不只是“任何人”，你是你，這已經說明了一切。只要有你在我身邊，我的未來就一定是幸福的。<br><br></font></td>
+                </tr>
+                 <tr bgcolor="F1D0D8"> 
+                  <td width="6"><img src="../images/spacer.gif" width="5" height="5"></td>
+                  <td align="left" with="10%" width="30"><img src="../images/sanriopoint.gif"></td>
+                  <td align="left" with="85%" width="576">在過去</td>
+                </tr>
+                <tr bgcolor="ffffff"> 
+                  <td width="6"><img src="../images/spacer.gif" width="5" height="5"></td>
+                  <td with="95%" align="left" colspan="2"><font color="#7E7E7E">
+					我知道我讓你太操心了，對不起 <3 我保證我在改進，我絕不想讓你再有那樣的感受。我們沒有過一次爭吵，而我打算就這樣繼續下去。我們只會越來越親密，我每天都更愛你（我以前不知道這還能再多，但無限加1總是歡迎的，哈）。我們會繼續上升，即使遇到天花板，我們也會突破。我會一直陪在你身邊，確保我們的明天永遠比今天更好。 <br><br></font></td>
+                </tr>
+				<tr bgcolor="F1D0D8"> 
+					<td width="6"><img src="../images/spacer.gif" width="5" height="5"></td>
+					<td align="left" with="10%" width="30"><img src="../images/sanriopoint.gif"></td>
+					<td align="left" with="85%" width="576">噢，仲有</td>
+				  </tr>
+				  <tr bgcolor="ffffff"> 
+					<td width="6"><img src="../images/spacer.gif" width="5" height="5"></td>
+					<td with="95%" align="left" colspan="2"><font color="#7E7E7E">如果你注意到嘅話，喺頁面嘅左邊有個用戶名同密碼嘅嘢。事實上呢，得一個正確答案，我為呢個賬號留咗啲嘢俾你。我有呢個網站一年時間，所以即使我知你可能唔係好在意，如果你真係好無聊同想試下搵到答案，你有365日去試。（我可能有或者可能無畀過啲提示. <br><br></font></td>
+				  </tr>
+                 <tr bgcolor="F1D0D8"> 
+                  <td width="6"><img src="../images/spacer.gif" width="5" height="5"></td>
+                  <td align="left" with="10%" width="30"><img src="../images/sanriopoint.gif"></td>
+                  <td align="left" with="85%" width="576">過多的心</td>
+                </tr>
+                <tr bgcolor="ffffff"> 
+                  <td width="6"><img src="../images/spacer.gif" width="5" height="5"></td>
+                  <td with="95%" align="left" colspan="2"><font color="#7E7E7E">
+					<3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <br><br> </font></td>
+                </tr>
+                <tr bgcolor="F1D0D8"> 
+                  <td width="6"><img src="../images/spacer.gif" width="5" height="5"></td>
+                  <td align="left" with="10%" width="30"><img src="../images/sanriopoint.gif"></td>
+                  <td align="left" with="85%" width="576">點解呢？</td>
+                </tr>
+                <tr bgcolor="ffffff"> 
+                  <td width="6"><img src="../images/spacer.gif" width="5" height="5"></td>
+                  <td with="95%" align="left" colspan="2"><font color="#7E7E7E">
+                  <br>因為我愛你，傻瓜
+				  <br><br></font>  
+                </tr>
+                 <tr bgcolor="F1D0D8"> 
+                  <td width="6"><img src="../images/spacer.gif" width="5" height="5"></td>
+                  <td align="left" with="10%" width="30"><img src="../images/sanriopoint.gif"></td>
+                  <td align="left" with="85%" width="576">後記</td>
+                </tr>
+                <tr bgcolor="ffffff"> 
+                  <td width="6"><img src="../images/spacer.gif" width="5" height="5"></td>
+                  <td with="95%" align="left" colspan="2"><font color="#7E7E7E">
+					對唔住我用咁多大寫字母，我只係想令呢段話聽起嚟好正式，補償返我嘅愚蠢，所以我可以話自己係高智商nya。仲有如果呢段話有啲肉麻，對唔住啦，你知我係T-T。仲有唔好覺得我係同性戀，只係因為呢度係Hello Kitty主題（如果你真係以為我係因為你嘅話...）<br><br></font>
+ 		</td>
+                
+              </tbody></table>
+            </td>
+          </tr>
+        </tbody></table>
         
 	<!--                -->
 	<br>
@@ -519,6 +491,7 @@ sorry<br></center><br>
 </tr>
 </tbody></table>
 </div>
+
 
 
 
