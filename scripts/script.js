@@ -191,6 +191,12 @@ OH ALSO i'm learning how to make these entries look prettier, i dont wanna burn 
 
 ya ill start putting pics in these.... this sounded way more exciting in my head..
 
+i'm not even nearly done with this part of the website,
+it'd be so embarassing if you got 
+the password now and it was this ugly 😭
+also im only like 20 entries in 
+so we can't have that happening..
+
 
 ANYWAYS since today is actually tomorrow for you 
 i'll just end this entry here and start writing the next one. 
@@ -214,7 +220,6 @@ BYE BABYYYY, I LOVE YOUU!!!`
 
         const dateElem = document.createElement('div');
         dateElem.classList.add('date');
-        dateElem.textContent = letter.date;
         envelope.appendChild(dateElem);
 
         container.appendChild(envelope);
@@ -226,34 +231,27 @@ BYE BABYYYY, I LOVE YOUU!!!`
             const offset = (index - currentIndex) * 120; // Adjust spacing
             envelope.style.top = `calc(50% + ${offset}px)`;
             envelope.style.zIndex = 1000 - Math.abs(index - currentIndex);
-
-            const dateElem = envelope.querySelector('.date');
+            
+            // Add or update the center date for all envelopes
+            let centerDate = envelope.querySelector('.center-date');
+            if (!centerDate) {
+                centerDate = document.createElement('div');
+                centerDate.classList.add('center-date');
+                envelope.appendChild(centerDate);
+            }
+            centerDate.innerHTML = `${letters[index].day}<br>${letters[index].date}`;
+    
+            // Apply the visual scaling for selected or unselected envelopes
             if (index === currentIndex) {
-                // Selected envelope
                 envelope.classList.add('selected');
                 envelope.style.transform = 'translate(-50%, -50%) scale(1.1)';
-
-                // Show center date
-                let centerDate = envelope.querySelector('.center-date');
-                if (!centerDate) {
-                    centerDate = document.createElement('div');
-                    centerDate.classList.add('center-date');
-                    envelope.appendChild(centerDate);
-                }
-                centerDate.innerHTML = `${letters[index].day}<br>${letters[index].date}`;
-                dateElem.style.display = 'none';
             } else {
-                // Unselected envelopes
                 envelope.classList.remove('selected');
                 envelope.style.transform = 'translate(-50%, -50%) scale(1)';
-
-                // Remove center date
-                const centerDate = envelope.querySelector('.center-date');
-                if (centerDate) centerDate.remove();
-                dateElem.style.display = 'block';
             }
         });
     }
+    
 
     updateEnvelopes();
 
