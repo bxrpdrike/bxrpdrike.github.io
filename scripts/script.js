@@ -183,7 +183,7 @@ you're doing so much for me, you're always trying your best and i'll say it for 
 
 ANYWAYS, enough dooming and glooming. WE HAVE A DISH!!! we're making ig reels potato flatbread on our date ahaahaha (picked out by you ofc 😼) im happy we didnt go with cinnammon rolls because all they do is cause is cavities and diabetes (plus i suck ass at baking) and theyre only 3 INGREDIENTS TOO!! THATS RIGHT!! THREE!!! im such a goated potato pancake salesman..
 
-i kinda wrote you a paragraph again.. you hate them dont you 😭 im sorryy.. i wanna make it up to you after today but idk what to dooo, mmmmm HELPPPP EHGLP WHAT DO I DO AAAA.. OH WAIT I FORGOT TO UPDATE THE WEBSITE YESTERDAY SJIT, ILL DO IT LATER 
+i kinda wrote you a paragraph again.. you hate them dont you 😭 im sorryy ill delete it.. i wanna make it up to you after today but idk what to dooo, mmmmm HELPPPP EHGLP WHAT DO I DO AAAA.. OH WAIT I FORGOT TO UPDATE THE WEBSITE YESTERDAY SJIT, ILL DO IT LATER 
 
 okay, ITS DECIDED, I AM STAYING UP WITH YOU TODAY. WE BARELY HAD ANY FUN THIS WEEKEDN!! today's goals are making you laugh and making sure ur not bored aha x WISH ME LUCKKK, i'll give an update on these goals later.
 
