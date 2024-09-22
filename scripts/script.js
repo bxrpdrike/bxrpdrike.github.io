@@ -211,7 +211,6 @@ BYE BABYYYY, I LOVE YOUU!!!`
 
     let currentIndex = 0; // Start with the first letter
     let isLetterOpen = false;
-
     // Generate the envelope elements
     letters.forEach((letter, index) => {
         const envelope = document.createElement('div');
@@ -231,7 +230,7 @@ BYE BABYYYY, I LOVE YOUU!!!`
             const offset = (index - currentIndex) * 120; // Adjust spacing
             envelope.style.top = `calc(50% + ${offset}px)`;
             envelope.style.zIndex = 1000 - Math.abs(index - currentIndex);
-            
+    
             // Add or update the center date for all envelopes
             let centerDate = envelope.querySelector('.center-date');
             if (!centerDate) {
@@ -244,13 +243,14 @@ BYE BABYYYY, I LOVE YOUU!!!`
             // Apply the visual scaling for selected or unselected envelopes
             if (index === currentIndex) {
                 envelope.classList.add('selected');
-                envelope.style.transform = 'translate(-50%, -50%) scale(1.1)';
+                envelope.style.transform = 'scale(1.1)';
             } else {
                 envelope.classList.remove('selected');
-                envelope.style.transform = 'translate(-50%, -50%) scale(1)';
+                envelope.style.transform = 'scale(1)';
             }
         });
     }
+    
     
 
     updateEnvelopes();
