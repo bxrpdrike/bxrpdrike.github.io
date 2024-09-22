@@ -22,8 +22,12 @@ body {
   transition: all 0.8s ease;
   transform: translateY(-70vh);
 }
-
-
+  .text-above, .text-below {
+    font-size: 14px;
+    color: #ff99cc;
+    text-align: center;
+    margin: 10px 0;
+}
 .icon {
   width: 2.8rem;
   height: 2.8rem;
