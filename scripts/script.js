@@ -276,17 +276,26 @@ BYE BABYYYY, I LOVE YOUU!!!`
         }
     });
 
-    // Click on envelope to open letter
-    container.addEventListener('click', (e) => {
-        if (isLetterOpen) return;
-        const envelope = e.target.closest('.envelope');
-        if (envelope) {
-            const index = parseInt(envelope.dataset.index);
+// Click on envelope to select or open letter
+container.addEventListener('click', (e) => {
+    if (isLetterOpen) return;
+
+    const envelope = e.target.closest('.envelope');
+    if (envelope) {
+        const index = parseInt(envelope.dataset.index);
+
+        // Check if the clicked envelope is already the selected one
+        if (index === currentIndex) {
+            // If the envelope is already selected, open the letter
+            openLetter(currentIndex);
+        } else {
+            // If it's not selected, just select it and update envelopes
             currentIndex = index;
             updateEnvelopes();
-            openLetter(currentIndex);
         }
-    });
+    }
+});
+
 
     // Open letter
     function openLetter(index) {
