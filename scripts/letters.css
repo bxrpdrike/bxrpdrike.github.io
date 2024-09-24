@@ -1,5 +1,7 @@
 /* styles.css */
 
+/* General Styles */
+
 body {
   margin: 0;
   background-color: #d19bbc;
@@ -34,16 +36,48 @@ body {
   margin: 40px auto; /* Centers the container horizontally with top margin */
 }
 
-/* Fixed Position Container for specific images */
+/* Fixed Position Containers for Specific Images */
 .image-container.fixed-position {
   position: fixed;
   right: 50px; /* Adjust as needed */
-  top: 430px;    /* Adjust as needed */
+  top: 430px; /* Adjust as needed */
   text-align: center;
   z-index: 1000; /* Ensure it's below navigation */
 }
 
-/* General styling for all letter images */
+.image-container.fixed-position-hrt {
+  position: fixed;
+  right: 20px; /* Adjust as needed */
+  top: 270px; /* Adjust as needed */
+  text-align: center;
+  z-index: 1000; /* Ensure it's below navigation */
+}
+
+.image-container.fixed-position-nwrd {
+  position: fixed;
+  right: 80px; /* Adjust as needed */
+  top: 500px; /* Adjust as needed */
+  text-align: center;
+  z-index: 1000; /* Ensure it's below navigation */
+}
+
+.image-container.fixed-position-gst {
+  position: fixed;
+  right: 80px; /* Adjust as needed */
+  top: 80px; /* Adjust as needed */
+  text-align: center;
+  z-index: 1000; /* Ensure it's below navigation */
+}
+
+.image-container.fixed-position-arrw {
+  position: fixed;
+  right: 500px; /* Adjust as needed */
+  top: 60px; /* Adjust as needed */
+  text-align: center;
+  z-index: 1000; /* Ensure it's below navigation */
+}
+
+/* General Styling for All Letter Images */
 img.letter-image {
   border: 1.5px solid #ff99cc;
   border-radius: 10px;
@@ -53,47 +87,46 @@ img.letter-image {
   margin: 0 auto; /* Centers the image within the container */
 }
 
-/* Specific styles for flatbread image */
+/* Specific Styles for Flatbread Image */
 img.flatbread {
-  /* Removed fixed positioning to prevent overlap */
-  border: 1.5px solid #ff99cc;
-  border-radius: 10px;
+  /* Inherits general styles; no fixed positioning */
   max-width: 180px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  /* Removed position: fixed and right: 50px */
 }
 
-/* Styling for text below the image */
+/* Specific Styles for Heartbreak Image */
+img.heartbreak {
+  /* Inherits general styles; no fixed positioning */
+  max-width: 180px;
+  /* Removed 'right: 10;' as it had no units and was unnecessary */
+}
+
+/* Specific Styles for NWrd Image */
+img.nwrd {
+  /* Inherits general styles; no fixed positioning */
+  max-width: 180px;
+  /* Removed 'right: 10;' as it had no units and was unnecessary */
+}
+
+/* Styling for Text Below the Image */
 .text-below {
   margin-top: 10px; /* Space between image and text */
   font-size: 10pt;
-  color: #000;
+  color: #FF66B3;
   text-align: center; /* Centers the text */
+  font-family: 'Courier New', Courier, monospace;
 }
 
-.bean {
-  position: absolute;
-  right: 30%;
-  transform: translateX(-50%);
-  width: 1000px;
-  height: 600px;
-
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  border-radius: 5px;
-  cursor: pointer;
-  transition: transform 0.3s ease, top 0.3s ease;
-}
-
+/* Envelope Styles */
 .envelope {
   position: absolute;
-  left: 30px;
+  left: 50%;
   transform: translateX(-50%);
   width: 300px;
   height: 200px;
   background-image: url('../images/envelope.png'); /* Add the image path */
   background-size: cover; /* Make sure the image covers the entire envelope area */
   background-position: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   cursor: pointer;
   transition: transform 0.3s ease, top 0.3s ease;
@@ -111,6 +144,7 @@ img.flatbread {
   font-family: 'Brush Script MT', 'Lucida Handwriting', 'Comic Sans MS', cursive;
 }
 
+/* Letter Styles */
 .letter {
   position: fixed;
   top: 50%;
@@ -120,7 +154,7 @@ img.flatbread {
   transform: translate(-50%, -50%);
   background-color: #FFFFFF;
   border: 2px solid #FF99CC;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   padding: 20px;
   overflow-y: auto;
   z-index: 2000;
@@ -128,7 +162,7 @@ img.flatbread {
 }
 
 .letter .content {
-  position:absolute;
+  position: absolute;
   top: 35px;
   left: 5px;
   width: 550px;
@@ -156,6 +190,15 @@ img.flatbread {
   cursor: pointer;
 }
 
+button:disabled {
+  cursor: not-allowed; /* Sets the cursor to indicate the button is not clickable */
+  opacity: 0.6; /* Optional: Make the button look visually disabled */
+  transition: none; /* Disable any animation or transition */
+}
+button:disabled:hover {
+  background-color: #FF99CC; /* Prevent background color change on hover */
+}
+/* Navigation Styles */
 .navigation {
   position: fixed;
   top: 50%;
@@ -181,7 +224,113 @@ img.flatbread {
   background-color: #FF66B3;
 }
 
-/* Responsive adjustments */
+/* Rock Paper Scissors Minigame Styles */
+
+/* Container for the RPS minigame */
+.rps-container {
+  text-align: center;
+}
+
+/* Start and Close buttons */
+.rps-button {
+  padding: 10px 20px;
+  font-size: 12pt;
+  background-color: #FF99CC;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.rps-button-close {
+  padding: 5px 10px;
+  font-size: 12pt;
+  background-color: #FF99CC;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  position:absolute;
+  right: 43px;
+  top: 358px;
+}
+.rps-button:hover {
+  background-color: #FF66B3;
+}
+
+/* RPS Game Interface */
+.rps-game {
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #FFCCEE;
+  border: 2px solid #FF99CC;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  display: inline-block;
+}
+
+.rps-game.hidden {
+  display: none;
+}
+
+/* Choices Styling */
+.choices {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.choice-button {
+  padding: 10px 15px;
+  font-size: 14pt;
+  background-color: #FFFFFF;
+  border: 2px solid #FF99CC;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#game-over-message {
+  font-size: 10pt; /* Change this value for text size */
+  position:absolute;
+  text-align: left;
+  left:10;
+  color: #000000; /* Change this value for text color */
+}
+.choice-button:hover {
+  background-color: #FFCCE5;
+}
+
+/* Score Display Styling */
+.rps-score {
+  display: flex;
+  justify-content: space-around;
+  font-size: 10pt;
+  
+  color: #fa49a2;
+}
+
+.rps-score p {
+  margin: 0;
+}
+
+/* Result Styling */
+.rps-result {
+  font-size: 10pt;
+  align-content: center;
+  text-align: center;
+  color: #fa49a2;
+}
+
+/* Additional Styling for Game Over Message */
+.rps-game .game-over {
+  font-size: 16pt;
+  font-weight: bold;
+  color: #ff0000; /* Red color for emphasis */
+  text-align: center;
+}
+
+/* Responsive Adjustments */
 @media (max-width: 600px) {
   .envelope {
     width: 80%;
@@ -194,16 +343,29 @@ img.flatbread {
   }
 
   .close-button {
-    right: 10px;
+    right: 20px;
   }
 
   .navigation {
     right: 10px;
   }
-
   .navigation button {
     padding: 8px 12px;
     font-size: 16px;
   }
-  
+
+  /* Responsive Adjustments for RPS */
+  .rps-button {
+    font-size: 14pt;
+    padding: 12px 24px;
+  }
+
+  .choice-button {
+    font-size: 16pt;
+    padding: 12px 20px;
+  }
+
+  .rps-game {
+    width: 70%;
+  }
 }

@@ -174,9 +174,12 @@ i hope you know how precious you are.. i'll make sure my beautiful cherry girl g
         {
             date: 'September 21st, 2024',
             day: 'Saturday',
-            image: '../images/flatbread.gif',
-            imageClass: 'flatbread' ,
-            textBelowImage: 'are we gonna eat it with soy sauce?',
+            images: [
+                {
+                    src: '../images/flatbread.gif',
+                    class: 'flatbread',
+                    textBelowImage: 'are we gonna eat it with soy sauce?',
+                },],
             content: `hi pretty, i made you worry too much today by being stupid...
 anyways, you were there for me, you cheered me up and you dont understand how much that meant. i think i need to appreciate you more.. 
 you're doing so much for me, you're always trying your best and i'll say it for the millionth time, i'm so lucky to have you <3
@@ -185,7 +188,7 @@ ANYWAYS, enough dooming and glooming. WE HAVE A DISH!!! we're making ig reels po
 
 i kinda wrote you a paragraph again.. you hate them dont you 😭 im sorryy ill delete it.. i wanna make it up to you after today but idk what to dooo, mmmmm HELPPPP EHGLP WHAT DO I DO AAAA.. OH WAIT I FORGOT TO UPDATE THE WEBSITE YESTERDAY SJIT, ILL DO IT LATER 
 
-okay, ITS DECIDED, I AM STAYING UP WITH YOU TODAY. WE BARELY HAD ANY FUN THIS WEEKEDN!! today's goals are making you laugh and making sure ur not bored aha x WISH ME LUCKKK, i'll give an update on these goals later.
+okay, ITS DECIDED, I AM STAYING UP WITH YOU TODAY. WE BARELY HAD ANY FUN THIS WEEKEDN!! today's goals are making you laugh and making sure ur not bored aha x WISH ME LUCKKK, i'll tell you how it went later.
 
 OH ALSO i'm learning how to make these entries look prettier, i dont wanna burn your eyes. ANNNND WHAT BETTER WAY TO START THAN PICS!!! and gifs and stuff.. 
 
@@ -196,21 +199,107 @@ it'd be so embarassing if you got
 the password now and it was this ugly 😭
 also im only like 20 entries in 
 so we can't have that happening..
+i used to have something else here but
+i decided to change the entire thing
+so now its just the letters lmao
 
 
 ANYWAYS since today is actually tomorrow for you 
 i'll just end this entry here and start writing the next one. 
 BYE BABYYYY, I LOVE YOUU!!!`
         },
-    ];
 
-    const container = document.querySelector('.document-container');
+        {
+            date: 'September 22nd, 2024',
+            day: 'Sunday',
+            images: [
+                {
+                    src: '../images/heartbreak.png',
+                    class: 'heartbreak',
+                    textBelowImage: '',
+                },
+                {
+                    src: '../images/nword.png',
+                    class: 'nwrd',
+                    textBelowImage: '',
+                },
+            ], 
+            textBelowImage: '',
+            content: `hii, im running out of original ways to open these up with.. today was hard for both of us but we got through it together, and i feel like we're closer than ever thanks to that.
+
+we opened up to eachother and i really hope we keep on building on everything we talked about today. you did good, i love you. anyways you taught me how to play minesweeper, and i KIINDAA got it (im still autistic tho..)
+and then we talked up until your 4AM, it was fun. i feel like we finally got to be able to be alot more intimate and comfortable w eachother, ALSO, I FULFILLED BOTH OF YESTERDAYS GOALS!! i got you to laugh, and i FINALLY got you to have fun talking to me IM SO HAPPY.
+
+also, that cooking date isnt happening, you were really quick to shut it down lol, that just makes yesterdays entry seem all the more stupid. what a shame, i was really looking forward to it.. IT DOESNT REAAAALLY MATTER THO WE'VE GOT A LIFETIME TOGETHER WE'LL COOK COUNTLESS DISHES I WONT LET SOME POTATO PANCAKE BRING ME DOWN. 
+
+also you made us a new playlist 
+(which was apparently so ass u had to delete it 😭) 
+we remade it though so its alr 😼 
+and i interrogated u with sex ed questions. 
+AND WE AGREED TO NEVER SAY SLURS AGAIN!!! 
+ISNT THAT SO NOBLE??
+
+ur at school now, luckily you dont seem TOO dead 
+even tho u only slept for like 2 hours
+
+ok anyways ill gts early so i get to catch you on ur way back home,
+love you pretty <3
+            `
+        },
+
+        {
+            date: 'September 23rd, 2024',
+            day: 'Monday',
+            images: [
+                {
+                    src: '../images/gasstation.png',
+                    class: 'gasstation',
+                    textBelowImage: 'dude WHERE WAS YOUR MOM',
+                },],
+            content: `hi precious <3 today was the definition of filler, we were both kinda busy 😭 
+you were suuuper tired because of school (you actually fell asleep in the car on ur way back home) you went to bed early today thankfully tho, i cant have you die from sleep deprivation
+      
+
+
+
+
+
+
+
+
+
+
+i was thinking of stuff i could do in these entries for filler days like these, and i came up with a GENIUS PLAN!!!!! well it's not actually all that genius, it did take me 4 hours to code though because im stupid. AND SOOO, if i may ask, how good r u at rock paper scissors? im assuming the answer is 'pretty good' because u were sweaty at literally every game i ever saw u play (legit not even glazing) 
+
+but then again calling someone a rock papers scissors sweat feels more like an insult than anything 😭 ANYWAYS as you probably already guessed i'm forcing u to play me at rock paper scissors because I'D RATHER PLAY FILLER GAMES THAN WRITE ANY MORE SHORT LETTERS, THEY JUST FEEL LIKE A LAZY COPOUT, i'll just do stuff like this on days where we don't talk as much. 
+
+anyways, we're doing it best of 3, its a bit scuffed because you're in the future and i'm in the past but we can make it work.. i think.. ALSO NO REPLAYS, the answers are predetermined so you can only play once. if u win i'll give you an iou (veeeery tempting ik 😼) 
+
+            <div class="rps-container">
+                <button id="start-rps" class="rps-button">start</button>
+                <div id="rps-game" class="rps-game hidden">
+                    <p></p>
+                    <div class="choices">
+                        <button class="choice-button" data-choice="rock">✊ rock</button>
+                        <button class="choice-button" data-choice="paper">✋ paper</button>
+                        <button class="choice-button" data-choice="scissors">✌️ scissors</button>
+                    </div>
+                    <div id="rps-result" class="rps-result"></div>
+                </div>
+            </div>
+        
+`
+        }
+        ,
+        
+    ];          const container = document.querySelector('.document-container');
     const navigation = document.getElementById('navigation');
     const prevButton = document.getElementById('prev-button');
     const nextButton = document.getElementById('next-button');
 
     let currentIndex = 0; // Start with the first letter
     let isLetterOpen = false;
+
     // Generate the envelope elements
     letters.forEach((letter, index) => {
         const envelope = document.createElement('div');
@@ -218,7 +307,8 @@ BYE BABYYYY, I LOVE YOUU!!!`
         envelope.dataset.index = index;
 
         const dateElem = document.createElement('div');
-        dateElem.classList.add('date');
+        dateElem.classList.add('center-date');
+        dateElem.innerHTML = `${letter.day}<br>${letter.date}`;
         envelope.appendChild(dateElem);
 
         container.appendChild(envelope);
@@ -230,16 +320,7 @@ BYE BABYYYY, I LOVE YOUU!!!`
             const offset = (index - currentIndex) * 120; // Adjust spacing
             envelope.style.top = `calc(50% + ${offset}px)`;
             envelope.style.zIndex = 1000 - Math.abs(index - currentIndex);
-    
-            // Add or update the center date for all envelopes
-            let centerDate = envelope.querySelector('.center-date');
-            if (!centerDate) {
-                centerDate = document.createElement('div');
-                centerDate.classList.add('center-date');
-                envelope.appendChild(centerDate);
-            }
-            centerDate.innerHTML = `${letters[index].day}<br>${letters[index].date}`;
-    
+
             // Apply the visual scaling for selected or unselected envelopes
             if (index === currentIndex) {
                 envelope.classList.add('selected');
@@ -250,8 +331,6 @@ BYE BABYYYY, I LOVE YOUU!!!`
             }
         });
     }
-    
-    
 
     updateEnvelopes();
 
@@ -274,26 +353,25 @@ BYE BABYYYY, I LOVE YOUU!!!`
         }
     });
 
-// Click on envelope to select or open letter
-container.addEventListener('click', (e) => {
-    if (isLetterOpen) return;
+    // Click on envelope to select or open letter
+    container.addEventListener('click', (e) => {
+        if (isLetterOpen) return;
 
-    const envelope = e.target.closest('.envelope');
-    if (envelope) {
-        const index = parseInt(envelope.dataset.index);
+        const envelope = e.target.closest('.envelope');
+        if (envelope) {
+            const index = parseInt(envelope.dataset.index);
 
-        // Check if the clicked envelope is already the selected one
-        if (index === currentIndex) {
-            // If the envelope is already selected, open the letter
-            openLetter(currentIndex);
-        } else {
-            // If it's not selected, just select it and update envelopes
-            currentIndex = index;
-            updateEnvelopes();
+            // Check if the clicked envelope is already the selected one
+            if (index === currentIndex) {
+                // If the envelope is already selected, open the letter
+                openLetter(currentIndex);
+            } else {
+                // If it's not selected, just select it and update envelopes
+                currentIndex = index;
+                updateEnvelopes();
+            }
         }
-    }
-});
-
+    });
 
     // Open letter
     function openLetter(index) {
@@ -327,52 +405,71 @@ container.addEventListener('click', (e) => {
 
         // Update the content
         const contentDiv = letter.querySelector('.content');
-        contentDiv.innerHTML = letters[index].content;
+        contentDiv.innerHTML = ''; // Clear previous content to prevent duplication
 
-        // Clear previous content to prevent duplication
-        contentDiv.innerHTML = letters[index].content;
+        // Add image(s) if they exist
+        if (letters[index].images && Array.isArray(letters[index].images)) {
+            letters[index].images.forEach((imageObj) => {
+                // Create image container
+                const imageContainer = document.createElement('div');
+                imageContainer.classList.add('image-container');
 
-        // Add image and optional text above/below if they exist
-        if (letters[index].image) {
-            // Create image container
-            const imageContainer = document.createElement('div');
-            imageContainer.classList.add('image-container');
+                // Assign fixed-position class based on imageClass
+                if (imageObj.class === 'flatbread') {
+                    imageContainer.classList.add('fixed-position');
+                }
+                if (imageObj.class === 'heartbreak') {
+                    imageContainer.classList.add('fixed-position-hrt');
+                }
+                if (imageObj.class === 'nwrd') {
+                    imageContainer.classList.add('fixed-position-nwrd');
+                    
+                }
+                if (imageObj.class === 'arrw') {
+                    imageContainer.classList.add('fixed-position-arrw');
+                    
+                }
+                if (imageObj.class === 'gasstation') {
+                    imageContainer.classList.add('fixed-position-gst');
+                }
+                // Add more conditions if you have more unique classes
 
-            // Assign fixed-position class based on imageClass
-            if (letters[index].imageClass === 'flatbread') {
-                imageContainer.classList.add('fixed-position');
-            }
+                // Optional text above the image
+                if (imageObj.textAboveImage) {
+                    const textAbove = document.createElement('div');
+                    textAbove.classList.add('text-above');
+                    textAbove.textContent = imageObj.textAboveImage;
+                    imageContainer.appendChild(textAbove);
+                }
 
-            // Optional text above the image
-            if (letters[index].textAboveImage) {
-                const textAbove = document.createElement('div');
-                textAbove.classList.add('text-above');
-                textAbove.textContent = letters[index].textAboveImage;
-                imageContainer.appendChild(textAbove);
-            }
+                const img = document.createElement('img');
+                img.src = imageObj.src; // Path to the image
+                img.alt = 'Letter image'; // Optional alt text for accessibility
 
-            const img = document.createElement('img');
-            img.src = letters[index].image; // Path to the image
-            img.alt = 'Letter image'; // Optional alt text for accessibility
+                // Add custom image class if it exists in the image object
+                if (imageObj.class) {
+                    img.classList.add(imageObj.class); // e.g., 'flatbread'
+                }
 
-            // Add custom image class if it exists in the letter object
-            if (letters[index].imageClass) {
-                img.classList.add(letters[index].imageClass); // e.g., 'flatbread'
-            }
+                img.classList.add('letter-image'); // General class for all images
+                imageContainer.appendChild(img); // Append the image to the image container
 
-            img.classList.add('letter-image'); // General class for all images
-            imageContainer.appendChild(img); // Append the image to the image container
+                // Optional text below the image
+                if (imageObj.textBelowImage) {
+                    const textBelow = document.createElement('div');
+                    textBelow.classList.add('text-below');
+                    textBelow.textContent = imageObj.textBelowImage;
+                    imageContainer.appendChild(textBelow); // Append text below the image
+                }
 
-            // Optional text below the image
-            if (letters[index].textBelowImage) {
-                const textBelow = document.createElement('div');
-                textBelow.classList.add('text-below');
-                textBelow.textContent = letters[index].textBelowImage;
-                imageContainer.appendChild(textBelow); // Append text below the image
-            }
-
-            contentDiv.appendChild(imageContainer); // Append the image container to the letter's content
+                contentDiv.appendChild(imageContainer); // Append the image container to the letter's content
+            });
         }
+        // Add the letter's main content
+        const mainContent = document.createElement('div');
+        mainContent.classList.add('main-content');
+        mainContent.innerHTML = letters[index].content;
+        contentDiv.appendChild(mainContent);
 
         navigation.style.display = 'flex';
 
@@ -388,6 +485,11 @@ container.addEventListener('click', (e) => {
         letter.addEventListener('click', (event) => {
             event.stopPropagation();
         });
+
+        // Initialize RPS if it's the last letter
+        if (index === letters.length - 1) {
+            initializeRPS();
+        }
     }
 
     // Close letter
@@ -464,4 +566,199 @@ container.addEventListener('click', (e) => {
             }
         }
     });
-});
+
+    // Rock Paper Scissors Minigame Logic
+
+    // Rock Paper Scissors Minigame Logic
+
+    function initializeRPS() {
+        const startButton = document.getElementById('start-rps');
+        const rpsGame = document.getElementById('rps-game');
+        const closeButton = document.getElementById('rps-close');
+        const choiceButtons = document.querySelectorAll('.choice-button');
+        const rpsResult = document.getElementById('rps-result');
+        const rpsContainer = document.querySelector('.rps-container');
+    
+        // Initialize scores
+        let playerScore = 0;
+        let computerScore = 0;
+        let gameOver = false;
+    
+        // Create score display elements
+        const scoreDiv = document.createElement('div');
+        scoreDiv.classList.add('rps-score');
+        scoreDiv.innerHTML = `
+            <p>girlie: <span id="player-score">0</span></p>
+            <p>me: <span id="computer-score">0</span></p>
+        `;
+        const title = rpsGame.querySelector('p');
+        rpsGame.insertBefore(scoreDiv, title.nextSibling);
+    
+        if (startButton && rpsGame) {
+            startButton.addEventListener('click', () => {
+                rpsGame.classList.remove('hidden');
+                startButton.remove();
+                closeButton.classList.remove('hidden'); // Show the Close button when game starts
+                resetScores(); // Reset scores when starting the game
+            });
+        }
+    
+        if (closeButton && rpsGame) {
+            closeButton.addEventListener('click', () => {
+                rpsGame.classList.add('hidden');
+                closeButton.classList.add('hidden'); // Hide the Close button when game closes
+                resetScores(); // Reset scores when closing the game
+                enableChoiceButtons(); // Enable buttons in case they were disabled
+            });
+        }
+    
+        choiceButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                if (gameOver) return; // Do nothing if game is over
+                const userChoice = button.dataset.choice;
+                const computerChoice = getComputerChoice();
+                const result = determineWinner(userChoice, computerChoice);
+                displayResult(userChoice, computerChoice, result);
+                updateScores(result);
+                checkGameOver();
+                checkGameOva();
+            });
+        });
+    
+        // Function to reset scores
+        function resetScores() {
+            playerScore = 0;
+            computerScore = 0;
+            gameOver = false;
+            document.getElementById('player-score').textContent = playerScore;
+            document.getElementById('computer-score').textContent = computerScore;
+            rpsResult.innerHTML = '';
+            enableChoiceButtons();
+        }
+    
+        // Function to disable choice buttons
+        function disableChoiceButtons() {
+            choiceButtons.forEach(button => {
+                button.disabled = true;
+                button.style.cursor = 'not-allowed';
+                button.style.opacity = '0.6';
+            });
+        }
+    
+        // Function to enable choice buttons
+        function enableChoiceButtons() {
+            choiceButtons.forEach(button => {
+                button.disabled = false;
+                button.style.cursor = 'pointer';
+                button.style.opacity = '1';
+            });
+        }
+    
+        // Function to update scores
+        function updateScores(result) {
+            if (result === 'U WON UR SO GOOD! MARRY ME UR SO GOOD') {
+                playerScore++;
+                document.getElementById('player-score').textContent = playerScore;
+            } else if (result === 'i won :/ 😭') {
+                computerScore++;
+                document.getElementById('computer-score').textContent = computerScore;
+            }
+        }
+        let gameOverMessage = document.getElementById('game-over-message');
+    if (!gameOverMessage) {
+        gameOverMessage = document.createElement('div');
+        gameOverMessage.id = 'game-over-message';
+        gameOverMessage.style.fontSize = '10pt';
+        gameOverMessage.style.color = '#000000'; 
+    }
+        rpsContainer.appendChild(gameOverMessage);
+        function checkGameOver() {
+            if (playerScore >= 3) {
+                declareGameOver('u won');
+            } else if (computerScore >= 3) {
+                declareGameOver('i won');
+            }
+        }
+        function checkGameOva() {
+            if (playerScore >= 3) {
+                declareGameOva('YAAAY GJJJ/! honestly im not surprised you won, this is NOTHING for your demureness. OH YEAH im giving u an iou too 😼 honestly, personally i hope u use it to make me say i love you 100,000 times because ive been looking for an excuse to do that.                                                                                               also i deleted that playlist because all u added were shays songs sigh.. okay ya anyways not much to yap abt today sorry, BYE ILY <3');
+            } else if (computerScore >= 3) {
+                declareGameOva('NOOOOOO 😭 I SWEAR I JUST GOT LUKCY!!! I GOT LUCKY!! THIS GAMES SO RIGGED U SHOULDVE WON USHOUDLENVKEWOGIBSHNKOWNB. WTF!!! HOW COULD IM AKE THIS GARBAGE ASS GAME FICKASJMVOIEWD, UHHHH, OKAY, OKAY... OK UM.. REMATCH.. REMATCH FUTURE ME!!! I PROMISE HE WILL GIVE U ROBUX IF U WIN (u better wager equally as good tho though jjajajaj 😼)                                                   also i deleted that playlist because all u added were shays songs sigh.. okay ya anyways not much to yap abt today sorry, BYE ILY <3');
+            }
+        }
+
+        function declareGameOva(message) {
+            gameOver = true;
+            if (gameOverMessage) {
+                gameOverMessage.textContent = message;
+            }
+        }
+        // Function to declare game over
+        function declareGameOver(message) {
+            gameOver = true;
+            disableChoiceButtons(); // Disable choice buttons
+    
+            // Change the entire game window content
+            rpsGame.innerHTML = `<div class="game-over-message" style="text-align:center; font-size:24px; color:#ff99cc;">${message}</div>`;
+    
+            // Add a delay before hiding the game window
+            setTimeout(() => {
+                rpsGame.classList.add('hidden'); // Hide the game window after 2 seconds
+                closeButton.classList.add('hidden'); // Hide the Close button
+            }, 200000000); // 2000 milliseconds (2 seconds)
+        }
+    
+        let moveIndex = 0;
+        const predefinedMoves = ['scissors', 'scissors', 'rock', 'scissors', 'paper', 'rock', 'rock', 'paper'];
+    
+        function getComputerChoice() {
+            const choice = predefinedMoves[moveIndex];
+            moveIndex = (moveIndex + 1) % predefinedMoves.length;
+            return choice;
+        }
+    
+        // Function to determine the winner
+        function determineWinner(user, computer) {
+            if (user === computer) return "we tied";
+            if (
+                (user === 'rock' && computer === 'scissors') ||
+                (user === 'paper' && computer === 'rock') ||
+                (user === 'scissors' && computer === 'paper')
+            ) {
+                return 'U WON UR SO GOOD! MARRY ME UR SO GOOD';
+            } else {
+                return 'i won :/ 😭';
+            }
+        }
+    
+        // Function to display the result
+        function displayResult(user, computer, result) {
+            const rpsResult = document.getElementById('rps-result');
+            if (rpsResult) {
+                // Clear previous content
+                rpsResult.innerHTML = '';
+    
+                // Create a wrapper div for the result text
+                const resultWrapper = document.createElement('div');
+                resultWrapper.style.display = 'flex';
+                resultWrapper.style.flexDirection = 'column';
+                resultWrapper.style.alignItems = 'center'; // Center content horizontally
+    
+                // "I chose ..." text
+                const choiceText = document.createElement('p');
+                choiceText.innerHTML = user === computer 
+                    ? `i chose ${(user)} too<br>we literally complete eachother 🥺`
+                    : `i chose <strong>${computer}</strong>`;
+                resultWrapper.appendChild(choiceText);
+    
+                // Result (i win/u win/tied)
+                const resultText = document.createElement('em');
+                resultText.textContent = result;
+                resultWrapper.appendChild(resultText);
+    
+                // Append the wrapper to the rpsResult container
+                rpsResult.appendChild(resultWrapper);
+            }
+        }
+    }
+    });    
