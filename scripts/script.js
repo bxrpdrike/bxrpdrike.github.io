@@ -327,7 +327,7 @@ i love you mwah`
                 },],
             content: `uh hii, ya filler entry #2 👻
             
-well we didnt talk at all this day because i was taking a break and everything. well actually i came back but that's in my timezone, so it'd be tomorrow for you ig. 
+we didnt talk at all this day because i was taking a break and everything. well actually i came back but that's in my timezone, so it'd be tomorrow for you ig. 
 
 
 
