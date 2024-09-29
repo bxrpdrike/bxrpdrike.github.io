@@ -37,10 +37,12 @@ I LOVE YOUUUUU MWAHHHHH. BYE PRINCESS <3`
             date: 'September 9th, 2024',
             day: 'Monday',
             content: `HI CHERRY GORL, we vcd today n u read out fanfics while i was at the gym and i almost died, oh it was also leg day so u heard me moan in pain (U BETTER NOT HAVE RECORDED IT)
+
 everyone probably looked at me weird because i was talking to myself but I DO NOT CARE ITALKED TO MY GIRLY TODAY TEEHEEEEE. also u had such a stupid name idk why u put it as that, yk i was calling with echad
-and then i got a notif and i saw ur name and like, it just ruined my mood so i hung up on him ugh.. BUT ITS OK BECAUSE THEN U CALLEDM EMEE. oh also we looked at plushies earlier and u (almost) played piano teehee
-i was like reading out cantonese on call and u told me my pronunciation was sigma, so mgoi ig ahaha ;) (w rizz). ALSO U BETTER SHOW ME THOSE PLUSHIES U ORDERED FROM TAOBAO
-RIGHT AS U GET THEM! and my condolences u were forced to look at BMW cars for however many hours 😭 my baby does not deserve that kind of torture.. 
+and then i got a notif and i saw ur name and like, it just ruined my mood so i hung up on him ugh.. BUT ITS OK BECAUSE THEN U CALLEDM EMEE. 
+
+oh also we looked at plushies earlier and u (almost) played piano teehee
+i was like reading out cantonese on call and u told me my pronunciation was sigma, so mgoi ig ahaha ;) (w rizz). ALSO U BETTER SHOW ME THOSE PLUSHIES U ORDERED FROM TAOBAO RIGHT AS U GET THEM! and my condolences u were forced to look at BMW cars for however many hours 😭 my baby does not deserve that kind of torture.. 
 
 dude i played my stupid guitar without an amp and it soudns so bad ughhh, I HAVE SOMETHING COOKING UP THOUGH TRUST!!!! next time ill play for u when i have ACTUAL FUNCTIONAL EQUIPMENT. today was tje best and i dont think i can do it justice in this entry..
 i love you more than anything mwwwah`
