@@ -130,7 +130,7 @@ body.ghost-background {
 .image-container.fixed-position-gst {
   position: fixed;
   right: 80px; /* Adjust as needed */
-  top: 80px; /* Adjust as needed */
+  top: 70px; /* Adjust as needed */
   text-align: center;
   z-index: 1000; /* Ensure it's below navigation */
 }

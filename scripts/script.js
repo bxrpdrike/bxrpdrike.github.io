@@ -254,12 +254,11 @@ love you pretty <3
                 {
                     src: '../images/gasstation.png',
                     class: 'gasstation',
-                    textBelowImage: 'dude WHERE WAS YOUR MOM',
+                    textBelowImage: 'WHERE WAS YOUR MOM',
                 },],
             content: `hi precious <3 today was the definition of filler, we were both kinda busy 😭 
 you were suuuper tired because of school (you actually fell asleep in the car on ur way back home) you went to bed early today thankfully tho, i cant have you die from sleep deprivation
       
-
 
 
 
@@ -305,7 +304,7 @@ anyways, we're doing it best of 3, its a bit scuffed because you're in the futur
 did i scare you?
             
 yeah anyways i added like filler entries. basically i come back and write letters for days i missed, I DONT MISS DAYS WITHOUT A REASON THO TRUST!!
-i'll write these as soon as i can, definetly not more than a week after the day i missed. todays real date is sep 28th teehee
+i'll write these as soon as i can after the day i missed, definetly no more than a week. todays real date is sep 28th teehee
             
 anyways the next 3 days will be these filler thingies because i was taking a break and recomposing, september 24th was definetly in the top 2 worst days i've had this year, i dont think you'd even want to know why 😭
             
@@ -887,9 +886,9 @@ function openLetter(index) {
 
         function checkGameOva() {
             if (playerScore >= 3) {
-                declareGameOva('YAAAY GJJJ/! honestly im not surprised you won, this is NOTHING for your demureness. OH YEAH im giving u an iou too 😼 honestly, personally i hope u use it to make me say i love you 100,000 times because ive been looking for an excuse to do that.                                                                                               also i deleted that playlist because all u added were shays songs sigh.. okay ya anyways not much to yap abt today sorry, BYE ILY <3');
+                declareGameOva('YAAAY GJJJ/! honestly im not surprised you won, this is NOTHING for your demureness. OH YEAH im giving u an iou too 😼 honestly, personally i hope u use it to make me say i love you 100,000 times because ive been looking for an excuse to do that. also i deleted that playlist because all u added were shays songs sigh.. okay ya anyways not much to yap abt today sorry, BYE ILY <3');
             } else if (computerScore >= 3) {
-                declareGameOva('NOOOOOO 😭 I SWEAR I JUST GOT LUKCY!!! I GOT LUCKY!! THIS GAMES SO RIGGED U SHOULDVE WON USHOUDLENVKEWOGIBSHNKOWNB. WTF!!! HOW COULD IM AKE THIS GARBAGE ASS GAME FICKASJMVOIEWD, UHHHH, OKAY, OKAY... OK UM.. REMATCH.. REMATCH FUTURE ME!!! I PROMISE HE WILL GIVE U ROBUX IF U WIN (u better wager equally as good tho though jjajajaj 😼)                                                   also i deleted that playlist because all u added were shays songs sigh.. okay ya anyways not much to yap abt today sorry, BYE ILY <3');
+                declareGameOva('NOOOOOO 😭 I SWEAR I JUST GOT LUKCY!!! I GOT LUCKY!! THIS GAMES SO RIGGED U SHOULDVE WON USHOUDLENVKEWOGIBSHNKOWNB. WTF!!! HOW COULD IM AKE THIS GARBAGE ASS GAME FICKASJMVOIEWD, UHHHH, OKAY, OKAY... OK UM.. REMATCH.. REMATCH FUTURE ME!!! I PROMISE HE WILL GIVE U ROBUX IF U WIN (u better wager equally as good tho though jjajajaj 😼) also i deleted that playlist because all u added were shays songs sigh.. okay ya anyways not much to yap abt today sorry, BYE ILY <3');
             }
         }
 
