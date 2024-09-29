@@ -28,8 +28,9 @@ i watched u play thjat one wheel thing and it was fun (besides the part where u 
 anyways i think u should TOTALLY BUY DRESS TO IMPRESS VIP!!!! its very worth the uhh 800 robux or wtv.. we also played cart ride into 13 pregnant hyenas or wtv it was called but tjat was just filler.
 
 WE UH, SHOWER CALLED? I SHOWER CALLED U.. i think i ruined my phone case. idk if bringing my phone into the shower was a good idea it started typing stuff by itself, also i got cleanser in my eye.
-u were being SUPER WEIRD THO WDYM BY "he'll never know" WHT SONG IS 1:12 TJE TIMESTAMP TO U FREAK OF NATURE. oh also we did that typhoon assignment thing earlier and it was FUUN, well mostly because i was doing nothing-
-AI did most of it anyways. we almost sleep called too (not really). GRR IM IN LOVE WITH THE SHAPE OF YOU IM IN LOVE WITH UR BODY (i love ed she ran) OKAY ANWYAYS I WONT KEEP U HEREE, I LOVE YOU SO MUCH,
+u were being SUPER WEIRD THO WDYM BY "he'll never know" WHT SONG IS 1:12 TJE TIMESTAMP TO U FREAK OF NATURE. oh also we did that typhoon assignment thing earlier and it was FUUN, well mostly because i was doing nothing, AI did most of it anyways. we almost sleep called too (not really). 
+
+GRR IM IN LOVE WITH THE SHAPE OF YOU IM IN LOVE WITH UR BODY (i love ed she ran) OKAY ANWYAYS I WONT KEEP U HEREE, I LOVE YOU SO MUCH,
 I LOVE YOUUUUU MWAHHHHH. BYE PRINCESS <3`
         },
         {
