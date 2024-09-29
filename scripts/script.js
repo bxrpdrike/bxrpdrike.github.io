@@ -289,8 +289,140 @@ anyways, we're doing it best of 3, its a bit scuffed because you're in the futur
             </div>
         
 `
+        },
+        {
+            date: 'September 24th, 2024',
+            day: 'Tuesday',
+            isGhost:true,
+            images: [
+                {
+                    src: '../images/supermassive.png',
+                    class: 'supermassive',
+                    textBelowImage: 'this song slaps so hard',
+                },],
+            content: `BOO! 👻👻👻
+            
+did i scare you?
+            
+yeah anyways i added ghost entries. basically i come back and write letters for days i missed, I DONT MISS DAYS WITHOUT A REASON THO TRUST!!
+i'll write these as soon as i can, definetly not more than a week after the day i missed. todays real date is sep 28th teehee
+            
+anyways the next 3 days will be ghost because i was taking a break and recomposing, september 24th was definetly in the top 2 worst days i've had this year, i dont think you'd even want to know why 😭
+            
+okay yeah, OH WAIT, ONE MORE THING.
+<span class="spoiler">BOOOO 👻 (surely i got u this time) </span>
+            
+i love you mwah`
+
+        },
+
+        {
+            date: 'September 25th, 2024',
+            day: 'Wednesday',
+            isGhost:true,
+            images: [
+                {
+                    src: '../images/sep25.png',
+                    class: 'sep25',
+                    textBelowImage: 'literally the only message that was sent this day',
+                },],
+            content: `uh hii, this is ghost #2 👻
+            
+well we didnt talk at all this day because i was taking a break and everything. well actually i came back but that's in my timezone, so it'd be tomorrow for you ig. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+i wouldnt say this in normal entries but this one's a ghost PLUS we didnt do anything on the 25th and idk what to write about. SOOOO i'll just say that i WANT US TO PLAY MINECRAFT. U ALWAYS REFUSE BECAUSE APPARENTLY ITSN OT FUN BUT THE THING IS ITS A SANDBOX GAME, U CAN LITERALLY DO ANYTHING, IT CANT NOT BE FUN. WE CAN PLAY CREATIVE!! WE CAN DO MINIGAMES!! IT DOENST HAVE TO BE SURVIVAL PRINCESS, WE CAN DO ANYTHING YOU WANT!!!>!>!!1!!P LEAPSLPELPALS PLEASE PLEASE!!! PLEASE
+
+YEAH I LKOVE YOU 💚`
+
+        },
+        {
+            date: 'September 26th, 2024',
+            day: 'Thursday',
+            isGhost:true,
+            content: `hii, i finally came back from my break and we talked about alot of stuff this day. LIKE UH DISLYTE AND STUFF. AND UH U TOLD ME SEAN HAD A CRUSH ON EMMA, oh and then i mentioned keijo 😭 its okay i erased everything keijo related from my brain since then. im just reading through the dms to make sure im thinking of the right day. oh i also REALLY WANTED TO CALL LMAO. you dont know how much i missed you before i came back. yeah okay anyways this is the last ghost entry, spoiler warning i sound very depressed in tomorrow's entry for some reason LMAO, lowk wish i could punch myself.
+            
+anyways i'll drop a paragraph from my infamous literary masterpiece "Arggie is a fag" now because why not (i censored out the naughty words because i cant have your innocence be corrupted by such vulagrity)
+
+"He violently walked over to Minnie and dragged her over to the couch by her hair, he sat her down with force and tied her up to the corners of the couch, he pulled his mbappe out once again, and shook it around to get skibidi. Soon enough, it was fully skibidi, Arggie brought it up to her face and rubbed it against her baby gronk and saddam hussein. Minnie began quietly sobbing, Arggie pulled the front of her shirt down to expose her midriff, he positioned himself so that his mbappe was only a few inches from her face, and pushed it into her saddam hussein, he forced it deep into her shay emoji, before pulling out and allowing her to floss a little bit, he put it back into her saddam hussein. He then forced it in and out a few more times, he pushed her back and she flossed on the mbappe and fell to the floor, he grabbed her by her hair and dragged her across the floor, he continued to force himself into her shay emoji until he was completely out of breath."
+
+i just realized my censoring didn't do much.. UH OKAY, bye i love you <3
+`
+
         }
-        ,
+        , {
+            date: 'September 27th, 2024',
+            day: 'Friday',
+            content: `hi, its been a few days since i made the last entry. something happened a few days ago and it shook me up so i didnt really think about writing these, i wont bore you with it tho. you went to sleep early, im waiting for u to come back. for some reason you felt like i dont love you and that's terrible so i'll make sure to get that sorted.
+            
+i promised i wouldn't write any more short letters so i'll have to think of what to write here.. ik im taking this from the edating handbook (filthy edaters sigh) but i wish u were here rn. i hate timezones and i hate not being able to touch or see u ugh, did i tell u that my love language is cuddles? also u still havent used that gift card.. dont u dare let it expire
+            
+winter depression is coming in, i hate it so much.. maybe your love can negate it for me this year? i beg please save me from winter. i almost killed myself in 2022 because of it. also sorry for what i said about your friends that day, im sure theyre not that bad.. you'll have to introduce us some day. oh right also oct 3rd is coming up, i wonder what i'll get from you
+
+i havent heard your voice in so long, i miss it. sorry im just writing out my thoughts because i legitemately do not know what to write 😭 i'll try to call with you tomorrow i missed you so much this week.
+
+i love you
+            `
+        }, {
+            date: 'September 28th, 2024',
+            day: 'Saturday',
+            images: [
+                {
+                    src: '../images/spiderman.jpg',
+                    class: 'spiderman',
+                    textBelowImage: 'handshake (an agreement has been reached)',
+                },],
+            content: `HI SWEETIE, you were out at the pool with ur friends today. i hope u had even a lil itty bit of fun (even tho u told me u didnt 😭) because u were there for the entire day and stuff. u have the whole housewarming going on now, ur probably so tired after today lol. u wrote me a whole vlog and i was like kicking my legs in the air when i woke up, i love you <3
+
+also you ate like giant pizza n stuff and some kid kept coming into ur room to pet stinky LMAO, not that i blame him. ANYWAYS i decided that i'm NO LONGER participating in social activities with my friends becaaause i dont need anyone besides you anyways, and no one else is worthy of my time 😼 matter of fact i'll just stop talking in all my gcs altogether starting now. i'll be a loner for you 🗣️💯
+
+i realized the reason your spiderman voodoo doll has been watching me sleep this entire time is probably because it wants to be in bed with me. i never slept with plushies but i'll make an exception for this one from now on. i'll give u my hair and blood for yours so i can feel your smooches in 4k at all times. also ignore how messy my bed is i just got up i swear 😭 does my hand look fat yet? idk maybe i'll just keep bulking forever and be ur big boy <span><img src="../images/joobi.png" alt="Joobi Emoji" class="emoji"></span>
+
+OH ALSO U TRIED BEER, im glad u think it 
+tastes like ass because i only permit you to get 
+drunk around me. cant have u vulnerable with goobers 
+
+ugh i hope u'll gts soon you need a BIG recharge. 
+AND YOU BETTER NOT LET ME catch you calling
+yourself bad words EVER AGAIN!! because-
+I WILL NOT STAND HEARING ANYONE
+TALK ABOUT U LIKE THAT, EVEN IF ITS URSELF 🗣️🗣️😡
+like i said, i'll wash ur mouth with soap if u do <span><img src="../images/joobi.png" alt="Joobi Emoji" class="emoji"></span>
+
+also that thing about never stopping the bulk was
+a joke, i'd honestly rather die than force
+myself to eat 3000 calories every day for eternity
+
+oh yeah also i made us a new playlist again and u 
+loaded it with pally music before leaving and i was lowk like :/
+PLEASE FOR THE LOVE OF GOD LETS MAKE ONE.. 
+FOR SOME REASON U THINK I DISSED UR MUSIC 
+TASTE EVEN THO I NEVER DID AAAA, 
+I JUST WANT A PLAYLISTP LEASE PLEASEPLSAPE
+
+
+guess which pretty girl just went to sleep?
+hint: <span class="spoiler">the prettiest one</span>
+
+you better get all your rest hours in before the weekend is over
+i'll be here when you wake up, love you mwah <3
+
+P.S. the answer is <span class="spoiler">the only one</span>
+`
+        },
         
     ];          const container = document.querySelector('.document-container');
     const navigation = document.getElementById('navigation');
@@ -311,6 +443,10 @@ anyways, we're doing it best of 3, its a bit scuffed because you're in the futur
         dateElem.innerHTML = `${letter.day}<br>${letter.date}`;
         envelope.appendChild(dateElem);
 
+        if (letter.isGhost) {
+            envelope.classList.add('ghost-envelope');
+        }
+
         container.appendChild(envelope);
     });
 
@@ -320,17 +456,25 @@ anyways, we're doing it best of 3, its a bit scuffed because you're in the futur
             const offset = (index - currentIndex) * 120; // Adjust spacing
             envelope.style.top = `calc(50% + ${offset}px)`;
             envelope.style.zIndex = 1000 - Math.abs(index - currentIndex);
-
+    
             // Apply the visual scaling for selected or unselected envelopes
             if (index === currentIndex) {
                 envelope.classList.add('selected');
-                envelope.style.transform = 'scale(1.1)';
+                envelope.style.transform = 'translate(-50%, -50%) scale(1.1)';
             } else {
                 envelope.classList.remove('selected');
-                envelope.style.transform = 'scale(1)';
+                envelope.style.transform = 'translate(-50%, -50%) scale(1)';
             }
         });
+    
+        // Adjust background color based on the current envelope
+        if (!letters[currentIndex].isGhost) {
+            // If the current envelope is not a ghost envelope, remove 'ghost-background' class
+            document.body.classList.remove('ghost-background');
+        }
+        // Else, do nothing (we don't change the background when scrolling onto a ghost envelope)
     }
+    
 
     updateEnvelopes();
 
@@ -351,7 +495,7 @@ anyways, we're doing it best of 3, its a bit scuffed because you're in the futur
                 updateEnvelopes();
             }
         }
-    });
+    }, { passive: false });
 
     // Click on envelope to select or open letter
     container.addEventListener('click', (e) => {
@@ -374,123 +518,176 @@ anyways, we're doing it best of 3, its a bit scuffed because you're in the futur
     });
 
     // Open letter
-    function openLetter(index) {
-        isLetterOpen = true;
+    // Open letter
+   // Open letter function
+function openLetter(index) {
+    isLetterOpen = true;
 
-        let letter = document.querySelector('.letter');
-        if (!letter) {
-            letter = document.createElement('div');
-            letter.classList.add('letter');
+    let letter = document.querySelector('.letter');
+    if (!letter) {
+        letter = document.createElement('div');
+        letter.classList.add('letter');
 
-            const closeButton = document.createElement('div');
-            closeButton.classList.add('close-button');
-            closeButton.innerHTML = '&times;';
-            closeButton.addEventListener('click', closeLetter);
-            letter.appendChild(closeButton);
+        const closeButton = document.createElement('div');
+        closeButton.classList.add('close-button');
+        closeButton.innerHTML = '&times;';
+        closeButton.addEventListener('click', closeLetter);
+        letter.appendChild(closeButton);
 
-            const dateDiv = document.createElement('div');
-            dateDiv.classList.add('letter-date');
-            letter.appendChild(dateDiv);
+        const dateDiv = document.createElement('div');
+        dateDiv.classList.add('letter-date');
+        letter.appendChild(dateDiv);
 
-            const contentDiv = document.createElement('div');
-            contentDiv.classList.add('content');
-            letter.appendChild(contentDiv);
+        const contentDiv = document.createElement('div');
+        contentDiv.classList.add('content');
+        letter.appendChild(contentDiv);
 
-            document.body.appendChild(letter);
-        }
-
-        // Update the date
-        const dateDiv = letter.querySelector('.letter-date');
-        dateDiv.textContent = letters[index].date;
-
-        // Update the content
-        const contentDiv = letter.querySelector('.content');
-        contentDiv.innerHTML = ''; // Clear previous content to prevent duplication
-
-        // Add image(s) if they exist
-        if (letters[index].images && Array.isArray(letters[index].images)) {
-            letters[index].images.forEach((imageObj) => {
-                // Create image container
-                const imageContainer = document.createElement('div');
-                imageContainer.classList.add('image-container');
-
-                // Assign fixed-position class based on imageClass
-                if (imageObj.class === 'flatbread') {
-                    imageContainer.classList.add('fixed-position');
-                }
-                if (imageObj.class === 'heartbreak') {
-                    imageContainer.classList.add('fixed-position-hrt');
-                }
-                if (imageObj.class === 'nwrd') {
-                    imageContainer.classList.add('fixed-position-nwrd');
-                    
-                }
-                if (imageObj.class === 'arrw') {
-                    imageContainer.classList.add('fixed-position-arrw');
-                    
-                }
-                if (imageObj.class === 'gasstation') {
-                    imageContainer.classList.add('fixed-position-gst');
-                }
-                // Add more conditions if you have more unique classes
-
-                // Optional text above the image
-                if (imageObj.textAboveImage) {
-                    const textAbove = document.createElement('div');
-                    textAbove.classList.add('text-above');
-                    textAbove.textContent = imageObj.textAboveImage;
-                    imageContainer.appendChild(textAbove);
-                }
-
-                const img = document.createElement('img');
-                img.src = imageObj.src; // Path to the image
-                img.alt = 'Letter image'; // Optional alt text for accessibility
-
-                // Add custom image class if it exists in the image object
-                if (imageObj.class) {
-                    img.classList.add(imageObj.class); // e.g., 'flatbread'
-                }
-
-                img.classList.add('letter-image'); // General class for all images
-                imageContainer.appendChild(img); // Append the image to the image container
-
-                // Optional text below the image
-                if (imageObj.textBelowImage) {
-                    const textBelow = document.createElement('div');
-                    textBelow.classList.add('text-below');
-                    textBelow.textContent = imageObj.textBelowImage;
-                    imageContainer.appendChild(textBelow); // Append text below the image
-                }
-
-                contentDiv.appendChild(imageContainer); // Append the image container to the letter's content
-            });
-        }
-        // Add the letter's main content
-        const mainContent = document.createElement('div');
-        mainContent.classList.add('main-content');
-        mainContent.innerHTML = letters[index].content;
-        contentDiv.appendChild(mainContent);
-
-        navigation.style.display = 'flex';
-
-        const envelopes = document.querySelectorAll('.envelope');
-        envelopes.forEach((env) => {
-            env.style.visibility = 'hidden';
-        });
-
-        setTimeout(() => {
-            document.addEventListener('click', outsideClickListener);
-        }, 0);
-
-        letter.addEventListener('click', (event) => {
-            event.stopPropagation();
-        });
-
-        // Initialize RPS if it's the last letter
-        if (index === letters.length - 1) {
-            initializeRPS();
-        }
+        document.body.appendChild(letter);
     }
+
+    // Update the date
+    const dateDiv = letter.querySelector('.letter-date');
+    dateDiv.textContent = letters[index].date;
+
+    // Update the content
+    const contentDiv = letter.querySelector('.content');
+    contentDiv.innerHTML = ''; // Clear previous content to prevent duplication
+
+    // Add image(s) if they exist
+    if (letters[index].images && Array.isArray(letters[index].images)) {
+        letters[index].images.forEach((imageObj) => {
+            // Create image container
+            const imageContainer = document.createElement('div');
+            imageContainer.classList.add('image-container');
+
+            // Assign fixed-position class based on imageClass
+            if (imageObj.class === 'flatbread') {
+                imageContainer.classList.add('fixed-position');
+            }
+            if (imageObj.class === 'heartbreak') {
+                imageContainer.classList.add('fixed-position-hrt');
+            }
+            if (imageObj.class === 'sep25') {
+                imageContainer.classList.add('fixed-position-sep25');
+            }
+            if (imageObj.class === 'supermassive') {
+                imageContainer.classList.add('fixed-position-supermassive');
+            }
+            if (imageObj.class === 'spiderman') {
+                imageContainer.classList.add('fixed-position-spiderman');
+            }
+            if (imageObj.class === 'nwrd') {
+                imageContainer.classList.add('fixed-position-nwrd');
+            }
+            if (imageObj.class === 'arrw') {
+                imageContainer.classList.add('fixed-position-arrw');
+            }
+            if (imageObj.class === 'gasstation') {
+                imageContainer.classList.add('fixed-position-gst');
+            }
+            // Add more conditions if you have more unique classes
+
+            // Optional text above the image
+            if (imageObj.textAboveImage) {
+                const textAbove = document.createElement('div');
+                textAbove.classList.add('text-above');
+                textAbove.textContent = imageObj.textAboveImage;
+                imageContainer.appendChild(textAbove);
+            }
+
+            const img = document.createElement('img');
+            img.src = imageObj.src; // Path to the image
+            img.alt = 'Letter image'; // Optional alt text for accessibility
+
+            // Add custom image class if it exists in the image object
+            if (imageObj.class) {
+                img.classList.add(imageObj.class); // e.g., 'flatbread'
+            }
+
+            img.classList.add('letter-image'); // General class for all images
+            imageContainer.appendChild(img); // Append the image to the image container
+
+            // Optional text below the image
+            if (imageObj.textBelowImage) {
+                const textBelow = document.createElement('div');
+                textBelow.classList.add('text-below');
+                textBelow.textContent = imageObj.textBelowImage;
+                imageContainer.appendChild(textBelow); // Append text below the image
+            }
+
+            contentDiv.appendChild(imageContainer); // Append the image container to the letter's content
+        });
+    }
+
+    // Add the letter's main content
+    const mainContent = document.createElement('div');
+    mainContent.classList.add('main-content');
+    mainContent.innerHTML = letters[index].content;
+    contentDiv.appendChild(mainContent);
+
+    // Toggle ghost mode classes
+    if (letters[index].isGhost) {
+        letter.classList.add('ghost-mode');
+        document.body.classList.add('ghost-background'); // Add dark background
+        prevButton.classList.add('background-color-ghost');
+        nextButton.classList.add('background-color-ghost');
+    } else {
+        letter.classList.remove('ghost-mode');
+        document.body.classList.remove('ghost-background'); // Revert to original background
+        prevButton.classList.remove('background-color-ghost');
+        nextButton.classList.remove('background-color-ghost');
+    }
+
+    navigation.style.display = 'flex';
+
+    const envelopes = document.querySelectorAll('.envelope');
+    envelopes.forEach((env) => {
+        env.style.visibility = 'hidden';
+    });
+
+    // **Add Spoiler Functionality (Moved Outside of Envelopes Loop)**
+    const spoilers = contentDiv.querySelectorAll('.spoiler');
+    spoilers.forEach(spoiler => {
+        // Make spoilers focusable
+        spoiler.setAttribute('tabindex', '0');
+
+        // Click event to toggle 'revealed' class
+        spoiler.addEventListener('click', () => {
+            spoiler.classList.toggle('revealed');
+        });
+
+        // Keyboard event to toggle 'revealed' class on Enter or Space
+        spoiler.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault(); // Prevent default behavior like scrolling
+                spoiler.classList.toggle('revealed');
+            }
+        });
+    });
+
+    // Add Spoiler Reveal on Initial Load (Optional)
+    // This ensures that any spoilers already marked as revealed in the content are displayed correctly
+    spoilers.forEach(spoiler => {
+        if (spoiler.classList.contains('revealed')) {
+            spoiler.style.color = 'var(--letter-text-color)';
+            spoiler.style.backgroundColor = '#FFD7DD';
+        }
+    });
+    setTimeout(() => {
+        document.addEventListener('click', outsideClickListener);
+    }, 0);
+
+    letter.addEventListener('click', (event) => {
+        event.stopPropagation();
+    });
+
+    if (index === 16) {
+        setTimeout(() => {
+            initializeRPS();
+        }, 0);
+    }
+}
+
 
     // Close letter
     function closeLetter() {
@@ -499,21 +696,25 @@ anyways, we're doing it best of 3, its a bit scuffed because you're in the futur
         if (letter) {
             letter.remove();
         }
-
+    
         // Hide navigation buttons
         navigation.style.display = 'none';
-
+    
         // Remove outside click listener
         document.removeEventListener('click', outsideClickListener);
-
+    
         // Show envelopes
         const envelopes = document.querySelectorAll('.envelope');
         envelopes.forEach((env) => {
             env.style.visibility = 'visible';
         });
-
+    
+        // Remove 'ghost-background' class when closing any letter
+        document.body.classList.remove('ghost-background');
+    
         updateEnvelopes();
     }
+    
 
     // Outside click listener to close the letter
     function outsideClickListener(event) {
@@ -568,22 +769,21 @@ anyways, we're doing it best of 3, its a bit scuffed because you're in the futur
     });
 
     // Rock Paper Scissors Minigame Logic
-
-    // Rock Paper Scissors Minigame Logic
-
     function initializeRPS() {
-        const startButton = document.getElementById('start-rps');
-        const rpsGame = document.getElementById('rps-game');
-        const closeButton = document.getElementById('rps-close');
-        const choiceButtons = document.querySelectorAll('.choice-button');
-        const rpsResult = document.getElementById('rps-result');
-        const rpsContainer = document.querySelector('.rps-container');
+        const letter = document.querySelector('.letter');
+        const contentDiv = letter.querySelector('.content');
     
+        const startButton = contentDiv.querySelector('#start-rps');
+        const rpsGame = contentDiv.querySelector('#rps-game');
+        const closeButton = contentDiv.querySelector('#rps-close'); // If you have a close button
+        const choiceButtons = contentDiv.querySelectorAll('.choice-button');
+        const rpsResult = contentDiv.querySelector('#rps-result');
+        const rpsContainer = contentDiv.querySelector('.rps-container');
         // Initialize scores
         let playerScore = 0;
         let computerScore = 0;
         let gameOver = false;
-    
+
         // Create score display elements
         const scoreDiv = document.createElement('div');
         scoreDiv.classList.add('rps-score');
@@ -593,25 +793,29 @@ anyways, we're doing it best of 3, its a bit scuffed because you're in the futur
         `;
         const title = rpsGame.querySelector('p');
         rpsGame.insertBefore(scoreDiv, title.nextSibling);
-    
+
         if (startButton && rpsGame) {
             startButton.addEventListener('click', () => {
                 rpsGame.classList.remove('hidden');
                 startButton.remove();
-                closeButton.classList.remove('hidden'); // Show the Close button when game starts
+                if (closeButton) {
+                    closeButton.classList.remove('hidden'); // Show the Close button when game starts
+                }
                 resetScores(); // Reset scores when starting the game
             });
         }
-    
+
         if (closeButton && rpsGame) {
             closeButton.addEventListener('click', () => {
                 rpsGame.classList.add('hidden');
-                closeButton.classList.add('hidden'); // Hide the Close button when game closes
+                if (closeButton) {
+                    closeButton.classList.add('hidden'); // Hide the Close button when game closes
+                }
                 resetScores(); // Reset scores when closing the game
                 enableChoiceButtons(); // Enable buttons in case they were disabled
             });
         }
-    
+
         choiceButtons.forEach(button => {
             button.addEventListener('click', () => {
                 if (gameOver) return; // Do nothing if game is over
@@ -624,7 +828,7 @@ anyways, we're doing it best of 3, its a bit scuffed because you're in the futur
                 checkGameOva();
             });
         });
-    
+
         // Function to reset scores
         function resetScores() {
             playerScore = 0;
@@ -635,7 +839,7 @@ anyways, we're doing it best of 3, its a bit scuffed because you're in the futur
             rpsResult.innerHTML = '';
             enableChoiceButtons();
         }
-    
+
         // Function to disable choice buttons
         function disableChoiceButtons() {
             choiceButtons.forEach(button => {
@@ -644,7 +848,7 @@ anyways, we're doing it best of 3, its a bit scuffed because you're in the futur
                 button.style.opacity = '0.6';
             });
         }
-    
+
         // Function to enable choice buttons
         function enableChoiceButtons() {
             choiceButtons.forEach(button => {
@@ -653,7 +857,7 @@ anyways, we're doing it best of 3, its a bit scuffed because you're in the futur
                 button.style.opacity = '1';
             });
         }
-    
+
         // Function to update scores
         function updateScores(result) {
             if (result === 'U WON UR SO GOOD! MARRY ME UR SO GOOD') {
@@ -664,14 +868,16 @@ anyways, we're doing it best of 3, its a bit scuffed because you're in the futur
                 document.getElementById('computer-score').textContent = computerScore;
             }
         }
+
         let gameOverMessage = document.getElementById('game-over-message');
-    if (!gameOverMessage) {
-        gameOverMessage = document.createElement('div');
-        gameOverMessage.id = 'game-over-message';
-        gameOverMessage.style.fontSize = '10pt';
-        gameOverMessage.style.color = '#000000'; 
-    }
-        rpsContainer.appendChild(gameOverMessage);
+        if (!gameOverMessage) {
+            gameOverMessage = document.createElement('div');
+            gameOverMessage.id = 'game-over-message';
+            gameOverMessage.style.fontSize = '10pt';
+            gameOverMessage.style.color = '#000000';
+            rpsContainer.appendChild(gameOverMessage);
+        }
+
         function checkGameOver() {
             if (playerScore >= 3) {
                 declareGameOver('u won');
@@ -679,6 +885,7 @@ anyways, we're doing it best of 3, its a bit scuffed because you're in the futur
                 declareGameOver('i won');
             }
         }
+
         function checkGameOva() {
             if (playerScore >= 3) {
                 declareGameOva('YAAAY GJJJ/! honestly im not surprised you won, this is NOTHING for your demureness. OH YEAH im giving u an iou too 😼 honestly, personally i hope u use it to make me say i love you 100,000 times because ive been looking for an excuse to do that.                                                                                               also i deleted that playlist because all u added were shays songs sigh.. okay ya anyways not much to yap abt today sorry, BYE ILY <3');
@@ -689,34 +896,35 @@ anyways, we're doing it best of 3, its a bit scuffed because you're in the futur
 
         function declareGameOva(message) {
             gameOver = true;
-            if (gameOverMessage) {
-                gameOverMessage.textContent = message;
-            }
+            gameOverMessage.textContent = message;
         }
+
         // Function to declare game over
         function declareGameOver(message) {
             gameOver = true;
             disableChoiceButtons(); // Disable choice buttons
-    
+
             // Change the entire game window content
             rpsGame.innerHTML = `<div class="game-over-message" style="text-align:center; font-size:24px; color:#ff99cc;">${message}</div>`;
-    
+
             // Add a delay before hiding the game window
             setTimeout(() => {
                 rpsGame.classList.add('hidden'); // Hide the game window after 2 seconds
-                closeButton.classList.add('hidden'); // Hide the Close button
-            }, 200000000); // 2000 milliseconds (2 seconds)
+                if (closeButton) {
+                    closeButton.classList.add('hidden'); // Hide the Close button
+                }
+            }, 20000000); // 2000 milliseconds (2 seconds)
         }
-    
+
         let moveIndex = 0;
         const predefinedMoves = ['scissors', 'scissors', 'rock', 'scissors', 'paper', 'rock', 'rock', 'paper'];
-    
+
         function getComputerChoice() {
             const choice = predefinedMoves[moveIndex];
             moveIndex = (moveIndex + 1) % predefinedMoves.length;
             return choice;
         }
-    
+
         // Function to determine the winner
         function determineWinner(user, computer) {
             if (user === computer) return "we tied";
@@ -730,35 +938,35 @@ anyways, we're doing it best of 3, its a bit scuffed because you're in the futur
                 return 'i won :/ 😭';
             }
         }
-    
+
         // Function to display the result
         function displayResult(user, computer, result) {
             const rpsResult = document.getElementById('rps-result');
             if (rpsResult) {
                 // Clear previous content
                 rpsResult.innerHTML = '';
-    
+
                 // Create a wrapper div for the result text
                 const resultWrapper = document.createElement('div');
                 resultWrapper.style.display = 'flex';
                 resultWrapper.style.flexDirection = 'column';
                 resultWrapper.style.alignItems = 'center'; // Center content horizontally
-    
+
                 // "I chose ..." text
                 const choiceText = document.createElement('p');
                 choiceText.innerHTML = user === computer 
-                    ? `i chose ${(user)} too<br>we literally complete eachother 🥺`
+                    ? `i chose ${user} too<br>we literally complete eachother 🥺`
                     : `i chose <strong>${computer}</strong>`;
                 resultWrapper.appendChild(choiceText);
-    
+
                 // Result (i win/u win/tied)
                 const resultText = document.createElement('em');
                 resultText.textContent = result;
                 resultWrapper.appendChild(resultText);
-    
+
                 // Append the wrapper to the rpsResult container
                 rpsResult.appendChild(resultWrapper);
             }
         }
     }
-    });    
+});

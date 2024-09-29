@@ -1,27 +1,68 @@
 /* styles.css */
 
-/* General Styles */
+/* CSS Variables for the Entire Document */
+:root { /* Original background color */
+  --background-color: #d19bbc;
+  --background-color-dark:#111111;
+  --header-background: #FFCCEE;
+  --header-text-color: #000000;
+  /* Envelopes */
+  --envelope-background: url('../images/envelope.png');
+  --envelope-border-radius: 5px;
+  --envelope-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --envelope-transition: transform 0.3s ease, top 0.3s ease, filter 0.5s ease;
+  /* Other global variables can be added here */
+}
+
+/* Dark Mode Variables for Letters */
+.letter.ghost-mode {
+  --letter-background: #2c2c2c; /* Dark letter background */
+  --letter-border-color: #287a33; /* Darker pink border */
+  --letter-text-color: #b3b3b3; /* Light text color */
+  --accent-color: #287a33; /* Darker pink accent */
+  --button-hover: #11551a; /* Darker hover color */
+}
+
+/* Regular Mode Variables for Letters */
+.letter {
+  --letter-background: #FFFFFF; /* Original letter background */
+  --letter-border-color: #FF99CC; /* Original pink border */
+  --letter-text-color: #000000; /* Original text color */
+  --accent-color: #FF99CC; /* Original pink accent */
+  --button-hover: #FF66B3; /* Original button hover color */
+}
 
 body {
   margin: 0;
-  background-color: #d19bbc;
+  background-color: var(--background-color);
   font-family: 'Verdana', 'Arial', 'sans-serif';
   overflow: auto;
+  transition: background-color 0.5s ease;
 }
 
+/* Ghost Background Modifier */
+body.ghost-background {
+  --background-color: var(--background-color-dark);
+}
+
+
+/* Header Styles */
 .header {
   width: 100%;
   text-align: center;
-  background-color: #FFCCEE;
+  background-color: var(--header-background);
   padding: 20px;
+  transition: background-color 0.5s ease;
 }
 
 .header h1 {
   margin: 0;
   font-size: 24px;
-  color: #000;
+  color: var(--header-text-color);
+  transition: color 0.5s ease;
 }
 
+/* Document Container */
 .document-container {
   position: relative;
   width: 100%;
@@ -29,11 +70,12 @@ body {
   overflow: hidden;
 }
 
-/* General Container for image and its text */
+/* General Container for Image and Its Text */
 .image-container {
   width: 180px; /* Adjust as needed */
   text-align: center;
   margin: 40px auto; /* Centers the container horizontally with top margin */
+  transition: color 0.5s ease;
 }
 
 /* Fixed Position Containers for Specific Images */
@@ -49,6 +91,30 @@ body {
   position: fixed;
   right: 20px; /* Adjust as needed */
   top: 270px; /* Adjust as needed */
+  text-align: center;
+  z-index: 1000; /* Ensure it's below navigation */
+}
+
+.image-container.fixed-position-supermassive {
+  position: fixed;
+  right: 20px; /* Adjust as needed */
+  top: 270px; /* Adjust as needed */
+  text-align: center;
+  z-index: 1000; /* Ensure it's below navigation */
+}
+
+.image-container.fixed-position-sep25 {
+  position: fixed;
+  right: 20px; /* Adjust as needed */
+  top: 120px; /* Adjust as needed */
+  text-align: center;
+  z-index: 1000; /* Ensure it's below navigation */
+}
+
+.image-container.fixed-position-spiderman {
+  position: fixed;
+  right: 50px; /* Adjust as needed */
+  top: 310px; /* Adjust as needed */
   text-align: center;
   z-index: 1000; /* Ensure it's below navigation */
 }
@@ -77,14 +143,169 @@ body {
   z-index: 1000; /* Ensure it's below navigation */
 }
 
+/* Spoiler Hidden State */
+/* Spoiler Hidden State */
+.letter .content .spoiler {
+  position: relative; /* Establish positioning context for the pseudo-element */
+  background-color: var(--accent-color);
+  color: var(--accent-color);
+  cursor: pointer;
+  padding: 0 5px;
+  border-radius: 3px;
+  display: inline-block;
+  font-size: inherit; /* Ensure font size is consistent */
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Pseudo-element Overlay to Hide Content */
+.letter .content .spoiler::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color);
+  border-radius: 3px;
+  pointer-events: none; /* Allow clicks to pass through to the spoiler */
+  transition: opacity 0.3s ease;
+  opacity: 1; /* Fully opaque in hidden state */
+}
+
+/* Spoiler Revealed State - Hide the Overlay */
+.letter .content .spoiler.revealed::before {
+  opacity: 0; /* Make the overlay transparent, revealing content */
+}
+
+/* Spoiler Revealed State - Change Text and Background Colors */
+.letter .content .spoiler.revealed {
+  color:#6c2c77;
+  background-color:#d19bbc;
+}
+/* Spoiler Hidden State in Ghost Mode */
+.letter.ghost-mode .content .spoiler {
+  background-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+/* Spoiler Revealed State in Ghost Mode */
+.letter.ghost-mode .content .spoiler.revealed {
+  color:#a1eeab;
+  background-color: #287a33; /* Darker green to match ghost accent */
+}
+
+/* Emoji Image Styling */
+.emoji {
+  width: 14px; /* Adjust the size as needed */
+  height: 14px; /* Adjust the size as needed */
+  display: inline-block; /* Ensures the image behaves like text */
+  vertical-align: middle; /* Aligns the emoji vertically with the text */
+  transform: translateY(0.5px); /* Moves the emoji down slightly */
+  transition: transform 0.3s ease;
+}
+
+/* Envelopes */
+.envelope {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 200px;
+  background-image: var(--envelope-background); /* Use CSS variable */
+  background-size: cover; /* Make sure the image covers the entire envelope area */
+  background-position: center;
+  box-shadow: var(--envelope-shadow);
+  border-radius: var(--envelope-border-radius);
+  cursor: pointer;
+  transition: transform 0.3s ease, top 0.3s ease, filter 0.5s ease;
+}
+
+/* Distinct Ghost Envelope */
+.envelope.ghost-envelope {
+  filter: brightness(0.7) grayscale(50%);
+}
+
+/* Envelope Date */
+.envelope .center-date {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12pt;
+  font-weight: bold;
+  color: var(--letter-text-color);
+  text-align: center;
+  font-family: 'Brush Script MT', 'Lucida Handwriting', 'Comic Sans MS', cursive;
+  transition: color 0.5s ease;
+}
+
+/* Letter Styles */
+.letter {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 800px;
+  transform: translate(-50%, -50%);
+  background-color: var(--letter-background);
+  border: 2px solid var(--letter-border-color);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  overflow-y: auto;
+  z-index: 2000;
+  border-radius: 5px;
+  transition: background-color 0.5s ease, border-color 0.5s ease;
+}
+
+/* Letter Content */
+.letter .content {
+  position: absolute;
+  top: 35px;
+  left: 5px;
+  width: 550px;
+  font-size: 10pt;
+  color: var(--letter-text-color);
+  white-space: pre-wrap;
+  transition: color 0.5s ease;
+}
+
+/* Letter Date */
+.letter .letter-date {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-size: 8pt;
+  color: #666;
+  font-weight: normal;
+  transition: color 0.5s ease;
+}
+
+/* Close Button */
+.close-button {
+  position: absolute;
+  top: 2.5px;
+  right: 5px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Close Button Hover */
+.close-button:hover {
+  color: var(--accent-color);
+}
+
 /* General Styling for All Letter Images */
 img.letter-image {
-  border: 1.5px solid #ff99cc;
+  border: 1.5px solid var(--accent-color);
   border-radius: 10px;
   max-width: 100%; /* Ensures the image fills the container */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   display: block;
   margin: 0 auto; /* Centers the image within the container */
+  transition: border-color 0.5s ease;
 }
 
 /* Specific Styles for Flatbread Image */
@@ -97,107 +318,24 @@ img.flatbread {
 img.heartbreak {
   /* Inherits general styles; no fixed positioning */
   max-width: 180px;
-  /* Removed 'right: 10;' as it had no units and was unnecessary */
 }
 
 /* Specific Styles for NWrd Image */
 img.nwrd {
   /* Inherits general styles; no fixed positioning */
   max-width: 180px;
-  /* Removed 'right: 10;' as it had no units and was unnecessary */
 }
 
 /* Styling for Text Below the Image */
 .text-below {
   margin-top: 10px; /* Space between image and text */
   font-size: 10pt;
-  color: #FF66B3;
+  color: var(--accent-color);
   text-align: center; /* Centers the text */
   font-family: 'Courier New', Courier, monospace;
+  transition: color 0.5s ease;
 }
 
-/* Envelope Styles */
-.envelope {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 300px;
-  height: 200px;
-  background-image: url('../images/envelope.png'); /* Add the image path */
-  background-size: cover; /* Make sure the image covers the entire envelope area */
-  background-position: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  cursor: pointer;
-  transition: transform 0.3s ease, top 0.3s ease;
-}
-
-.envelope .center-date {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 12pt;
-  font-weight: bold;
-  color: #000;
-  text-align: center;
-  font-family: 'Brush Script MT', 'Lucida Handwriting', 'Comic Sans MS', cursive;
-}
-
-/* Letter Styles */
-.letter {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 600px;
-  height: 800px;
-  transform: translate(-50%, -50%);
-  background-color: #FFFFFF;
-  border: 2px solid #FF99CC;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  padding: 20px;
-  overflow-y: auto;
-  z-index: 2000;
-  border-radius: 5px;
-}
-
-.letter .content {
-  position: absolute;
-  top: 35px;
-  left: 5px;
-  width: 550px;
-  font-size: 10pt;
-  color: #000;
-  white-space: pre-wrap;
-}
-
-.letter .letter-date {
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  font-size: 8pt;
-  color: #666;
-  font-weight: normal;
-}
-
-.close-button {
-  position: absolute;
-  top: 2.5px;
-  right: 5px;
-  font-size: 24px;
-  font-weight: bold;
-  color: #333;
-  cursor: pointer;
-}
-
-button:disabled {
-  cursor: not-allowed; /* Sets the cursor to indicate the button is not clickable */
-  opacity: 0.6; /* Optional: Make the button look visually disabled */
-  transition: none; /* Disable any animation or transition */
-}
-button:disabled:hover {
-  background-color: #FF99CC; /* Prevent background color change on hover */
-}
 /* Navigation Styles */
 .navigation {
   position: fixed;
@@ -213,15 +351,22 @@ button:disabled:hover {
 .navigation button {
   padding: 10px 15px;
   font-size: 10pt;
-  background-color: #FF99CC;
+  background-color:#FF66B3;
   border: none;
   color: #FFFFFF;
   cursor: pointer;
   border-radius: 5px;
+  transition: background-color 0.5s ease;
+}
+
+.navigation button.background-color-ghost {
+  background-color: #555555; /* Dark Grey for Ghost Mode */
+  color: #DDDDDD; /* Optional: Change Text Color for Better Contrast */
 }
 
 .navigation button:hover {
-  background-color: #FF66B3;
+  background-color: var(--button-hover);
+  transition: background-color 0.5s ease;
 }
 
 /* Rock Paper Scissors Minigame Styles */
@@ -235,28 +380,30 @@ button:disabled:hover {
 .rps-button {
   padding: 10px 20px;
   font-size: 12pt;
-  background-color: #FF99CC;
+  background-color: var(--accent-color);
   border: none;
   color: #FFFFFF;
   cursor: pointer;
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
+
 .rps-button-close {
   padding: 5px 10px;
   font-size: 12pt;
-  background-color: #FF99CC;
+  background-color: var(--accent-color);
   border: none;
   color: #FFFFFF;
   cursor: pointer;
   border-radius: 5px;
   transition: background-color 0.3s ease;
-  position:absolute;
+  position: absolute;
   right: 43px;
   top: 358px;
 }
+
 .rps-button:hover {
-  background-color: #FF66B3;
+  background-color: var(--button-hover);
 }
 
 /* RPS Game Interface */
@@ -264,10 +411,11 @@ button:disabled:hover {
   padding-left: 15px;
   padding-right: 15px;
   background-color: #FFCCEE;
-  border: 2px solid #FF99CC;
+  border: 2px solid var(--accent-color);
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   display: inline-block;
+  transition: background-color 0.5s ease, border-color 0.5s ease;
 }
 
 .rps-game.hidden {
@@ -285,20 +433,24 @@ button:disabled:hover {
   padding: 10px 15px;
   font-size: 14pt;
   background-color: #FFFFFF;
-  border: 2px solid #FF99CC;
+  border: 2px solid var(--accent-color);
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
+
 #game-over-message {
   font-size: 10pt; /* Change this value for text size */
-  position:absolute;
+  position: absolute;
   text-align: left;
-  left:10;
-  color: #000000; /* Change this value for text color */
+  left: 10px; /* Added 'px' unit */
+  color: var(--letter-text-color);
+  transition: color 0.5s ease;
 }
+
 .choice-button:hover {
   background-color: #FFCCE5;
+  transition: background-color 0.3s ease;
 }
 
 /* Score Display Styling */
@@ -306,8 +458,8 @@ button:disabled:hover {
   display: flex;
   justify-content: space-around;
   font-size: 10pt;
-  
   color: #fa49a2;
+  transition: color 0.5s ease;
 }
 
 .rps-score p {
@@ -320,6 +472,7 @@ button:disabled:hover {
   align-content: center;
   text-align: center;
   color: #fa49a2;
+  transition: color 0.5s ease;
 }
 
 /* Additional Styling for Game Over Message */
@@ -328,6 +481,7 @@ button:disabled:hover {
   font-weight: bold;
   color: #ff0000; /* Red color for emphasis */
   text-align: center;
+  transition: color 0.5s ease;
 }
 
 /* Responsive Adjustments */
@@ -349,6 +503,7 @@ button:disabled:hover {
   .navigation {
     right: 10px;
   }
+  
   .navigation button {
     padding: 8px 12px;
     font-size: 16px;
