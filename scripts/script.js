@@ -416,7 +416,7 @@ TASTE EVEN THO I NEVER DID AAAA,
 I JUST WANT A PLAYLISTP LEASE PLEASEPLSAPE
 
 
-guess which pretty girl just went to sleep?
+guess which pretty girl's finally getting her beauty sleep?
 hint: <span class="spoiler">the prettiest one</span>
 
 you better get all your rest hours in before the weekend is over
