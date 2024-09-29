@@ -304,10 +304,10 @@ anyways, we're doing it best of 3, its a bit scuffed because you're in the futur
             
 did i scare you?
             
-yeah anyways i added ghost entries. basically i come back and write letters for days i missed, I DONT MISS DAYS WITHOUT A REASON THO TRUST!!
+yeah anyways i added like filler entries. basically i come back and write letters for days i missed, I DONT MISS DAYS WITHOUT A REASON THO TRUST!!
 i'll write these as soon as i can, definetly not more than a week after the day i missed. todays real date is sep 28th teehee
             
-anyways the next 3 days will be ghost because i was taking a break and recomposing, september 24th was definetly in the top 2 worst days i've had this year, i dont think you'd even want to know why 😭
+anyways the next 3 days will be these filler thingies because i was taking a break and recomposing, september 24th was definetly in the top 2 worst days i've had this year, i dont think you'd even want to know why 😭
             
 okay yeah, OH WAIT, ONE MORE THING.
 <span class="spoiler">BOOOO 👻 (surely i got u this time) </span>
@@ -326,7 +326,7 @@ i love you mwah`
                     class: 'sep25',
                     textBelowImage: 'literally the only message that was sent this day',
                 },],
-            content: `uh hii, this is ghost #2 👻
+            content: `uh hii, ya filler entry #2 👻
             
 well we didnt talk at all this day because i was taking a break and everything. well actually i came back but that's in my timezone, so it'd be tomorrow for you ig. 
 
@@ -344,7 +344,7 @@ well we didnt talk at all this day because i was taking a break and everything. 
 
 
 
-i wouldnt say this in normal entries but this one's a ghost PLUS we didnt do anything on the 25th and idk what to write about. SOOOO i'll just say that i WANT US TO PLAY MINECRAFT. U ALWAYS REFUSE BECAUSE APPARENTLY ITSN OT FUN BUT THE THING IS ITS A SANDBOX GAME, U CAN LITERALLY DO ANYTHING, IT CANT NOT BE FUN. WE CAN PLAY CREATIVE!! WE CAN DO MINIGAMES!! IT DOENST HAVE TO BE SURVIVAL PRINCESS, WE CAN DO ANYTHING YOU WANT!!!>!>!!1!!P LEAPSLPELPALS PLEASE PLEASE!!! PLEASE
+i wouldnt say this in normal entries but this one's a filler PLUS we didnt do anything on the 25th and idk what to write about. SOOOO i'll just say that i WANT US TO PLAY MINECRAFT. U ALWAYS REFUSE BECAUSE APPARENTLY ITSN OT FUN BUT THE THING IS ITS A SANDBOX GAME, U CAN LITERALLY DO ANYTHING, IT CANT NOT BE FUN. WE CAN PLAY CREATIVE!! WE CAN DO MINIGAMES!! IT DOENST HAVE TO BE SURVIVAL PRINCESS, WE CAN DO ANYTHING YOU WANT!!!>!>!!1!!P LEAPSLPELPALS PLEASE PLEASE!!! PLEASE
 
 YEAH I LKOVE YOU 💚`
 
@@ -353,7 +353,7 @@ YEAH I LKOVE YOU 💚`
             date: 'September 26th, 2024',
             day: 'Thursday',
             isGhost:true,
-            content: `hii, i finally came back from my break and we talked about alot of stuff this day. LIKE UH DISLYTE AND STUFF. AND UH U TOLD ME SEAN HAD A CRUSH ON EMMA, oh and then i mentioned keijo 😭 its okay i erased everything keijo related from my brain since then. im just reading through the dms to make sure im thinking of the right day. oh i also REALLY WANTED TO CALL LMAO. you dont know how much i missed you before i came back. yeah okay anyways this is the last ghost entry, spoiler warning i sound very depressed in tomorrow's entry for some reason LMAO, lowk wish i could punch myself.
+            content: `hii, i finally came back from my break and we talked about alot of stuff this day. LIKE UH DISLYTE AND STUFF. AND UH U TOLD ME SEAN HAD A CRUSH ON EMMA, oh and then i mentioned keijo 😭 its okay i erased everything keijo related from my brain since then. im just reading through the dms to make sure im thinking of the right day. oh i also REALLY WANTED TO CALL LMAO. you dont know how much i missed you before i came back. yeah okay anyways this is the last filler entry, spoiler warning i sound very depressed in tomorrow's entry for some reason LMAO, lowk wish i could punch myself.
             
 anyways i'll drop a paragraph from my infamous literary masterpiece "Arggie is a fag" now because why not (i censored out the naughty words because i cant have your innocence be corrupted by such vulagrity)
 
@@ -419,7 +419,6 @@ hint: <span class="spoiler">the prettiest one</span>
 
 you better get all your rest hours in before the weekend is over
 i'll be here when you wake up, love you mwah <3
-
 P.S. the answer is <span class="spoiler">the only one</span>
 `
         },

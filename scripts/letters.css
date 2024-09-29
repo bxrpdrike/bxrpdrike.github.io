@@ -105,7 +105,7 @@ body.ghost-background {
 
 .image-container.fixed-position-sep25 {
   position: fixed;
-  right: 20px; /* Adjust as needed */
+  right: 250px; /* Adjust as needed */
   top: 120px; /* Adjust as needed */
   text-align: center;
   z-index: 1000; /* Ensure it's below navigation */
@@ -369,9 +369,6 @@ img.nwrd {
   transition: background-color 0.5s ease;
 }
 
-/* Rock Paper Scissors Minigame Styles */
-
-/* Container for the RPS minigame */
 .rps-container {
   text-align: center;
 }
