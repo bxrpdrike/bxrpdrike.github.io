@@ -448,7 +448,9 @@ OK ANYWAYS IM WAITING FOR YOU TO COME BACK, I LOVE YOU MWAH
 ive been scrolling on ig and my entire feed is full of very concerning reels and im scared it's because they're actually yours and ig just put them on my feed aswell, you liked some of them too... also you liked a reel about how you've never felt unconditional love and that really hurt me because i want you to feel loved no matter what, i love you as you are, i'll keep loving you as you are and as you will be, i don't want more from you, you're everything i've ever wished for. 
 
 its probably because of what happened 5 days ago.. i said the most retarded shit ever to the girl i love most, and i hurt you. and now you feel unloved. i swear i'll fix it. i swear i'll make you feel happy and loved no matter what it takes. you're the most beautiful, precious thing i've ever held in my life, and you better believe i'm holding on for eternity. i love you
-ill try to talk with you when ur back from school tho because i wanna make sure ur ok 
+
+ill try to talk with you when ur back from 
+school tho because i wanna make sure ur ok 
 
 (oh also i wrote the first half of the entry like 10 hours ago)
 
