@@ -424,6 +424,41 @@ i'll be here when you wake up, love you mwah <3
 P.S. the answer is <span class="spoiler">the only one</span>
 `
         },
+        {
+            date: 'September 29th, 2024',
+            day: 'Sunday',
+            images: [
+                {
+                    src: '../images/bob.jpg',
+                    class: 'bob',
+                    textBelowImage: 'i also made it into an emoji <span><img src="../images/bob.jpg" alt="bob" class="emoji"></span><img src="../images/bob.jpg" alt="bob" class="emoji"></span><img src="../images/bob.jpg" alt="bob" class="emoji"></span><img src="../images/bob.jpg" alt="bob" class="emoji"></span> (its very small tho)',
+                },],
+            content: `hi beautiful <3
+
+when i was asleep this morning i woke up every like 30 mins to check if i got a dm from u to maximize the time we get to spend together. also u had an assignment due but immm pretty sure u didnt do it 😭
+
+we called for a bit and played blooket (never heard of it before) oh and sean lost his 50th egirl, im really curious as to how he treats them because how do u even mess up that often 😭
+
+i was debating u on kpop stuff (i really couldnt care less about the topic, i just enjoyed talking about something u were passionate abt)
+
+u were listening to scenecore and you said you'd go back to maining it and i kinda freaked and got worried because i associate it with you being sad and unstable and stuff and i REALLY dont want your mental state going back to what it was back then. also scenecore lyrics and titles are fucking weird, dont listen to that stuff sob
+
+OK ANYWAYS IM WAITING FOR YOU TO COME BACK, I LOVE YOU MWAH
+
+ive been scrolling on ig and my entire feed is full of very concerning reels and im scared it's because they're actually yours and ig just put them on my feed aswell, you liked some of them too... also you liked a reel about how you've never felt unconditional love and that really hurt me because i want you to feel loved no matter what, i love you as you are, i'll keep loving you as you are and as you will be, i don't want more from you, you're everything i've ever wished for. 
+
+its probably because of what happened 5 days ago.. i said the most retarded shit ever to the girl i love most, and i hurt you. and now you feel unloved. i swear i'll fix it. i swear i'll make you feel happy and loved no matter what it takes. you're the most beautiful, precious thing i've ever held in my life, and you better believe i'm holding on for eternity. i love you
+ill try to talk with you when ur back from school tho because i wanna make sure ur ok 
+
+(oh also i wrote the first half of the entry like 10 hours ago)
+
+
+sorry for the gloom, 
+heres a pic of ur fav cat to make up for it 😍😼
+its from like 2018
+`
+
+        },
         
     ];          const container = document.querySelector('.document-container');
     const navigation = document.getElementById('navigation');
@@ -568,6 +603,9 @@ function openLetter(index) {
             if (imageObj.class === 'heartbreak') {
                 imageContainer.classList.add('fixed-position-hrt');
             }
+            if (imageObj.class === 'bob') {
+                imageContainer.classList.add('fixed-position-bob');
+            }
             if (imageObj.class === 'sep25') {
                 imageContainer.classList.add('fixed-position-sep25');
             }
@@ -612,7 +650,7 @@ function openLetter(index) {
             if (imageObj.textBelowImage) {
                 const textBelow = document.createElement('div');
                 textBelow.classList.add('text-below');
-                textBelow.textContent = imageObj.textBelowImage;
+                textBelow.innerHTML = imageObj.textBelowImage;
                 imageContainer.appendChild(textBelow); // Append text below the image
             }
 
