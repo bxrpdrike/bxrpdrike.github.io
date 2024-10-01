@@ -460,6 +460,31 @@ heres a pic of ur fav cat to make up for it 😍😼
 its from like 2018
 `
 
+        }, {
+            date: 'September 30th, 2024',
+            day: 'Monday',
+            content: `HI HONEYBUNNNN <3
+
+i did that thing where i woke up to check if i got a DM from u every 30 mins again today teehee, and the crazy thing is i dont even do it on purpose, i think my body just constantly craves you lmao (is that bad??)
+
+you woke up at like 11PM today, and as much as i want u to get good rest, the evil part of me kinda hopes you wake up this late every day, because then we'd get to spend so much more time together (maaaybe u could even switch ur status to offline so that ur friends wont bother us and we could be alone <span><img src="../images/joobi.png" alt="Joobi Emoji" class="emoji"></span><span>) we called today and i finally got to hear ur pretty voice after so long 
+(i learned all i had to do this entire time was just shut up..)
+
+i hope that call wasnt too excruciating for you because at some point u just went like "im done calling u, can i leave?" and i was like "💀" i feel like ur just putting up with me.. maybe im the weird one for wanting to call 24/7?? idk the calls where we do nothing and the calls where we're both tired are just as fun as the ones where we actually do stuff, i need to figure out how to make them fun (or atleast not boring) for u too. also its like 9AM rn, i hope ur not oversleeping because you've been online up until now which means ur laptop is open.. maybe u dont have any school today? i doubt ur family would let u skip 😭😭
+
+ok enough with the conspiracies.. oh and about that thing yesterday, i asked you about it but you didnt really address it, ig u didnt really wanna talk about it. u told me ur okay though so thats good, as long as you're okay everything's fine.
+
+and i know i sound super demure and articulate i sound in these entries but i hope yk im constantly fighting the urge to say something like "WDIUSHGNIDSBHDFUWHG I MMISS YOU SO MUCH IW ANT U TO GET ONLINE, I WNAT U TO SKIP SCHOOL AND NEVER SLEEP SO WE CAN TAKL 24/7 AAAAAA" how clingy is that 1-10?? 
+
+oh that reminds me u told sean he should be super dry with girls, idk why ur praying for his demise like that 😭 as u probably remember i used to be very rude and dry back in my day and im NOT VERY PROUD OFTHAT!!! I WAS ACTUALLY SUCH AN ASSHOLE DUDE, actual peak mental illness, i used to say weird edgelord shit like "suicide is natural selection".. i also kept around sooo many situationships back then and i treated them all like trash because i didnt REALLY care sigh. SO YEAH, TERRIBLE ADVICE, HORRIBLEEL!!!! DO NOT BE DRY AND MYSTERIOUS GUYS!!
+
+sorry idk how i ended up ranting about my past 😭 i'd definetly strangle my old self if i could though. AAAA I HATE WAITING FOR U TO COME BACK UGH
+
+on a side note, sorry if u have a stroke reading todays entry, 
+i really didnt bother with making it very cohesive sob 🙏🙏
+
+bye, i love you <3
+`
         },
         
     ];          const container = document.querySelector('.document-container');
