@@ -530,7 +530,7 @@ i remember one time you told me that you were the worst thing that's ever happen
 
 i had to force myself to write all of the things in this entry because i had to stand up for myself. i dont know if i was wrong in any of my assumptions, but then again, i wouldn't have to assume and guess everything all the time if only you communicated.
 
-i wrote this all without really considering the option of you reading it. if youre reading this, if youre still here despite everything. it means you must miss me too, even if just a little.. it means i might've been wrong after all.. if you're here, and if you decided that you'll change, that you'll seek help, i hope its okay for me to ask:
+i wrote this all without really considering the option of you reading it. if youre reading this, if youre still here despite everything. it means you must miss me too, even if just a little.. it means i might've been wrong about some things after all.. if you're here, and if you decided that you'll change, that you'll seek help, i hope its okay for me to ask:
 
 do you want to start over as friends? 
 last time you asked it was too soon (2 minutes since we broke up to be precise). 
