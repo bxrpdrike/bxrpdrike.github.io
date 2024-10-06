@@ -531,7 +531,7 @@ i genuinely recommend you get a therapist. i know you won't though, i know you'l
 i dont hate you. im mad at you. i will stay mad at you for some time. im also mad at myself, mad i didnt insist harder on you getting better, and mad i didnt see through this earlier. i love you and i don't know how long moving on will take, but i know distancing myself from you is the best thing i can do for myself right now, even though it hurts me so bad, even though i can still barely even sleep, and even when i do i dream about you still being here, still constantly waking up to check my phone. even though i want nothing more than to add you back, call you, and break down, i have to remind myself that you wouldn't care, that you lied and manipulated me, that going back isnt the right choice. i could say "i wish you didnt stop spamming me before i woke up, i wish you didnt stop writing me poems or telling me you loved me. if only you were ready, if only you were open with me, if only you'd have taken one of the countless chances i've given you, things could've turned out differently" but the thing is, you didn't care. you weren't open. you didn't take any of those chances. so i have to remind myself that i did my best, that i offered you everything i had, treated you as best as i could. that i dont have any more to give, and that you turned me away.
 
 maybe one day, when you are better, we can start over as friends. maybe then we can have a real heart to heart, maybe then you'll be able to genuinely apologize for all the pain you've caused me. i know i'd forgive you. 
-i can't help but hope as much as i know it won't happen.
+i can't help but hope as much as i know it'll never happen.
 
 goodbye, girl who never told me her name.
 
