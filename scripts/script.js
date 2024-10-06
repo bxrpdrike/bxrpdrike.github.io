@@ -476,7 +476,7 @@ ok enough with the conspiracies.. oh and about that thing yesterday, i asked you
 
 and i know i sound super demure and articulate in these entries but i hope yk im constantly fighting the urge to say something like "WDIUSHGNIDSBHDFUWHG I MMISS YOU SO MUCH IW ANT U TO GET ONLINE, I WNAT U TO SKIP SCHOOL AND NEVER SLEEP SO WE CAN TAKL 24/7 AAAAAA" how clingy is that 1-10?? 
 
-oh that reminds me u told sean he should be super dry with girls, idk why ur praying for his demise like that 😭 as u probably remember i used to be very rude and dry back in my day and im NOT VERY PROUD OFTHAT!!! I WAS ACTUALLY SUCH AN ASSHOLE DUDE, actual peak mental illness, i used to say weird edgelord shit like "suicide is natural selection".. i also kept around sooo many situationships back then and i treated them all like trash because i didnt REALLY care sigh. SO YEAH, TERRIBLE ADVICE, HORRIBLEEL!!!! DO NOT BE DRY AND MYSTERIOUS GUYS!!
+oh that reminds me of how u told sean he should be super dry with girls, idk why ur praying for his demise like that 😭 as u probably remember i used to be very rude and dry back in my day and im NOT VERY PROUD OFTHAT!!! I WAS ACTUALLY SUCH AN ASSHOLE DUDE, actual peak mental illness, i used to say weird edgelord shit like "suicide is natural selection".. i also kept around sooo many situationships back then and i treated them all like trash because i didnt REALLY care sigh. SO YEAH, TERRIBLE ADVICE, HORRIBLEEL!!!! DO NOT BE DRY AND MYSTERIOUS GUYS!!
 
 sorry idk how i ended up ranting about my past 😭 i'd definetly strangle my old self if i could though. AAAA I HATE WAITING FOR U TO COME BACK UGH
 
