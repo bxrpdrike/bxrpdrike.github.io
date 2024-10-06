@@ -524,7 +524,7 @@ i wonder if you actually believed i didnt love you. wanna hear something? you kn
 
 you never loved me, not in the beginning, not in the end. maybe you wanted to, but you never did. you started it, you told me you loved me, and then you walked all over me. 
 
-you're not a good person, all you care about is yourself. even now, EVEN NOW, you're grasping onto your pathetic fucking pride so tightly that you're not willing to take a sliver of accountability. you made me suffer, you took my hand and used it to drag ME down instead of using it to pull YOURSELF up.
+you're not a good person, all you care about is yourself. even now, EVEN NOW, you're grasping onto your pathetic fucking pride so tightly that you're not willing to take a sliver of accountability. you made me suffer, you took my hand and used the opportunity to drag ME down instead of using it to pull YOURSELF up.
 
 i genuinely recommend you get a therapist. i know you won't though, i know you'll just keep on running away. you think you can keep this up for eternity? you think you can be this way forever? seriously. where do you see yourself in the future if you keep going? i have a guess, you won't be able to have any meaningful friendships or relationships with NORMAL people, you'll be all alone and you'd be wishing you did something sooner. you're not fucking okay, you have mental issues and you need them treated. go to a therapist. stop running away and wake the fuck up. dont give me any more fucking excuses, because i know exactly what you'd say. im tired of that shit, we both know i'm right, so stop trying to justify your shitty lifestyle to yourself and WAKE. THE FUCK. UP. 
 
