@@ -530,7 +530,7 @@ i remember one time you told me that you were the worst thing that's ever happen
 
 i had to force myself to write all of the things in this entry because i had to stand up for myself, so why do i still feel like this? my mind is upset but my heart cant be.
 
-i wrote this all without really considering the option of you reading it. if youre reading this, if youre still here despite everything. it means you must miss me too.. it means i might've been wrong after all.. if you're here, and if you decided that you'll change, that you'll seek help, i feel like i can ask
+i wrote this all without really considering the option of you reading it. if youre reading this, if youre still here despite everything. it means you must miss me too, even if just a little.. it means i might've been wrong after all.. if you're here, and if you decided that you'll change, that you'll seek help, i hope its okay for me to ask:
 
 do you want to start over as friends? 
 maybe then we can have a real heart to heart and talk about everything.
