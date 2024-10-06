@@ -534,7 +534,7 @@ i wrote this all without really considering the option of you reading it. if you
 
 do you want to start over as friends? 
 last time you asked it was too soon (2 minutes since we broke up to be precise). 
-i doubt you'll ever read this, this is just my wishful thinking speaking.
+but i doubt you'll ever read this, i just let my wishful thinking talk.
 
 goodbye, girl who never told me her name.
 
