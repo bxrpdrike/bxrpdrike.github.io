@@ -534,8 +534,8 @@ i wrote this all without really considering the option of you reading it. if you
 
 do you want to start over as friends? 
 maybe then we can have a real heart to heart and talk about everything.
-i know you already asked me to be friends, but the real reason i said no was because i just couldnt stand the idea of being friends with someone that doesnt care, someone that really isnt a good person.
-honestly, who am i kidding.. im so fucking petty, talking to a ghost.
+you already asked me to be friends, and the real reason i said no was because i just couldnt stand the idea of being friends with someone that doesnt care about anyone. and besides, it was obviously too soon. but if you're willing to change, wherever you are, whenever you are, i'd love to talk to you again.
+that's all just wishful thinking though, i don't think you'll ever get to see this.
 
 goodbye, girl who never told me her name.
 
