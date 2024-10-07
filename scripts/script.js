@@ -536,9 +536,9 @@ do you want to start over as friends?
 last time you asked me was literally 2 minutes after we broke up. 
 not sure where you were going with that.
 
-i'm still betrayed and hurt. i still dont understand WHY you did any of it, i dont get why you emotionally drained me when we could've been happy together. but at least i feel like i can start moving forward again, even without you by my side.
+i'm still betrayed and hurt. i still dont understand WHY you did any of it, i dont get why you emotionally drained me when we could've been happy together. but at least i feel like i can start moving forward again, even without you by my side. this entry was my goodbye.
 
-goodbye, girl who never told me her name.
+and so, goodbye, girl who never told me her name.
 
 `
         },
