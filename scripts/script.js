@@ -535,6 +535,8 @@ like i said, i wrote this all without really considering the option of you readi
 do you want to start over as friends? 
 last time you asked me was literally 2 minutes after we broke up. not sure where you were going with that.
 
+i'm still betrayed and hurt. i still dont understand WHY you did any of it. but at least i can start moving forward again.
+
 goodbye, girl who never told me her name.
 
 `
