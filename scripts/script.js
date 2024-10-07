@@ -540,7 +540,8 @@ i think you're a good person at heart, i know this might sound very counterintui
 
 i'm still betrayed and hurt. i still dont understand WHY you did any of it, i dont get why you emotionally drained me when we could've been happy together. but at least i feel like i can start moving forward again, even without you by my side. only these last few lines were truly addressed to you if you're reading, the rest was just me venting. this entry was my goodbye.
 
-and so, goodbye, girl who never told me her name.
+and so, 
+goodbye, girl who never told me her name.
 
 `
         },
