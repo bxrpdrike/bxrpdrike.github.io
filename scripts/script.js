@@ -488,7 +488,7 @@ bye, i love you <3
         }, {
             content: `
 
-goodbye, girl who never told me her name
+goodbye, girl who never told me her name.
 
 `
         },
