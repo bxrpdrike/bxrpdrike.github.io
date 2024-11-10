@@ -485,13 +485,7 @@ i really didnt bother with making it very cohesive sob 🙏🙏
 
 bye, i love you <3
 `
-        }, {
-            content: `
-
-goodbye, girl who never told me her name.
-
-`
-        },
+        }
         
     ];          const container = document.querySelector('.document-container');
     const navigation = document.getElementById('navigation');
