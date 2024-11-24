@@ -492,7 +492,7 @@ bye, i love you <3
     const prevButton = document.getElementById('prev-button');
     const nextButton = document.getElementById('next-button');
 
-    let currentIndex = 0; // Start with the first letter
+    let currentIndex = 0; // Start with the first lette
     let isLetterOpen = false;
 
     // Generate the envelope elements
