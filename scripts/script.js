@@ -679,19 +679,22 @@ function openLetter(index) {
                 imageContainer.classList.add('fixed-position-zeke');
                 }
             
-classList.add('image-container');
-
-            // Assign fixed-position class based on imageClass
-            if (imageObj.class === 'flatbread') {
-                imageContainer.classList.add('fixed-position');
+            if (imageObj.class === 'sep25') {
+                imageContainer.classList.add('fixed-position-sep25');
             }
-            if (imageObj.class === 'heartbreak') {
-                imageContainer.classList.add('fixed-position-hrt');
+            if (imageObj.class === 'supermassive') {
+                imageContainer.classList.add('fixed-position-supermassive');
             }
-            if (imageObj.class === 'bob') {
-                imageContainer.classList.add('fixed-position-bob');
+            if (imageObj.class === 'spiderman') {
+                imageContainer.classList.add('fixed-position-spiderman');
             }
-             if (imageObj.class === 'gasstation') {
+            if (imageObj.class === 'nwrd') {
+                imageContainer.classList.add('fixed-position-nwrd');
+            }
+            if (imageObj.class === 'arrw') {
+                imageContainer.classList.add('fixed-position-arrw');
+            }
+            if (imageObj.class === 'gasstation') {
                 imageContainer.classList.add('fixed-position-gst');
             }
             // Add more conditions if you have more unique classes
