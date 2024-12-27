@@ -691,7 +691,7 @@ classList.add('image-container');
             if (imageObj.class === 'bob') {
                 imageContainer.classList.add('fixed-position-bob');
             }
-             (imageObj.class === 'gasstation') {
+             if (imageObj.class === 'gasstation') {
                 imageContainer.classList.add('fixed-position-gst');
             }
             // Add more conditions if you have more unique classes

@@ -151,7 +151,7 @@ body.ghost-background {
   z-index: 1000; /* Ensure it's below navigation */
 }
 
-  text-aligon-arrw {
+  .text-aligon-arrw {
   position: fixed;
   right: 500px; /* Adjust as needed */
   top: 60px; /* Adjust as needed */
