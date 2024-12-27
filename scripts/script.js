@@ -495,7 +495,7 @@ bye, i love you <3
                     src: '../images/zeke.jpg',
                     class: 'zeke',
                 },],
-            content: `Hi. I heard writing another unsent letter to you might help, so even though I already wrote one (admittedly horrible) deleted entry right after we broke up, I just want to set the record straight with this one, and finally send it all off so I can stop thinking about how everything was handled and finally fully move on. I'll talk about everything that happened to me since, talk about how I felt and how I feel. As always, my thoughts will be very unorganized. 
+            content: `Hi. I heard writing another unsent letter to you might help, so even though I already wrote one (admittedly horrible) deleted entry right after we broke up, I just want to set the record straight with this one, and finally send it all off even if you might not read this, just so I can stop thinking about how everything was handled and finally fully move on. I'll talk about everything that happened to me since, talk about how I felt and how I feel. As always, my thoughts will be very unorganized. 
             
 I know you hurt me on purpose and I know you were not a good person for doing that, quite honestly I think I knew that back when we dated, I just wanted to believe that it wasn't true, that you were different. Around 2 weeks before we broke up, I did more research into BPD, I started to understand a lot of your mannerisms and I knew you were disinterested, that's sort of when the momentum began. So I'm pretty much just dealing with the remnants of a trauma bond now.
             
