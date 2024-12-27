@@ -485,6 +485,48 @@ i really didnt bother with making it very cohesive sob 🙏🙏
 
 bye, i love you <3
 `
+        },
+
+        {
+            date: 'December 26th, 2024',
+            day: 'Thursday',
+            images: [
+                {
+                    src: '../images/zeke.jpg',
+                    class: 'zeke',
+                },],
+            content: `Hi. I heard writing another unsent letter to you might help, so even though I already wrote one (admittedly horrible) deleted entry right after we broke up, I just want to set the record straight with this one, and finally send it all off so I can stop thinking about how everything was handled and finally fully move on. I'll talk about everything that happened to me since, talk about how I felt and how I feel. As always, my thoughts will be very unorganized. 
+            
+I know you hurt me on purpose and I know you were not a good person for doing that, quite honestly I think I knew that back when we dated, I just wanted to believe that it wasn't true, that you were different. Around 2 weeks before we broke up, I did more research into BPD, I started to understand a lot of your mannerisms and I knew you were disinterested, that's sort of when the momentum began. So I'm pretty much just dealing with the remnants of a trauma bond now.
+            
+I deleted everything in early November so that we wouldn't be able to contact eachother because I wanted to distance myself, even if it might've hurt, because I knew that I'd be really tempted to message you again. And at first I kind of still lingered on the thought of you, I knew it was over but a part of me still wanted, something? I don't know.. 
+
+I made sure to update my profiles on the places where I knew you could see me, I wanted you to care, honestly I don't know where I was going with any of that or what I wanted to happen. Anyways, after a bit of that is when I deleted everything because I knew I had to move on. I was really angry and betrayed at first, and that's when I wrote that huge angry entry, then I unblocked you after, maybe a week, and I said a lot of things because I wanted to see if you cared, I wanted you to say that you missed me. Honestly when I told you I wanted to break up I wanted you to say something, because in my mind even a "why?" would mean that you cared. I said a lot of things to try and make you jealous, I know it was obvious, it's a bit embarassing. 
+
+I think I should also mention I was really unstable during this period, like seriously my mind was in complete disarray, I didn't know who I was or where to go. In the end I sent you that big paragraph, I was very vulgar, it's hard to say why I wrote it because I can't really get back into that mindset. I don't know if I actually wanted an explanation, because I knew I wouldn't get one (courtesy of bpdlovedones), or if I just wanted to vent. I do remember that I wanted to make one last effort at "helping you" whatever that meant to me, I thought that I should be vulgar because no other way worked, maybe being rude would finally make something happen, don't really know if that approach worked lol. The morning after when I got that text from you I really didn't know how to feel, and I didn't know how you felt, now I just think that your response was a defense mechanism, or maybe you just actually didn't care, I don't know. 
+
+I told you to never talk to me again, and I blocked you. The next 2 months after that were really, really bad for me. I missed you a lot, I cried every night, I was still confused about everything. I couldn't listen to any song, look at any thing, because it reminded me of you. Every time I talked to someone, you were brought up because you were always on my mind. A lot of things you said were looping in my head for days, a lot of our moments too, both the good and the bad. I was thinking over everything, over and over, who was wrong, what went wrong, was it real? 
+
+Some moments I'd tell myself I hated you and others I'd tell myself I missed you. Before I deleted my accounts I unblocked Xylo, I'm not sure why, I told her "You were right," (back in july she'd always warn me about what might happen) I vented and told her about everything, needless to say she kind of made fun of me but I think she did her best to be supportive. But honestly I didn't really feel comfortable with her, she was just really, weird? I don't know, her boyfriend has BPD and she just toys with him which was super weird to me, she also wanted me to make you two meet (right after we broke up) so I felt really odd about that. We don't really talk now, I guess we talk about school like once a month because me and her attend the same online school (also she was the one who suggested i try to make you jealous after i unblocked you). 
+
+I sort of avoided, and still avoid relationships, because I didn't want the fact that you were still fresh on my mind to get in the way of a relationship, besides, I was worn out, I didn't think I was capable of going full force with anyone again. I met a girl and I kind of stopped it early because of that, I told her I didn't want the fact that I'm still thinking about my ex to get in the way, and I told her I'd distance myself from her. That was early november I think. I was still really depressed at this point, really unmotivated, always thinking about you. I still couldn't do anything, I basically didn't talk to anyone, didn't get out of bed, didn't even brush my teeth most days. Sometimes I'd wonder where you were or what you were doing, but most of all I'd wonder about how you felt about everything, if you still thought about me too.
+
+That is when I actually deleted my Discord. At that point I've finally come to terms with the idea that I'll probably never talk to you again, and that it'd be better if I wouldn't. I was still tired of everything, I was still worn out socially, so I decided to just kind of focus on myself. I slowly started picking everything back up, first it was hygiene, then hobbies and school. You were still in the back of my mind though, I still thought about you every day but it was manageable, it started happening less and less. 
+
+Anyways, that's basically all the catching up I could think of. I don't hate you anymore, nor do I love you anymore. I think I just wish the best for you as a person. I want you to be happy, and make everyone around you happy, just as I'd wish for any person. One thing I've constantly thought about is the time you told me that you were the worst thing to happen to me, and that I just didn't know it yet, and I wonder if that's true. 
+
+I think you were a valuable lesson—as overused as that line is—and I'm grateful for all the things that happened thanks to you, directly or indirectly. The good, the bad, and the ugly. And while good things came from it, bad things did as well. Social interactions still feel really dull to me, so every conversation I have just feels kind of shallow, I still sub-consciously have trouble trusting people or things sometimes. My friends tell me I'm distant now, honestly I just can't really bring myself to talk, not from a place of depression or anything, just genuine disinterest in social interaction. 
+
+A lot of times, people asked me "When will you move on?" or "Are you sure you moved on?" just because of how often I brought you up, but it's been a while since someone said anything like that honestly. My life's pretty set straight, I have a job, I'm doing good at school, going to uni soon, I still play guitar (finally got an amp,) and still go to the gym (still bulking). 
+
+Also, I actually used to learn Japanese until we started talking but you kind of made me ashamed of it so I stopped, I plan on picking that back up too. You made me ashamed of a lot of things, honestly you judged me, and other people so much, that I started to feel insecure myself. Hurt people hurt people I guess. I don't really wonder why you were so spiteful, judgemental, and hateful anymore, because it doesn't matter. I don't wonder why you did any of it, or if you talk about me because it doesn't matter (courtesy of Xylo telling me you're shittalking me to your boyfriend.) It's all in the past, and only you know why.
+
+To wrap it up, I want to say I'm doing amazing, but honestly it all just feels so mundane, maybe it's the winter depression lol. Everything is so repetitive and gray. I've been trying to find the feeling I had when I was with you, on my own. I was so happy and satisfied, I felt like I could do everything as long as you were with me, and honestly I've never felt like that before. I want to find that feeling again, but this time I want the source of my happiness to be myself, rather than someone else. Needless to say I've still yet to find it lol. And I'd be lying if I said I didn't want to find someone to love again, but I honestly just can't bring myself to do anything like that until I 100% know I can give that person, and only that person my all, so I'll have to wait until love comes to me instead of seeking it out, otherwise I'd end up risking hurting someone because of my selfishness. 
+
+But with all that said, I think it'll all be okay, time heals all. I'm moving forward regardless of whether or not I know it, I still feel happy a lot of times even though I may not have reflected on it a lot here. I just wanted to tie up all the negative things neatly and send them off with this letter so I know I addressed them and never have to think about them again. I also want to mention that I don't harbor ill will towards you, I know what you did was wrong and unjustified, but I also know that dwelling on it wont get me anywhere. So I'll just say that I hope you're doing better as well. 
+            
+In any case, this is a bit bittersweet, maybe because I'm finally letting go of it all. This'll be the (actual) final goodbye on my end, because I still think it could have been handled better than that paragraph. And I think with this I can finally, truely move on. Thank you for the good memories Cherune, I really, genuinely wish you the best.
+`
         }
         
     ];          const container = document.querySelector('.document-container');
@@ -633,6 +675,10 @@ function openLetter(index) {
             if (imageObj.class === 'bob') {
                 imageContainer.classList.add('fixed-position-bob');
             }
+            if (imageObj.class === 'zeke') {
+                imageContainer.classList.add('fixed-position-zeke');
+                }
+            
             if (imageObj.class === 'sep25') {
                 imageContainer.classList.add('fixed-position-sep25');
             }

@@ -143,6 +143,14 @@ body.ghost-background {
   z-index: 1000; /* Ensure it's below navigation */
 }
 
+.image-container.fixed-position-zeke {
+  position: fixed;
+  right: 40px; /* Adjust as needed */
+  top: 2280px; /* Adjust as needed */
+  text-align: center;
+  z-index: 1000; /* Ensure it's below navigation */
+}
+
 img.bob {
   /* Inherits general styles; no fixed positioning */
   max-width: 180px;
