@@ -146,7 +146,7 @@ body.ghost-background {
 .image-container.fixed-position-zeke {
   position: fixed;
   right: 40px; /* Adjust as needed */
-  top: 2290px; /* Adjust as needed */
+  top: 2300px; /* Adjust as needed */
   text-align: center;
   z-index: 1000; /* Ensure it's below navigation */
 }
