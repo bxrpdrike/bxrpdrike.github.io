@@ -526,6 +526,15 @@ To wrap it up, as much as I want to say I'm doing amazing, I'm just okay, everyt
 But with all that said, I think it'll all be okay, time heals all. I'm moving forward regardless of whether or not I know it, I still feel happy a lot of times even though I may not have reflected on it a lot here. I just wanted to tie up all the negative things neatly and send them off with this letter so I know I addressed them and never have to think about them again. I also want to mention that I don't harbor ill will towards you, I know what you did was wrong and unjustified, but I also know that not everything is black and white and that you probably had your own issues and reasons, not to rationalize your behavior or give you an out. I'd also be pretty dumb to not admit I've made mistakes as well. So I'll just say that I hope you're doing better too. 
             
 In any case, this is a bit bittersweet, maybe because I'm finally letting go of it all. This'll be the (actual) final goodbye on my end, because I still think it could have been handled better than that paragraph. And I think with this I can finally, truly move on. Thank you for the good memories Cherune, I really, genuinely wish you the best.
+
+
+
+
+
+
+
+
+
 `
         }
         
